@@ -1,0 +1,57 @@
+﻿.customTable {
+    border-right: 1px solid #000 !important;
+}
+
+    .customTable td {
+        border-left: 1px solid #000 !important;
+        padding: 5px !important;
+    }
+
+    .customTable tr {
+        border-bottom: 1px solid #000 !important;
+    }
+
+        .customTable tr:first-child {
+            border-top: 1px solid #000 !important;
+        }
+
+.profileDesign .card-header {
+    padding-top: 8px !important;
+    padding-left: 15px !important;
+    padding: 0;
+}
+
+.profileDesign .card-body {
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.customSelectOption {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + .25rem);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #ffffff;
+    background-color: #1a6ba0 !important;
+    font-weight: bold !important;
+    border:none;
+}
+
+    .customSelectOption option {
+        background-color: white;
+        color: black;
+        font-weight: normal;
+        display: block;
+        white-space: pre;
+        min-height: 1.2em;
+        padding: 0px 2px 1px;
+        cursor:pointer;
+    }
+
+        .customSelectOption option :hover{
+            cursor: pointer;
+        }

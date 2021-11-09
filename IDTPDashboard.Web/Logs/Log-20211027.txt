@@ -1,0 +1,6 @@
+2021-10-27T11:15:54.6486808+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-27T11:15:54.6570601+06:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-27T11:15:54.6589856+06:00  [INF] Content root path: "C:\TFS\NAV\Main\Source\Tools\IDTPDashboard\IDTPDashboard.Web" (b5d60022)
+2021-10-27T11:33:10.6459723+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-27T11:33:10.6600990+06:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-27T11:33:10.6618580+06:00  [INF] Content root path: "C:\TFS\NAV\Main\Source\Tools\IDTPDashboard\IDTPDashboard.Web" (b5d60022)

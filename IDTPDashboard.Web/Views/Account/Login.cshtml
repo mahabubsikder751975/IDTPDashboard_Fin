@@ -1,0 +1,178 @@
+﻿
+@model IDTPDashboard.Web.Models.LoginModel
+@{
+    Layout = "";
+}
+
+@*<div class="login-page">
+    <div class="page-header">
+        <h1>Login</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please enter your credentials</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form asp-route="Login">
+                        <input type="hidden" asp-for="ReturnUrl" />
+
+                        <fieldset>
+                            <div class="form-group">
+                                <label asp-for="Username"></label>
+                                <input class="form-control" placeholder="Username" asp-for="Username" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password"></label>
+                                <input type="password" class="form-control" placeholder="Password" asp-for="Password" autocomplete="off">
+                            </div>
+                            <div class="form-group login-remember">
+                                <label asp-for="RememberLogin">
+                                    <input asp-for="RememberLogin">
+                                    <strong>Remember Me</strong>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Login</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>*@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IDTP Dashboard Module</title>
+
+    <!-- Custom fonts for this theme -->
+    <link href="~/theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Theme CSS -->
+    <link href="~/theme/css/freelancer.min.css" rel="stylesheet">
+    <style>
+
+        img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top background-color:#1779ba;" style="background-color: #1A6BA0;padding-top:5px !important;padding-bottom:5px !important" id="mainNav">
+        <div class="row" style="width:100%">
+            <div class="col-md-4" style="padding-left:0px">
+            </div>
+            <div class="col-md-4" style="text-align:center">
+                <a class="navbar-brand js-scroll-trigger text-uppercase" href="#" style="font-size:1.70em !important">IDTP Dashboard Module</a>
+                <button class="navbar-toggler" style="float:left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                        aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </nav>
+    <!--Navbar -->
+    <br><br>
+
+    <section id="contact">
+        <div class="container">
+            <!-- Contact Section Heading -->
+            <h3 class=" text-center text-uppercase  mb-0" style="color: #1A6BA0">Log in</h3>
+        </div>
+    </section>
+
+    <div class="container">
+        <!--tab option end-->
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form asp-route="Login">
+                            <input type="hidden" asp-for="ReturnUrl" />
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input asp-for="Username" class="form-control" placeholder="Username" autofocus />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password"></label>
+                                <input type="password" asp-for="Password" class="form-control" placeholder="Password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label asp-for="RememberLogin">
+                                        <input asp-for="RememberLogin" />
+                                        @Html.DisplayNameFor(m => m.RememberLogin)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" style="float:right">
+                                <button type="submit" class="btn btn-success">Log in</button>
+                            </div>
+                            <div class="form-group">
+                                <p>
+                                    <a id="forgot-password" href="#">Forgot your password?</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center" style="font-size:small">© 2021 Techvision. All rights reserved.</div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <!--tab content end-->
+    </div>
+
+
+    <!--JavaScript -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/theme/vendor/jquery/jquery.min.js"></script>
+    <script src="~/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="~/theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="~/theme/js/jqBootstrapValidation.js"></script>
+    <script src="~/theme/js/contact_me.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="~/theme/js/freelancer.min.js"></script>
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>
+
+
+

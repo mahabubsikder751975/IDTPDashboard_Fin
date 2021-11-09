@@ -1,0 +1,112 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "FAManagement_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    Chart insuredNonInsuredAssets = (Chart)ViewData["insuredNonInsuredAssets"];
+    Chart serviceLifeAnalyses = (Chart)ViewData["serviceLifeAnalyses"];
+    Chart operationalNonOperationalTransformer = (Chart)ViewData["operationalNonOperationalTransformer"];
+    Chart landUsagesbyOffice = (Chart)ViewData["landUsagesbyOffice"];
+    Chart transformerOperationalAnalysisbyOffice = (Chart)ViewData["transformerOperationalAnalysisbyOffice"];
+    Chart transformerOperationalAnalysisbyMonth = (Chart)ViewData["transformerOperationalAnalysisbyMonth"];
+    Chart landAreabyOfficePieChart = (Chart)ViewData["landAreabyOfficePieChart"];
+    Chart landEncroachmentRatioPieChart = (Chart)ViewData["landEncroachmentRatioPieChart"];
+    Chart subStationsbyOfficePieChart = (Chart)ViewData["subStationsbyOfficePieChart"];
+}
+
+<br />
+<h4 style="text-align:center">Fixed Assets Management Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Insured vs Non-Insured</h5>
+                <canvas id="insuredNonInsuredAssets"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Equipment Service Life Analysis</h5>
+                <canvas id="serviceLifeAnalyses"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">No. of Operational vs Non-Operational Transformers</h5>
+                <canvas id="operationalNonOperationalTransformer"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Present Usage of Land (in Acres)</h5>
+                <canvas id="landUsagesbyOffice"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Transformer Overload & Burnt Out Ratio</h5>
+                <canvas id="transformerOperationalAnalysisbyOffice"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Transformer Overload & Burnt by Month</h5>
+                <canvas id="transformerOperationalAnalysisbyMonth"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Land Area by Offices (in Acres)</h5>
+                <canvas id="landAreabyOfficePieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Land Encroachment Ratio</h5>
+                <canvas id="landEncroachmentRatioPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Sub-Stations by Offices</h5>
+                    <canvas id="subStationsbyOfficePieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(insuredNonInsuredAssets.CreateChartCode("insuredNonInsuredAssets"));
+        @Html.Raw(serviceLifeAnalyses.CreateChartCode("serviceLifeAnalyses"));
+        @Html.Raw(operationalNonOperationalTransformer.CreateChartCode("operationalNonOperationalTransformer"));
+        @Html.Raw(landUsagesbyOffice.CreateChartCode("landUsagesbyOffice"));
+        @Html.Raw(transformerOperationalAnalysisbyOffice.CreateChartCode("transformerOperationalAnalysisbyOffice"));
+        @Html.Raw(transformerOperationalAnalysisbyMonth.CreateChartCode("transformerOperationalAnalysisbyMonth"));
+        @Html.Raw(landAreabyOfficePieChart.CreateChartCode("landAreabyOfficePieChart"));
+        @Html.Raw(landEncroachmentRatioPieChart.CreateChartCode("landEncroachmentRatioPieChart"));
+        @Html.Raw(subStationsbyOfficePieChart.CreateChartCode("subStationsbyOfficePieChart"));
+
+    </script>
+}

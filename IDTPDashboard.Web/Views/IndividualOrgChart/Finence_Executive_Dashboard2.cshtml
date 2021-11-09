@@ -1,0 +1,69 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "Finence_Executive_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    Chart FinanceENetMargin = (Chart)ViewData["FinanceENetMargin"];
+    Chart FinanceETotalTax = (Chart)ViewData["FinanceETotalTax"];
+    Chart FinanceEProfitablyRatio = (Chart)ViewData["FinanceEProfitablyRatio"];
+    Chart FinanceECurrentRatio = (Chart)ViewData["FinanceECurrentRatio"];
+    Chart FinanceEQuickRatio = (Chart)ViewData["FinanceEQuickRatio"];
+}
+
+<br />
+<h4 style="text-align:center">Finence Executive Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Net Margin (Last Two FY)</h5>
+                <canvas id="FinanceENetMargin"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Tax (Last Two FY)</h5>
+                <canvas id="FinanceETotalTax"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Profitability Ratio (Last Two FY)</h5>
+                <canvas id="FinanceEProfitablyRatio"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Current Ratio (Last Two FY)</h5>
+                <canvas id="FinanceECurrentRatio"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Quick Ratio (Last Two FY)</h5>
+                <canvas id="FinanceEQuickRatio"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(FinanceENetMargin.CreateChartCode("FinanceENetMargin"));
+        @Html.Raw(FinanceETotalTax.CreateChartCode("FinanceETotalTax"));
+        @Html.Raw(FinanceEProfitablyRatio.CreateChartCode("FinanceEProfitablyRatio"));
+        @Html.Raw(FinanceECurrentRatio.CreateChartCode("FinanceECurrentRatio"));
+        @Html.Raw(FinanceEQuickRatio.CreateChartCode("FinanceEQuickRatio"));
+    </script>
+}
+
+

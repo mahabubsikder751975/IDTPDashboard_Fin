@@ -1,0 +1,60 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "HRManagement_Part2_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    Chart sanctionedPostVacantPost = (Chart)ViewData["sanctionedPostVacantPost"];
+    Chart maleFemaleEmployee = (Chart)ViewData["maleFemaleEmployee"];
+    Chart backgroundWisePost = (Chart)ViewData["backgroundWisePost"];
+    Chart zoneWiseOffice = (Chart)ViewData["zoneWiseOffice"];
+}
+
+<br />
+<h4 style="text-align:center">Human Resource Management Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sanctioned Posts & Vacant Posts</h5>
+                <canvas id="sanctionedPostVacantPost"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Post wise Male & Female</h5>
+                <canvas id="maleFemaleEmployee"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Background wise Post</h5>
+                <canvas id="backgroundWisePost"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Zone wise Offices</h5>
+                <canvas id="zoneWiseOffice"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(sanctionedPostVacantPost.CreateChartCode("sanctionedPostVacantPost"));
+        @Html.Raw(maleFemaleEmployee.CreateChartCode("maleFemaleEmployee"));
+        @Html.Raw(backgroundWisePost.CreateChartCode("backgroundWisePost"));
+        @Html.Raw(zoneWiseOffice.CreateChartCode("zoneWiseOffice"));
+    </script>
+}
+
+
+

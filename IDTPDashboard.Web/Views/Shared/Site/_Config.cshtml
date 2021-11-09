@@ -1,0 +1,9 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<script>
+    const appsetting = {
+        apiurl:@Json.Serialize(@Configuration.GetSection("ApiUrls").GetSection("commonUrl").Value)
+    }
+
+</script>

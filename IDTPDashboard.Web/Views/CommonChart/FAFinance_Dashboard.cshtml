@@ -1,0 +1,113 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "FAFinance_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    Chart MaintenanceCostbyOffice = (Chart)ViewData["MaintenanceCostbyOffice"];
+    Chart AssetAcquisitionOfficeWise = (Chart)ViewData["AssetAcquisitionOfficeWise"];
+    Chart LandValuebyOffice = (Chart)ViewData["LandValuebyOffice"];
+    Chart BookValuevsAccumulatedPrice = (Chart)ViewData["BookValuevsAccumulatedPrice"];
+    Chart AssetDisposedAssetWise = (Chart)ViewData["AssetDisposedAssetWise"];
+    Chart AssetDisposedOfficeWise = (Chart)ViewData["AssetDisposedOfficeWise"];
+    Chart AssetAcquisitionAssetWise = (Chart)ViewData["AssetAcquisitionAssetWise"];
+    Chart MaintenanceCostbyMonth = (Chart)ViewData["MaintenanceCostbyMonth"];
+    Chart BookValuebyAssetType = (Chart)ViewData["BookValuebyAssetType"];
+}
+
+<br />
+<h4 style="text-align:center">Fixed Assets Finance Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Maintenance Cost by Offices (Current FY)</h5>
+                <canvas id="MaintenanceCostbyOffice"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Office wise Asset Acquisition Cost (Current FY)</h5>
+                <canvas id="AssetAcquisitionOfficeWise"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Land Value by Offices</h5>
+                <canvas id="LandValuebyOffice"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Book Value vs Accumulated Price</h5>
+                <canvas id="BookValuevsAccumulatedPrice"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Asset Disposed (Current FY)</h5>
+                <canvas id="AssetDisposedAssetWise"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Office wise Asset Disposed (Current FY)</h5>
+                <canvas id="AssetDisposedOfficeWise"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Asset Acquisition (Current FY)</h5>
+                <canvas id="AssetAcquisitionAssetWise"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Maintenance Cost by Month</h5>
+                    <canvas id="MaintenanceCostbyMonth"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book Value by Asset Type</h5>
+                    <canvas id="BookValuebyAssetType"></canvas>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(MaintenanceCostbyOffice.CreateChartCode("MaintenanceCostbyOffice"));
+        @Html.Raw(AssetAcquisitionOfficeWise.CreateChartCode("AssetAcquisitionOfficeWise"));
+        @Html.Raw(LandValuebyOffice.CreateChartCode("LandValuebyOffice"));
+        @Html.Raw(BookValuevsAccumulatedPrice.CreateChartCode("BookValuevsAccumulatedPrice"));
+        @Html.Raw(AssetDisposedAssetWise.CreateChartCode("AssetDisposedAssetWise"));
+        @Html.Raw(AssetDisposedOfficeWise.CreateChartCode("AssetDisposedOfficeWise"));
+        @Html.Raw(AssetAcquisitionAssetWise.CreateChartCode("AssetAcquisitionAssetWise"));
+        @Html.Raw(MaintenanceCostbyMonth.CreateChartCode("MaintenanceCostbyMonth"));
+        @Html.Raw(BookValuebyAssetType.CreateChartCode("BookValuebyAssetType"));
+    </script>
+}
+
+

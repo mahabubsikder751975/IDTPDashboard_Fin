@@ -1,0 +1,142 @@
+﻿
+@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "HRManagement_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+
+    string monthYear = DateTime.Now.AddMonths(-1).ToString("MMMM yyyy");
+    string LastYear = DateTime.Now.AddYears(-1).ToString("yyyy");
+    string CurrYear = DateTime.Now.ToString("yyyy");
+
+    Chart attendanceInfo = (Chart)ViewData["attendanceInfo"];
+    Chart employeeOnLeave = (Chart)ViewData["employeeOnLeave"];
+    Chart filledPostVacantPosts = (Chart)ViewData["filledPostVacantPosts"];
+    Chart upcommingRetirement = (Chart)ViewData["upcommingRetirement"];
+    Chart employeePerformancePieChart = (Chart)ViewData["employeePerformancePieChart"];
+    Chart employeeJobStatusPieChart = (Chart)ViewData["employeeJobStatusPieChart"];
+    Chart employeeQualifcationPieChart = (Chart)ViewData["employeeQualifcationPieChart"];
+    //Chart retirementvsNewEmployee = (Chart)ViewData["retirementvsNewEmployee"];
+    Chart foreignTourCategoryWisePieChart = (Chart)ViewData["foreignTourCategoryWisePieChart"];
+    Chart foreignTourPurposeWiseOfficialPieChart = (Chart)ViewData["foreignTourPurposeWiseOfficialPieChart"];
+    Chart foreignTourPurposeWisePersonalPieChart = (Chart)ViewData["foreignTourPurposeWisePersonalPieChart"];
+}
+
+<br />
+<h4 style="text-align:center">Human Resource Management Dashboard</h4>
+<h6 style="color: #00008B; text-align: center">Total Number of Employee: @ViewBag.totalemployee</h6>
+
+<div class="row p-4">
+
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employment Status</h5>
+                <canvas id="filledPostVacantPosts"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Upcoming Retirements - next 12 months </h5>
+                <canvas id="upcommingRetirement"></canvas>
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Retirement vs New Employee for Last Year(@LastYear) - Utility wise</h5>
+                    <canvas id="retirementvsNewEmployee"></canvas>
+                </div>
+            </div>
+        </div>*@
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Attendance Info (Today)</h5>
+                <canvas id="attendanceInfo"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employees On Leave (Today)</h5>
+                <canvas id="employeeOnLeave"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee Performance for Last Year(@LastYear)</h5>
+                <canvas id="employeePerformancePieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee Job Status</h5>
+                <canvas id="employeeJobStatusPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee Qualification</h5>
+                <canvas id="employeeQualifcationPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Foreign Tour Category wise</h5>
+                <canvas id="foreignTourCategoryWisePieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Foreign Tour Personal Purpose wise</h5>
+                <canvas id="foreignTourPurposeWisePersonalPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Foreign Tour Official Purpose wise</h5>
+                <canvas id="foreignTourPurposeWiseOfficialPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(attendanceInfo.CreateChartCode("attendanceInfo"));
+        @Html.Raw(employeeOnLeave.CreateChartCode("employeeOnLeave"));
+          @*@Html.Raw(retirementvsNewEmployee.CreateChartCode("retirementvsNewEmployee"));*@
+        @Html.Raw(filledPostVacantPosts.CreateChartCode("filledPostVacantPosts"));
+        @Html.Raw(upcommingRetirement.CreateChartCode("upcommingRetirement"));
+        @Html.Raw(employeePerformancePieChart.CreateChartCode("employeePerformancePieChart"));
+        @Html.Raw(employeeJobStatusPieChart.CreateChartCode("employeeJobStatusPieChart"));
+        @Html.Raw(employeeQualifcationPieChart.CreateChartCode("employeeQualifcationPieChart"));
+        @Html.Raw(foreignTourCategoryWisePieChart.CreateChartCode("foreignTourCategoryWisePieChart"));
+        @Html.Raw(foreignTourPurposeWiseOfficialPieChart.CreateChartCode("foreignTourPurposeWiseOfficialPieChart"));
+        @Html.Raw(foreignTourPurposeWisePersonalPieChart.CreateChartCode("foreignTourPurposeWisePersonalPieChart"));
+    </script>
+}
+

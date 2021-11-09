@@ -1,0 +1,48 @@
+﻿@using System.Security.Claims;
+@{ 
+    var OrgName = Context.User.FindFirstValue("Organization");
+    if (OrgName == "IDTP")
+    {
+        OrgName = "Bangladesh Bank";
+    }
+
+}
+<nav class="navbar navbar-expand-lg fixed-top background-color:#1779ba;" style="background-color: #1A6BA0;padding-top:5px !important;padding-bottom:5px !important" id="mainNav">
+    <div class="row" style="width:100%">
+        <div class="col-md-2" style="margin-top:4px">
+            @if (Context.User.FindFirstValue("Organization") == "IDTP")
+            {
+                <a class="form-inline btn btn-link" asp-controller="IDTPChart" asp-action="IDTPDashboard1" style="color:white">
+                    <b> <i class="fas fa-home"></i> Home</b>
+                </a>
+            }
+            else
+            {
+                <a class="form-inline btn btn-link" asp-controller="Dashboard" asp-action="Index" style="color:white">
+                    <b> <i class="fas fa-home"></i> Home</b>
+                </a>
+            }
+
+        </div>
+        
+        <div class="col-md-7" style="text-align:center">            
+            <img src="~/logo//1200px-Government_Seal_of_Bangladesh.svg.png" alt="Italian Trulli" style="width:60px;height:60px;">
+            <a class="navbar-brand js-scroll-trigger text-uppercase" href="#" style="font-size:1.30em !important">&nbsp;&nbsp; @OrgName IDTP Executive Dashboard</a>
+            <button class="navbar-toggler" style="float:left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="col-md-3">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="form-inline" style="float:right;margin-top:13px">
+                    <a style="color:white">Hi @User.Identity.Name!</a>&nbsp;&nbsp;&nbsp;
+                    <a asp-controller="Account" asp-action="Logout" style="color:white"><b> <i class="fas fa-sign-out-alt"></i>Logout</b></a>
+                </div>
+
+            }
+        </div>
+    </div>
+
+</nav>

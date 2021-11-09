@@ -1,0 +1,113 @@
+﻿@model IEnumerable<IDTPDashboard.DomainModel.Entity.GraphSetup>
+@{
+    ViewData["Title"] = "Graph List";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+}
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <h5>Graph List</h5>
+    </div>
+    <div class="col-md-6 mb-4">
+        <a class="btn btn-success float-right mb-2" asp-controller="Graph" asp-action="Create"><i class="fas fa-plus"></i> <b>Create new graph</b></a>
+    </div>
+</div>
+<div class="container mt-1">
+    <table class="table table-bordered nt-3">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Graph name
+                </th>
+                <th>
+                    Chart Type
+                </th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var b in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => b.GraphName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.ChartType)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-light float-right" data-toggle="modal" data-target="#myModal" onclick="showGraph(@b.Id)">
+                        <i class="bi bi-bar-chart"></i> Show Chart
+                    </button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content ">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Chart Detail</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                @*<h5 class="card-title">Employment Status</h5>*@
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+<script>
+    var graphList =@Html.Raw(Json.Serialize(@Model));
+    var chart;
+    function showGraph(id) {        
+        var graph = graphList.filter(g => g.id == id);
+        var xValues = graph[0].graphDataList.map(p => p.particularName);
+        var yValues = graph[0].graphDataList.map(p => p.particularValue);
+        //console.log(graph);
+        //var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        //var yValues = [55, 49, 44, 24, 15];
+        var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+        var chartType = graph[0].chartType;
+         chart=new Chart("myChart", {
+            type: chartType,
+            data: {
+                labels: xValues,
+                datasets: [{
+                    //label:'Emplo',
+                    backgroundColor: '#01B8AA',
+                    data: yValues
+                }]
+            },
+            options: {
+                plugins: {
+                    labels: false,
+                },
+                legend: { display: true },
+                title: {
+                    display: true,
+                    text: graph[0].graphName
+                }
+            }
+        });
+    }
+    $('#myModal').on('hidden.bs.modal', function (e) {
+        // do something
+        chart.destroy();
+    })
+</script>

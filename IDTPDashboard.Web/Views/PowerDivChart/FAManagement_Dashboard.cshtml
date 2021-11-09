@@ -1,0 +1,546 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "FAManagement_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    //Chart insuredNonInsuredAssets = (Chart)ViewData["insuredNonInsuredAssets"];
+    //Chart serviceLifeAnalyses = (Chart)ViewData["serviceLifeAnalyses"];
+    //Chart operationalNonOperationalTransformer = (Chart)ViewData["operationalNonOperationalTransformer"];
+    //Chart landUsagesbyOffice = (Chart)ViewData["landUsagesbyOffice"];
+    //Chart utilitywiseTotalLand = (Chart)ViewData["utilitywiseTotalLand"];
+    //Chart totalLandbyUsages = (Chart)ViewData["totalLandbyUsages"];
+    //Chart utilitywiseTotalBuilding = (Chart)ViewData["utilitywiseTotalBuilding"];
+    //Chart utilitywiseTotalNumberofPowerPlant = (Chart)ViewData["utilitywiseTotalNumberofPowerPlant"];
+    Chart utilitywiseTotalNumberofPowerPlantinOperation = (Chart)ViewData["utilitywiseTotalNumberofPowerPlantinOperation"];
+    Chart utilitywiseTotalNumberofPowerPlantUnderMaintenance = (Chart)ViewData["utilitywiseTotalNumberofPowerPlantUnderMaintenance"];
+    Chart utilitywiseTotalInstalledCapacityofPowerPlant = (Chart)ViewData["utilitywiseTotalInstalledCapacityofPowerPlant"];
+    Chart utilitywiseTotalInstalledCapacityofPowerPlantinOperation = (Chart)ViewData["utilitywiseTotalInstalledCapacityofPowerPlantinOperation"];
+    Chart utilitywiseTotalInstalledCapacityofPowerPlantUnderMaintenance = (Chart)ViewData["utilitywiseTotalInstalledCapacityofPowerPlantUnderMaintenance"];
+
+    //Chart transformerOperationalAnalysisbyOffice = (Chart)ViewData["transformerOperationalAnalysisbyOffice"];
+    //Chart transformerOperationalAnalysisbyMonth = (Chart)ViewData["transformerOperationalAnalysisbyMonth"];
+    //Chart landAreabyOfficePieChart = (Chart)ViewData["landAreabyOfficePieChart"];
+    //Chart landEncroachmentRatioPieChart = (Chart)ViewData["landEncroachmentRatioPieChart"];
+    //Chart subStationsbyOfficePieChart = (Chart)ViewData["subStationsbyOfficePieChart"];
+    Chart fuelWisePowerPlant = (Chart)ViewData["fuelWisePowerPlant"];
+    Chart pPTypeWisePowerPlant = (Chart)ViewData["pPTypeWisePowerPlant"];
+
+    //FAF
+    //Chart MaintenanceCostbyOffice = (Chart)ViewData["MaintenanceCostbyOffice"];
+    //Chart AssetAcquisitionOfficeWise = (Chart)ViewData["AssetAcquisitionOfficeWise"];
+    //Chart LandValuebyOffice = (Chart)ViewData["LandValuebyOffice"];
+    //Chart BookValuevsAccumulatedPrice = (Chart)ViewData["BookValuevsAccumulatedPrice"];
+    //Chart AssetDisposedAssetWise = (Chart)ViewData["AssetDisposedAssetWise"];
+    //Chart AssetDisposedOfficeWise = (Chart)ViewData["AssetDisposedOfficeWise"];
+    //Chart AssetAcquisitionAssetWise = (Chart)ViewData["AssetAcquisitionAssetWise"];
+    //Chart MaintenanceCostbyMonth = (Chart)ViewData["MaintenanceCostbyMonth"];
+    //Chart BookValuebyAssetType = (Chart)ViewData["BookValuebyAssetType"];
+    Chart AcquisitionVsBookValue = (Chart)ViewData["AcquisitionVsBookValue"];
+}
+
+<br />
+<h4 style="text-align:center">Fixed Assets Dashboard</h4>
+<h6 style="color: #00008B; text-align: center ">Total Land (acre): @ViewBag.totalLand</h6>
+<h6 style="color: #00008B; text-align: center ">Total Number of Power Plant/Unit: @ViewBag.totalPowerPlant</h6>
+<h6 style="color: #00008B; text-align: center ">Total Installed Capacity (MW): @ViewBag.totalCapacity</h6>
+<h6 style="color: #00008B; text-align: center ">Total Number of Distribution Sub Stations: @ViewBag.totalDistributionSS</h6>
+<div class="row p-4">
+
+    <div class="col-md-6 p-1">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 id="chartTitle1" class="card-title">Total Land (acre)</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <button id="btnBack1" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain1()">
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                <canvas id="utilitywiseTotalLand"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 id="chartTitle2" class="card-title">Total Land by Usages</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <button id="btnBack2" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain2()">
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                <canvas id="totalLandbyUsages"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 id="chartTitle3" class="card-title">Total Number of Power Plant</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <button id="btnBack3" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain3()">
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                <canvas id="utilitywiseTotalNumberofPowerPlant"></canvas>
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Number of Power Plant</h5>
+                <canvas id="utilitywiseTotalNumberofPowerPlant"></canvas>
+            </div>
+        </div>
+    </div>*@
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Installed Capacity (MW)</h5>
+                <canvas id="utilitywiseTotalInstalledCapacityofPowerPlant"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Number of Power Plant in Operation</h5>
+                <canvas id="utilitywiseTotalNumberofPowerPlantinOperation"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Power Plants in Operation by Installed Capacity</h5>
+                <canvas id="utilitywiseTotalInstalledCapacityofPowerPlantinOperation"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Number of Power Plant under Maintenance</h5>
+                <canvas id="utilitywiseTotalNumberofPowerPlantUnderMaintenance"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Installed Capacity of Power Plants Under Maintenance</h5>
+                <canvas id="utilitywiseTotalInstalledCapacityofPowerPlantUnderMaintenance"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align:center;">Acquisition Cost & Book Value</h5>
+                <canvas style="height:10px;" id="AcquisitionVsBookValue" width="600px"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Fuel wise Power Plant</h5>
+                <canvas id="fuelWisePowerPlant"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Type wise Power Plant</h5>
+                <canvas style="height:10px;" width="640px" id="pPTypeWisePowerPlant"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @*@Html.Raw(insuredNonInsuredAssets.CreateChartCode("insuredNonInsuredAssets"));
+        @Html.Raw(serviceLifeAnalyses.CreateChartCode("serviceLifeAnalyses"));
+        @Html.Raw(operationalNonOperationalTransformer.CreateChartCode("operationalNonOperationalTransformer"));*@
+        @*@Html.Raw(landUsagesbyOffice.CreateChartCode("landUsagesbyOffice"));*@
+        @*@Html.Raw(utilitywiseTotalLand.CreateChartCode("utilitywiseTotalLand"));*@
+        @*@Html.Raw(totalLandbyUsages.CreateChartCode("totalLandbyUsages"));*@
+        @*@Html.Raw(utilitywiseTotalBuilding.CreateChartCode("utilitywiseTotalBuilding"));*@
+        @*@Html.Raw(utilitywiseTotalNumberofPowerPlant.CreateChartCode("utilitywiseTotalNumberofPowerPlant"));*@
+        @Html.Raw(utilitywiseTotalNumberofPowerPlantinOperation.CreateChartCode("utilitywiseTotalNumberofPowerPlantinOperation"));
+        @Html.Raw(utilitywiseTotalNumberofPowerPlantUnderMaintenance.CreateChartCode("utilitywiseTotalNumberofPowerPlantUnderMaintenance"));
+        @Html.Raw(utilitywiseTotalInstalledCapacityofPowerPlant.CreateChartCode("utilitywiseTotalInstalledCapacityofPowerPlant"));
+        @Html.Raw(utilitywiseTotalInstalledCapacityofPowerPlantinOperation.CreateChartCode("utilitywiseTotalInstalledCapacityofPowerPlantinOperation"));
+        @Html.Raw(utilitywiseTotalInstalledCapacityofPowerPlantUnderMaintenance.CreateChartCode("utilitywiseTotalInstalledCapacityofPowerPlantUnderMaintenance"));
+        @*@Html.Raw(transformerOperationalAnalysisbyOffice.CreateChartCode("transformerOperationalAnalysisbyOffice"));
+        @Html.Raw(transformerOperationalAnalysisbyMonth.CreateChartCode("transformerOperationalAnalysisbyMonth"));
+        @Html.Raw(landAreabyOfficePieChart.CreateChartCode("landAreabyOfficePieChart"));*@
+        @*@Html.Raw(landEncroachmentRatioPieChart.CreateChartCode("landEncroachmentRatioPieChart"));*@
+        @*@Html.Raw(subStationsbyOfficePieChart.CreateChartCode("subStationsbyOfficePieChart"));*@
+        @Html.Raw(fuelWisePowerPlant.CreateChartCode("fuelWisePowerPlant"));
+        @Html.Raw(pPTypeWisePowerPlant.CreateChartCode("pPTypeWisePowerPlant"));
+
+        @*@Html.Raw(MaintenanceCostbyOffice.CreateChartCode("MaintenanceCostbyOffice"));
+        @Html.Raw(AssetAcquisitionOfficeWise.CreateChartCode("AssetAcquisitionOfficeWise"));
+        @Html.Raw(LandValuebyOffice.CreateChartCode("LandValuebyOffice"));
+        @Html.Raw(BookValuevsAccumulatedPrice.CreateChartCode("BookValuevsAccumulatedPrice"));
+        @Html.Raw(AssetDisposedAssetWise.CreateChartCode("AssetDisposedAssetWise"));
+        @Html.Raw(AssetDisposedOfficeWise.CreateChartCode("AssetDisposedOfficeWise"));
+        @Html.Raw(AssetAcquisitionAssetWise.CreateChartCode("AssetAcquisitionAssetWise"));
+        @Html.Raw(MaintenanceCostbyMonth.CreateChartCode("MaintenanceCostbyMonth"));
+        @Html.Raw(BookValuebyAssetType.CreateChartCode("BookValuebyAssetType"));*@
+        @Html.Raw(AcquisitionVsBookValue.CreateChartCode("AcquisitionVsBookValue"));
+
+    </script>
+
+    <script type="text/javascript">
+        var chart1;
+        //Load Document
+        $(document).ready(function () {
+            //utilitywiseTotalLand
+             //Graph 01 level 01 data loading
+            loadutilitywiseTotalLandChart();
+
+
+        });
+
+        function loadMain1() {
+            if ($('#utilitywiseTotalLand').css('display') == 'none' || $('#utilitywiseTotalLand').css("visibility") == "hidden") {
+                $('#utilitywiseTotalLand').show();
+
+            }
+            else {
+                chart1.destroy();
+                $('#chartTitle1').text('Total Land (acre)');
+                $('#btnBack1').hide();
+                loadutilitywiseTotalLandChart();
+                //$('#searchBox1').hide();
+
+            }
+
+        }
+        function loadutilitywiseTotalLandChart() {
+            var utilitywiseTotalLand =@Html.Raw(Json.Serialize(@ViewBag.utilitywiseTotalLand));
+            var canvas = document.getElementById("utilitywiseTotalLand");
+            var ctx = canvas.getContext("2d");
+            var xValues = utilitywiseTotalLand.map(o => o.organization);
+            var yValues = utilitywiseTotalLand.map(v => v.totalArea);
+
+            //var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Land Area',
+                backgroundColor: "#01B8AA",
+                data: yValues
+            };
+
+            var chartData1 = chartHelper.data(xValues, dataSet);
+            chart1 = new Chart(ctx, chartHelper.config('bar',chartData1));
+            canvas.onclick = function (evt) {
+                var activePoints1 = chart1.getElementsAtEvent(evt);
+                console.log(canvas.onclick);
+                if (activePoints1[0]) {
+                    var chartData1 = activePoints1[0]['_chart'].config.data;
+                    var idx = activePoints1[0]['_index'];
+
+                    var label = chartData1.labels[idx];
+                    var value = chartData1.datasets[0].label[idx];
+
+                    //var url = "http://example.com/?label=" + label + "&value=" + value;
+                    //console.log(url);
+                    //alert(url);
+                    chart1.destroy();
+                    //loadEmployeeJobStatus(label);
+                    UtilitywiseTotalLandChart(label);
+                }
+
+            };
+        }
+        //Graph 01 level 02 data pulling
+        function UtilitywiseTotalLandChart(org) {
+            $('#btnBack1').show();
+            $('#chartTitle1').text(org + ' - Total Land by Usages ');
+
+            fetch('@Url.Content("~/")' +'PowerDivChart/GetUsagesWiseLandByOrgData?org=' + org)
+                .then(response => response.json())
+                .then(data => loadUtilitywiseTotalLandChart(data))
+                .catch(error => console.error('Unable to get items.', error));
+        }
+
+        //Graph 01 level 02 data loading
+        function loadUtilitywiseTotalLandChart(utilitywiseTotalLand) {
+
+            var canvas = document.getElementById("utilitywiseTotalLand");
+            var ctx = canvas.getContext("2d");
+            var xValues = utilitywiseTotalLand.map(o => o.usages);
+            var yValues = utilitywiseTotalLand.map(v => v.totalArea);
+            //var dsColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Land Area',
+                backgroundColor: "#FE9666",
+                data: yValues
+            };
+
+            var chartData1 = chartHelper.data(xValues, dataSet);
+            chart1 = new Chart(ctx, chartHelper.config('bar', chartData1));
+            canvas.onclick = function (evt) {
+                var activePoints1 = chart1.getElementsAtEvent(evt);
+                if (activePoints1[0]) {
+                    var chartData1 = activePoints1[0]['_chart'].config.data;
+                    var idx = activePoints1[0]['_index'];
+
+                    var label = chartData1.labels[idx];
+                    var value = chartData1.datasets[0].data[idx];
+
+                    //var url = "http://example.com/?label=" + label + "&value=" + value;
+                    //console.log(url);
+                    //alert(url);
+                    //loadChildGraph(label);
+                    //$('#searchBox3').show();
+                    //$('#upcommingRetirement').hide();
+                    //$('#Level3RetirementEmployeeList').show();
+                }
+            };
+        }
+
+
+    </script>
+
+    <script type="text/javascript">
+        var chart2;
+        //Load Document
+        $(document).ready(function () {
+            //totalLandbyUsages
+             //Graph 02 level 01 data loading
+            loadtotalLandbyUsagesChart();
+
+
+        });
+
+        function loadMain2() {
+            if ($('#totalLandbyUsages').css('display') == 'none' || $('#totalLandbyUsages').css("visibility") == "hidden") {
+                $('#totalLandbyUsages').show();
+
+            }
+            else {
+                chart2.destroy();
+                $('#chartTitle2').text('Total Land by Usages');
+                $('#btnBack2').hide();
+                loadtotalLandbyUsagesChart();
+                //$('#searchBox1').hide();
+
+            }
+
+        }
+        function loadtotalLandbyUsagesChart() {
+            var totalLandbyUsages =@Html.Raw(Json.Serialize(@ViewBag.totalLandbyUsages));
+            var canvas = document.getElementById("totalLandbyUsages");
+            var ctx = canvas.getContext("2d");
+            var xValues = totalLandbyUsages.map(o => o.usages);
+            var yValues = totalLandbyUsages.map(v => v.totalArea);
+
+            //var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Land Area',
+                backgroundColor: "#01B8AA",
+                data: yValues
+            };
+
+            var chartData2 = chartHelper.data(xValues, dataSet);
+            chart2 = new Chart(ctx, chartHelper.config('bar',chartData2));
+            canvas.onclick = function (evt) {
+                var activePoints2 = chart2.getElementsAtEvent(evt);
+                console.log(canvas.onclick);
+                if (activePoints2[0]) {
+                    var chartData2 = activePoints2[0]['_chart'].config.data;
+                    var idx = activePoints2[0]['_index'];
+
+                    var label = chartData2.labels[idx];
+                    var value = chartData2.datasets[0].label[idx];
+
+                    //var url = "http://example.com/?label=" + label + "&value=" + value;
+                    //console.log(url);
+                    //alert(url);
+                    chart2.destroy();
+                    TotalLandbyUsagesChart(label);
+                }
+
+            };
+        }
+        //Graph 02 level 02 data pulling
+        function TotalLandbyUsagesChart(usases) {
+            $('#btnBack2').show();
+            $('#chartTitle2').text(usases + ' - Usages in Land(Acre) ');
+
+            fetch('@Url.Content("~/")' + 'PowerDivChart/GetOrgWiseLandByUsagesData?usages=' + usases)
+                .then(response => response.json())
+                .then(data => loadTotalLandbyUsagesChart(data))
+                .catch(error => console.error('Unable to get items.', error));
+        }
+
+        //Graph 02 level 02 data loading
+        function loadTotalLandbyUsagesChart(totalLandbyUsages) {
+
+            var canvas = document.getElementById("totalLandbyUsages");
+            var ctx = canvas.getContext("2d");
+            var xValues = totalLandbyUsages.map(o => o.organization);
+            var yValues = totalLandbyUsages.map(v => v.totalArea);
+            //var dsColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Land Area',
+                backgroundColor: "#FE9666",
+                data: yValues
+            };
+
+            var chartData2 = chartHelper.data(xValues, dataSet);
+            chart2 = new Chart(ctx, chartHelper.config('bar', chartData2));
+            canvas.onclick = function (evt) {
+                var activePoints2 = chart2.getElementsAtEvent(evt);
+                if (activePoints2[0]) {
+                    var chartData2 = activePoints2[0]['_chart'].config.data;
+                    var idx = activePoints2[0]['_index'];
+
+                    var label = chartData2.labels[idx];
+                    var value = chartData2.datasets[0].data[idx];
+
+                    //var url = "http://example.com/?label=" + label + "&value=" + value;
+                    //console.log(url);
+                    //alert(url);
+                    //loadChildGraph(label);
+                    //$('#searchBox3').show();
+                    //$('#upcommingRetirement').hide();
+                    //$('#Level3RetirementEmployeeList').show();
+                }
+            };
+        }
+
+
+    </script>
+
+    <script type="text/javascript">
+        var chart3;
+        //Load Document
+        $(document).ready(function () {
+            //totalLandbyUsages
+             //Graph 03 level 01 data loading
+            loadutilitywiseTotalNumberofPowerPlantChart();
+
+
+        });
+
+        function loadMain3() {
+            if ($('#utilitywiseTotalNumberofPowerPlant').css('display') == 'none' || $('#utilitywiseTotalNumberofPowerPlant').css("visibility") == "hidden") {
+                $('#utilitywiseTotalNumberofPowerPlant').show();
+
+            }
+            else {
+                chart3.destroy();
+                $('#chartTitle3').text('Total Land by Usages');
+                $('#btnBack3').hide();
+                loadutilitywiseTotalNumberofPowerPlantChart();
+                //$('#searchBox1').hide();
+
+            }
+
+        }
+        function loadutilitywiseTotalNumberofPowerPlantChart() {
+            var utilitywiseTotalNumberofPowerPlant =@Html.Raw(Json.Serialize(@ViewBag.utilitywiseTotalNumberofPowerPlant));
+            var canvas = document.getElementById("utilitywiseTotalNumberofPowerPlant");
+            var ctx = canvas.getContext("2d");
+            var xValues = utilitywiseTotalNumberofPowerPlant.map(o => o.organization);
+            var yValues = utilitywiseTotalNumberofPowerPlant.map(v => v.totalPowerPlant);
+
+            //var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Power Plant',
+                backgroundColor: "#01B8AA",
+                data: yValues
+            };
+
+            var chartData3 = chartHelper.data(xValues, dataSet);
+            chart3 = new Chart(ctx, chartHelper.config('bar',chartData3));
+            canvas.onclick = function (evt) {
+                var activePoints3 = chart3.getElementsAtEvent(evt);
+                console.log(canvas.onclick);
+                if (activePoints3[0]) {
+                    var chartData3 = activePoints3[0]['_chart'].config.data;
+                    var idx = activePoints3[0]['_index'];
+
+                    var label = chartData3.labels[idx];
+                    var value = chartData3.datasets[0].label[idx];
+
+                    //var url = "http://example.com/?label=" + label + "&value=" + value;
+                    //console.log(url);
+                    //alert(url);
+                    chart3.destroy();
+                    UtilitywiseTotalNumberofPowerPlantChart(label);
+                }
+
+            };
+        }
+        //Graph 03 level 02 data pulling
+        function UtilitywiseTotalNumberofPowerPlantChart(org) {
+            $('#btnBack3').show();
+            $('#chartTitle3').text(org + ' - Fuel Type wise Power Plant ');
+
+            fetch('@Url.Content("~/")' + 'PowerDivChart/GetFuleWiswPPByOrgData?usages=' + org)
+                .then(response => response.json())
+                .then(data => loadUtilitywiseTotalNumberofPowerPlantChart(data))
+                .catch(error => console.error('Unable to get items.', error));
+        }
+
+        //Graph 03 level 02 data loading
+        function loadUtilitywiseTotalNumberofPowerPlantChart(utilitywiseTotalNumberofPowerPlant) {
+
+            var canvas = document.getElementById("utilitywiseTotalNumberofPowerPlant");
+            var ctx = canvas.getContext("2d");
+            var xValues = utilitywiseTotalNumberofPowerPlant.map(o => o.fuelType);
+            var yValues = utilitywiseTotalNumberofPowerPlant.map(v => v.totalPowerPlant);
+            var dsColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Power Plant',
+                backgroundColor: dsColors,
+                data: yValues
+            };
+
+            var chartData3 = chartHelper.data(xValues, dataSet);
+            chart3 = new Chart(ctx, chartHelper.config('pie', chartData3));
+            canvas.onclick = function (evt) {
+                var activePoints3 = chart3.getElementsAtEvent(evt);
+                if (activePoints3[0]) {
+                    var chartData3 = activePoints3[0]['_chart'].config.data;
+                    var idx = activePoints3[0]['_index'];
+
+                    var label = chartData3.labels[idx];
+                    var value = chartData3.datasets[0].data[idx];
+
+                    //var url = "http://example.com/?label=" + label + "&value=" + value;
+                    //console.log(url);
+                    //alert(url);
+                    //loadChildGraph(label);
+                    //$('#searchBox3').show();
+                    //$('#upcommingRetirement').hide();
+                    //$('#Level3RetirementEmployeeList').show();
+                }
+            };
+        }
+
+
+    </script>
+}

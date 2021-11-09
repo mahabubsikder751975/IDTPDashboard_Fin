@@ -1,0 +1,149 @@
+﻿@model IEnumerable<IDTPDashboard.DomainModel.Entity.Menu_Entity>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    static string GetCurrFinancialYear()
+    {
+        int CurrentYear = (DateTime.Now.Year);
+        int PreviousYear = (DateTime.Now.Year - 1);
+        int NextYear = (DateTime.Now.Year +1);
+        string PreYear = PreviousYear.ToString();
+        string NexYear = NextYear.ToString();
+        string CurYear = CurrentYear.ToString();
+        string FinYear = string.Empty;
+        if (DateTime.Now.Month > 7)
+        {
+            FinYear = CurYear + "-" + NexYear;
+        }
+        else
+        {
+            FinYear = PreYear + "-" + CurYear;
+        }
+        return FinYear;
+    }
+}
+@using ChartJSCore.Models;
+@{
+    //Chart UtilityWiseTurnover = (Chart)ViewData["UtilityWiseTurnover"];
+    //Chart totalEmployeeUtilityWise = (Chart)ViewData["totalEmployeeUtilityWise"];
+    //Chart TotalPowerPlants = (Chart)ViewData["TotalPowerPlants"];
+    //Chart TotalInstalledCapacityMW = (Chart)ViewData["TotalInstalledCapacityMW"];
+    //Chart procurementValuebyOffice = (Chart)ViewData["procurementValuebyOffice"];
+    //Chart TotalEmployeeByStatus = (Chart)ViewData["TotalEmployeeByStatus"];
+    //Chart FinancialPosition = (Chart)ViewData["FinancialPosition"];
+    //Chart APPUtilizedUnutilized = (Chart)ViewData["APPUtilizedUnutilized"];
+    //Chart fuelWisePowerPlant = (Chart)ViewData["fuelWisePowerPlant"];
+    //Chart AccReceivableAndPayable = (Chart)ViewData["AccReceivableAndPayable"];
+}
+<div class="container mt-3">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <a class="btn btn-primary btn-lg btn-block"  asp-controller="@item.Controller" asp-action="@item.Action">@item.MenuName</a>
+            </div>
+        }
+    </div>
+</div>
+<div class="container mt-3">
+</div>
+<h4 style="text-align: center; background-color: #1A6BA0; color: white; padding: 8px; ">@ViewBag.OrgName at a glance</h4>
+<div class="row p-2">
+    <div class="col-md-4 p-1">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td colspan="2" style="background-color: #1A6BA0; color: white; text-align: center; border-color: #1A6BA0;"><h6><b>General Information(As On 02-Sep-21)</b></h6></td>
+                </tr>
+                @foreach (var items in ViewBag.particulars)
+                {
+                    <tr>
+                        <td style="background-color: #98AFC7;"><b>@items.ParticularName</b></td>
+                        <td style="background-color: #ADD8E6;"><b>@items.CurrentStatus</b></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4 p-1">
+        @*<div class="card container mt-2">
+            <div class="card-body">
+                <h5 class="card-title">Total Employee by Utility</h5>
+                <canvas id="totalEmployeeUtilityWise"></canvas>
+            </div>
+        </div>
+        <div class="card container mt-2">
+            <div class="card-body">
+                <h5 class="card-title">Total Power Plants</h5>
+                <canvas id="TotalPowerPlants"></canvas>
+            </div>
+        </div>*@
+        <!--<div class="card container" >
+            <div class="card-body">
+                <h6 class="card-title">Employment Status</h6>
+                <canvas id="TotalEmployeeByStatus"></canvas>
+            </div>
+        </div>
+        <div class="card container mt-2">
+            <div class="card-body">
+                <h6 class="card-title">Total Installed Capacity (MW)</h6>
+                <canvas id="TotalInstalledCapacityMW"></canvas>
+            </div>
+        </div>
+        <div class="card container mt-2">
+            <div class="card-body" >
+                <h6 class="card-title">Accounts Receivable vs Payables (@GetCurrFinancialYear())</h6>
+                <canvas id="AccReceivableAndPayable"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">-->
+        @*<div class="card container mt-2">
+            <div class="card-body">
+                <h5 class="card-title">Total Procurement Value</h5>
+                <canvas id="procurementValuebyOffice"></canvas>
+            </div>
+        </div>
+
+        <div class="card container mt-2">
+            <div class="card-body">
+                <h5 class="card-title">Turnover (Last Fiscal year)</h5>
+                <canvas id="UtilityWiseTurnover"></canvas>
+            </div>
+        </div>*@
+        <!--<div class="card container" >
+        <div class="card-body">
+            <h6 class="card-title">APP Utilization (@GetCurrFinancialYear()) in Crore Tk</h6>
+            <canvas id="APPUtilizedUnutilized"></canvas>
+        </div>
+    </div>
+    <div class="card container mt-2" >
+        <div class="card-body">
+            <h6 class="card-title">Fuel Type wise Power Plant</h6>
+            <canvas id="TotalPowerPlants"></canvas>
+        </div>
+    </div>
+
+    <div class="card container mt-2" >
+        <div class="card-body">
+            <h6 class="card-title">Financial Position (@GetCurrFinancialYear())</h6>
+            <canvas id="FinancialPosition"></canvas>
+        </div>
+    </div>-->
+    </div>
+
+</div>
+@section Scripts {
+    <script type="text/javascript">
+         @*@Html.Raw(totalEmployeeUtilityWise.CreateChartCode("totalEmployeeUtilityWise"));
+         @Html.Raw(UtilityWiseTurnover.CreateChartCode("UtilityWiseTurnover"));*@
+         @*@Html.Raw(TotalPowerPlants.CreateChartCode("TotalPowerPlants"));
+         @Html.Raw(TotalInstalledCapacityMW.CreateChartCode("TotalInstalledCapacityMW"));
+         @Html.Raw(TotalEmployeeByStatus.CreateChartCode("TotalEmployeeByStatus"));
+         @Html.Raw(FinancialPosition.CreateChartCode("FinancialPosition"));
+         @Html.Raw(APPUtilizedUnutilized.CreateChartCode("APPUtilizedUnutilized"));*@
+         @*@Html.Raw(fuelWisePowerPlant.CreateChartCode("fuelWisePowerPlant"));*@
+         @*@Html.Raw(AccReceivableAndPayable.CreateChartCode("AccReceivableAndPayable"));*@
+         @*@Html.Raw(procurementValuebyOffice.CreateChartCode("procurementValuebyOffice"));*@
+    </script>
+}

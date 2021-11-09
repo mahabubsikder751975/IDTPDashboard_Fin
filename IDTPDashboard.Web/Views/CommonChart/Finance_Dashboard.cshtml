@@ -1,0 +1,92 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "Finance_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    Chart RevenueVsExpense = (Chart)ViewData["RevenueVsExpense"];
+    Chart NetProfitVsGrossRevenue = (Chart)ViewData["NetProfitVsGrossRevenue"];
+    Chart AccountReceivableVsCashflow = (Chart)ViewData["AccountReceivableVsCashflow"];
+    Chart CapitalExpenditureVsOperationalExpenses = (Chart)ViewData["CapitalExpenditureVsOperationalExpenses"];
+    Chart AccountsPayable = (Chart)ViewData["AccountsPayable"];
+    Chart AccountsReceivable = (Chart)ViewData["AccountsReceivable"];
+    Chart YearlyTurnOver = (Chart)ViewData["YearlyTurnOver"];
+}
+
+<br />
+<h4 style="text-align:center">Finance Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Revenue vs Expense (Current FY)</h5>
+                <canvas id="RevenueVsExpense"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Net Profit vs Gross Revenue (Current FY)</h5>
+                <canvas id="NetProfitVsGrossRevenue"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Account Receivable vs Cashflow (Current FY)</h5>
+                <canvas id="AccountReceivableVsCashflow"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Capital Expenditure vs Operational Expenses</h5>
+                <canvas id="CapitalExpenditureVsOperationalExpenses"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Accounts Payable</h5>
+                <canvas id="AccountsPayable"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Accounts Receivable</h5>
+                <canvas id="AccountsReceivable"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Turnover (Last Year)</h5>
+                <canvas id="YearlyTurnOver"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+         @Html.Raw(RevenueVsExpense.CreateChartCode("RevenueVsExpense"));
+         @Html.Raw(NetProfitVsGrossRevenue.CreateChartCode("NetProfitVsGrossRevenue"));
+         @Html.Raw(AccountReceivableVsCashflow.CreateChartCode("AccountReceivableVsCashflow"));
+         @Html.Raw(CapitalExpenditureVsOperationalExpenses.CreateChartCode("CapitalExpenditureVsOperationalExpenses"));
+         @Html.Raw(AccountsPayable.CreateChartCode("AccountsPayable"));
+         @Html.Raw(AccountsReceivable.CreateChartCode("AccountsReceivable"));
+         @Html.Raw(YearlyTurnOver.CreateChartCode("YearlyTurnOver"));
+    </script>
+}
+

@@ -1,0 +1,234 @@
+﻿
+@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "HRManagement_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+
+    string monthYear = DateTime.Now.AddMonths(-1).ToString("MMMM yyyy");
+    string LastYear = DateTime.Now.AddYears(-1).ToString("yyyy");
+    string CurrYear = DateTime.Now.ToString("yyyy");
+
+
+    Chart filledPostVacantPosts = (Chart)ViewData["filledPostVacantPosts"];
+    Chart employeeJobStatusPieChart = (Chart)ViewData["employeeJobStatusPieChart"];
+    Chart employeeQualifcationPieChart = (Chart)ViewData["employeeQualifcationPieChart"];
+    Chart retirementvsNewEmployee = (Chart)ViewData["retirementvsNewEmployee"];
+    Chart foreignTourCategoryWisePieChart = (Chart)ViewData["foreignTourCategoryWisePieChart"];
+    Chart foreignTourPurposeWiseOfficialPieChart = (Chart)ViewData["foreignTourPurposeWiseOfficialPieChart"];
+    Chart foreignTourPurposeWisePersonalPieChart = (Chart)ViewData["foreignTourPurposeWisePersonalPieChart"];
+    Chart upcommingRetirement = (Chart)ViewData["upcommingRetirement"];
+
+    //HRE
+    Chart EmployeeAgeRange = (Chart)ViewData["EmployeeAgeRange"];
+    Chart YearlyTurnover = (Chart)ViewData["YearlyTurnover"];
+    Chart YearlyRecruitment = (Chart)ViewData["YearlyRecruitment"];
+    Chart YearlyTermination = (Chart)ViewData["YearlyTermination"];
+    Chart YearlyPromotion = (Chart)ViewData["YearlyPromotion"];
+    Chart EmployeebyCategory = (Chart)ViewData["EmployeebyCategory"];
+    Chart MaleFemaleRatioBoth = (Chart)ViewData["MaleFemaleRatioBoth"];
+    Chart MaleFemaleRatioOfficer = (Chart)ViewData["MaleFemaleRatioOfficer"];
+    Chart MaleFemaleRatioStaff = (Chart)ViewData["MaleFemaleRatioStaff"];
+
+    //HRF
+    Chart netSalaryByMonth = (Chart)ViewData["netSalaryByMonth"];
+    Chart salaryByOffices = (Chart)ViewData["salaryByOffices"];
+}
+
+<br />
+<h4 style="text-align:center">Human Resource Management Dashboard</h4>
+<h6 style="color: #00008B; text-align: center">Total Number of Employee: @ViewBag.totalemployee</h6>
+
+<div class="row p-4">
+
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employment Status</h5>
+                <canvas id="filledPostVacantPosts"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employees by Age Group</h5>
+                <canvas id="EmployeeAgeRange"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Upcoming Retirements - next 12 months </h5>
+                <canvas id="upcommingRetirement"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Yearly Turnover for Last Year(@LastYear)</h5>
+                <canvas id="YearlyTurnover"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Yearly Recruitment for Last Year(@LastYear)</h5>
+                <canvas id="YearlyRecruitment"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Yearly Termination for Last Year(@LastYear)</h5>
+                <canvas id="YearlyTermination"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Yearly Promotion for Last Year(@LastYear)</h5>
+                <canvas id="YearlyPromotion"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Retirement vs New Employee for Last Year(@LastYear)</h5>
+                <canvas id="retirementvsNewEmployee"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Salary by Month</h5>
+                <canvas id="netSalaryByMonth"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Office wise Last Month Salary (@monthYear)</h5>
+                <canvas id="salaryByOffices"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Male-Female Ratio</h5>
+                <canvas id="MaleFemaleRatioBoth"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Male-Female Ratio (Officer)</h5>
+                <canvas id="MaleFemaleRatioOfficer"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Male-Female Ratio (Staff)</h5>
+                <canvas id="MaleFemaleRatioStaff"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee by Cadre</h5>
+                <canvas id="EmployeebyCategory"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee Job Status</h5>
+                <canvas id="employeeJobStatusPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee Qualification</h5>
+                <canvas id="employeeQualifcationPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Foreign Tour Category wise</h5>
+                <canvas id="foreignTourCategoryWisePieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Foreign Tour Personal Purpose wise</h5>
+                <canvas id="foreignTourPurposeWisePersonalPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Foreign Tour Official Purpose wise</h5>
+                <canvas id="foreignTourPurposeWiseOfficialPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+
+        @Html.Raw(retirementvsNewEmployee.CreateChartCode("retirementvsNewEmployee"));
+        @Html.Raw(filledPostVacantPosts.CreateChartCode("filledPostVacantPosts"));
+        @Html.Raw(upcommingRetirement.CreateChartCode("upcommingRetirement"));
+        @Html.Raw(employeeJobStatusPieChart.CreateChartCode("employeeJobStatusPieChart"));
+        @Html.Raw(employeeQualifcationPieChart.CreateChartCode("employeeQualifcationPieChart"));
+        @Html.Raw(foreignTourCategoryWisePieChart.CreateChartCode("foreignTourCategoryWisePieChart"));
+        @Html.Raw(foreignTourPurposeWiseOfficialPieChart.CreateChartCode("foreignTourPurposeWiseOfficialPieChart"));
+        @Html.Raw(foreignTourPurposeWisePersonalPieChart.CreateChartCode("foreignTourPurposeWisePersonalPieChart"));
+
+        @Html.Raw(EmployeeAgeRange.CreateChartCode("EmployeeAgeRange"));
+        @Html.Raw(YearlyTurnover.CreateChartCode("YearlyTurnover"));
+        @Html.Raw(YearlyRecruitment.CreateChartCode("YearlyRecruitment"));
+        @Html.Raw(YearlyTermination.CreateChartCode("YearlyTermination"));
+        @Html.Raw(YearlyPromotion.CreateChartCode("YearlyPromotion"));
+        @Html.Raw(EmployeebyCategory.CreateChartCode("EmployeebyCategory"));
+        @Html.Raw(MaleFemaleRatioBoth.CreateChartCode("MaleFemaleRatioBoth"));
+        @Html.Raw(MaleFemaleRatioOfficer.CreateChartCode("MaleFemaleRatioOfficer"));
+        @Html.Raw(MaleFemaleRatioStaff.CreateChartCode("MaleFemaleRatioStaff"));
+
+        @Html.Raw(netSalaryByMonth.CreateChartCode("netSalaryByMonth"));
+        @Html.Raw(salaryByOffices.CreateChartCode("salaryByOffices"));
+    </script>
+}
+

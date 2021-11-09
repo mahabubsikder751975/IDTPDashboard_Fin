@@ -1,0 +1,93 @@
+﻿
+@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "HRManagement_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    Chart procurementTrend = (Chart)ViewData["procurementTrend"];
+    Chart topProcuredItemsbyOffice = (Chart)ViewData["topProcuredItemsbyOffice"];
+    Chart procurementValuebyOffice = (Chart)ViewData["procurementValuebyOffice"];
+    Chart procurementTypebyOffice = (Chart)ViewData["procurementTypebyOffice"];
+    Chart procurementStatusPieChart = (Chart)ViewData["procurementStatusPieChart"];
+    Chart appUtilizationPieChart = (Chart)ViewData["appUtilizationPieChart"];
+    Chart requisitionStatusPieChart = (Chart)ViewData["requisitionStatusPieChart"];
+}
+
+<br />
+<h4 style="text-align:center">Procurement Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Procurement Trend</h5>
+                <canvas id="procurementTrend"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Top Items</h5>
+                <canvas id="topProcuredItemsbyOffice"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Procurement Value (Current Year)</h5>
+                <canvas id="procurementValuebyOffice"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Procurement Types</h5>
+                <canvas id="procurementTypebyOffice"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Procurement Status</h5>
+                <canvas id="procurementStatusPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">APP Utilization</h5>
+                <canvas id="appUtilizationPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Requisition Status</h5>
+                    <canvas id="requisitionStatusPieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(procurementTrend.CreateChartCode("procurementTrend"));
+        @Html.Raw(topProcuredItemsbyOffice.CreateChartCode("topProcuredItemsbyOffice"));
+        @Html.Raw(procurementValuebyOffice.CreateChartCode("procurementValuebyOffice"));
+        @Html.Raw(procurementTypebyOffice.CreateChartCode("procurementTypebyOffice"));
+        @Html.Raw(procurementStatusPieChart.CreateChartCode("procurementStatusPieChart"));
+        @Html.Raw(appUtilizationPieChart.CreateChartCode("appUtilizationPieChart"));
+        @Html.Raw(requisitionStatusPieChart.CreateChartCode("requisitionStatusPieChart"));
+    </script>
+}
+

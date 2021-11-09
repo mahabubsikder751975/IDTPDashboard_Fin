@@ -1,0 +1,261 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "FAManagement_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    //Chart insuredNonInsuredAssets = (Chart)ViewData["insuredNonInsuredAssets"];
+    //Chart serviceLifeAnalyses = (Chart)ViewData["serviceLifeAnalyses"];
+    //Chart operationalNonOperationalTransformer = (Chart)ViewData["operationalNonOperationalTransformer"];
+    //Chart landUsagesbyOffice = (Chart)ViewData["landUsagesbyOffice"];
+    //Chart transformerOperationalAnalysisbyOffice = (Chart)ViewData["transformerOperationalAnalysisbyOffice"];
+    //Chart transformerOperationalAnalysisbyMonth = (Chart)ViewData["transformerOperationalAnalysisbyMonth"];
+    //Chart landAreabyOfficePieChart = (Chart)ViewData["landAreabyOfficePieChart"];
+    //Chart landEncroachmentRatioPieChart = (Chart)ViewData["landEncroachmentRatioPieChart"];
+    //Chart subStationsbyOfficePieChart = (Chart)ViewData["subStationsbyOfficePieChart"];
+    Chart fuelWisePowerPlant = (Chart)ViewData["fuelWisePowerPlant"];
+    Chart pPTypeWisePowerPlant = (Chart)ViewData["pPTypeWisePowerPlant"];
+    Chart totalLandbyUsages = (Chart)ViewData["totalLandbyUsages"];
+
+    //FAF
+    //Chart MaintenanceCostbyOffice = (Chart)ViewData["MaintenanceCostbyOffice"];
+    Chart AssetAcquisitionOfficeWise = (Chart)ViewData["AssetAcquisitionOfficeWise"];
+    //Chart LandValuebyOffice = (Chart)ViewData["LandValuebyOffice"];
+    Chart BookValuevsAccumulatedPrice = (Chart)ViewData["BookValuevsAccumulatedPrice"];
+    //Chart AssetDisposedAssetWise = (Chart)ViewData["AssetDisposedAssetWise"];
+    Chart AssetDisposedOfficeWise = (Chart)ViewData["AssetDisposedOfficeWise"];
+    //Chart AssetAcquisitionAssetWise = (Chart)ViewData["AssetAcquisitionAssetWise"];
+    //Chart MaintenanceCostbyMonth = (Chart)ViewData["MaintenanceCostbyMonth"];
+    //Chart BookValuebyAssetType = (Chart)ViewData["BookValuebyAssetType"];
+    Chart AcquisitionVsBookValue = (Chart)ViewData["AcquisitionVsBookValue"];
+}
+
+<br />
+<h4 style="text-align:center">Fixed Assets Management Dashboard</h4>
+<h6 style="color: #00008B; text-align: center">Total Land (acre): @ViewBag.totalLand</h6>
+@if ((ViewBag.OrganizationName == "BPDB") || (ViewBag.OrganizationName == "APSCL") || (ViewBag.OrganizationName == "NWPGCL") || (ViewBag.OrganizationName == "RPCL") || (ViewBag.OrganizationName == "CPGCBL") || (ViewBag.OrganizationName == "EGCB") || (ViewBag.OrganizationName == "BRPL"))
+{
+    <h6 style="color: #00008B; text-align: center ">Total Number of Power Plant: @ViewBag.totalPowerPlant</h6>
+    <h6 style="color: #00008B; text-align: center ">Total Installed Capacity: @ViewBag.totalCapacity</h6>
+}
+@if ((ViewBag.OrganizationName == "BREB") || (ViewBag.OrganizationName == "DESCO") || (ViewBag.OrganizationName == "DPDC") || (ViewBag.OrganizationName == "WZPDCL") || (ViewBag.OrganizationName == "NESCO"))
+{
+    <h6 style="color: #00008B; text-align: center ">Total Number of Distribution Sub Stations: @ViewBag.totalDistributionSS</h6>
+}
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Land by Usages</h5>
+                <canvas id="totalLandbyUsages"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Acquisition Cost vs Book Value Asset Type wise</h5>
+                <canvas id="AcquisitionVsBookValue"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Asset Acquisition Cost Office wise (Current FY)</h5>
+                <canvas id="AssetAcquisitionOfficeWise"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Asset Disposed Office wise (Current FY)</h5>
+                <canvas id="AssetDisposedOfficeWise"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Book Value vs Accumulated Depreciation</h5>
+                <canvas style="height:10px;" width="600px" id="BookValuevsAccumulatedPrice"></canvas>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Fuel wise Power Plant</h5>
+                <canvas id="fuelWisePowerPlant"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Type wise Power Plant</h5>
+                <canvas style="height:10px;" width="640px" id="pPTypeWisePowerPlant"></canvas>
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Insured vs Non-Insured</h5>
+                    <canvas id="insuredNonInsuredAssets"></canvas>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Equipment Service Life Analysis</h5>
+                    <canvas id="serviceLifeAnalyses"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">No. of Operational vs Non-Operational Transformers</h5>
+                    <canvas id="operationalNonOperationalTransformer"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Present Usage of Land (in Acres)</h5>
+                    <canvas id="landUsagesbyOffice"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Transformer Overload & Burnt Out Ratio</h5>
+                    <canvas id="transformerOperationalAnalysisbyOffice"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Transformer Overload & Burnt by Month</h5>
+                    <canvas id="transformerOperationalAnalysisbyMonth"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Maintenance Cost by Offices (Current FY)</h5>
+                    <canvas id="MaintenanceCostbyOffice"></canvas>
+                </div>
+            </div>
+
+        </div>*@
+
+    @*<div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Land Value by Offices</h5>
+                    <canvas id="LandValuebyOffice"></canvas>
+                </div>
+            </div>
+        </div>*@
+
+    @*<div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Asset Disposed (Current FY)</h5>
+                    <canvas id="AssetDisposedAssetWise"></canvas>
+                </div>
+            </div>
+        </div>*@
+
+
+    @*<div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Asset Acquisition (Current FY)</h5>
+                    <canvas id="AssetAcquisitionAssetWise"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Maintenance Cost by Month</h5>
+                    <canvas id="MaintenanceCostbyMonth"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book Value by Asset Type</h5>
+                    <canvas id="BookValuebyAssetType"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Land Area by Offices (in Acres)</h5>
+                    <canvas id="landAreabyOfficePieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Land Encroachment Ratio</h5>
+                    <canvas id="landEncroachmentRatioPieChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Sub-Stations by Offices</h5>
+                    <canvas id="subStationsbyOfficePieChart"></canvas>
+                </div>
+            </div>
+        </div>*@
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @*@Html.Raw(insuredNonInsuredAssets.CreateChartCode("insuredNonInsuredAssets"));
+        @Html.Raw(serviceLifeAnalyses.CreateChartCode("serviceLifeAnalyses"));
+        @Html.Raw(operationalNonOperationalTransformer.CreateChartCode("operationalNonOperationalTransformer"));
+        @Html.Raw(landUsagesbyOffice.CreateChartCode("landUsagesbyOffice"));
+        @Html.Raw(transformerOperationalAnalysisbyOffice.CreateChartCode("transformerOperationalAnalysisbyOffice"));
+        @Html.Raw(transformerOperationalAnalysisbyMonth.CreateChartCode("transformerOperationalAnalysisbyMonth"));
+        @Html.Raw(landAreabyOfficePieChart.CreateChartCode("landAreabyOfficePieChart"));
+        @Html.Raw(landEncroachmentRatioPieChart.CreateChartCode("landEncroachmentRatioPieChart"));
+        @Html.Raw(subStationsbyOfficePieChart.CreateChartCode("subStationsbyOfficePieChart"));*@
+        @Html.Raw(fuelWisePowerPlant.CreateChartCode("fuelWisePowerPlant"));
+        @Html.Raw(pPTypeWisePowerPlant.CreateChartCode("pPTypeWisePowerPlant"));
+        @Html.Raw(totalLandbyUsages.CreateChartCode("totalLandbyUsages"));
+
+
+        @*@Html.Raw(MaintenanceCostbyOffice.CreateChartCode("MaintenanceCostbyOffice"));*@
+        @Html.Raw(AssetAcquisitionOfficeWise.CreateChartCode("AssetAcquisitionOfficeWise"));
+        @*@Html.Raw(LandValuebyOffice.CreateChartCode("LandValuebyOffice"));*@
+        @Html.Raw(BookValuevsAccumulatedPrice.CreateChartCode("BookValuevsAccumulatedPrice"));
+        @*@Html.Raw(AssetDisposedAssetWise.CreateChartCode("AssetDisposedAssetWise"));*@
+        @Html.Raw(AssetDisposedOfficeWise.CreateChartCode("AssetDisposedOfficeWise"));
+        @*@Html.Raw(AssetAcquisitionAssetWise.CreateChartCode("AssetAcquisitionAssetWise"));
+        @Html.Raw(MaintenanceCostbyMonth.CreateChartCode("MaintenanceCostbyMonth"));
+        @Html.Raw(BookValuebyAssetType.CreateChartCode("BookValuebyAssetType"));*@
+         @Html.Raw(AcquisitionVsBookValue.CreateChartCode("AcquisitionVsBookValue"));
+
+    </script>
+}

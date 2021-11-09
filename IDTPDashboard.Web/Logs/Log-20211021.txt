@@ -1,0 +1,36 @@
+2021-10-21T20:30:24.2925243+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-21T20:30:24.3170333+06:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-21T20:30:24.3192056+06:00  [INF] Content root path: "C:\TFS\NAV\Main\Source\Tools\IDTPDashboard\IDTPDashboard.Web" (b5d60022)
+2021-10-21T20:30:27.3174825+06:00 8000000e-0005-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Data.SqlClient.SqlException (0x80131904): Cannot open server 'tvdbserver' requested by the login. Client with IP address '103.101.199.17' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at System.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at IDTPDashboard.DataAccess.Repository.Menu_Repository.GetAllMenu(String organization) in C:\TFS\NAV\Main\Source\Tools\IDTPDashboard\IDTPDashboard.DataAccess\Repository\Menu_Repository.cs:line 29
+   at IDTPDashboard.Web.Controllers.DashboardController.Index() in C:\TFS\NAV\Main\Source\Tools\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:6bdcaf02-f7f9-47d8-addd-919097375f79
+Error Number:40615,State:1,Class:14
+2021-10-21T20:31:13.9589075+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-21T20:31:13.9676242+06:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-21T20:31:13.9696298+06:00  [INF] Content root path: "C:\TFS\NAV\Main\Source\Tools\IDTPDashboard\IDTPDashboard.Web" (b5d60022)
+2021-10-21T20:57:06.6057437+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-21T20:57:06.6138071+06:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-21T20:57:06.6153690+06:00  [INF] Content root path: "C:\TFS\NAV\Main\Source\Tools\IDTPDashboard\IDTPDashboard.Web" (b5d60022)

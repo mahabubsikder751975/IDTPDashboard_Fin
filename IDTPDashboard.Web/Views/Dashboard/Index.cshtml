@@ -1,0 +1,56 @@
+﻿@model IEnumerable<IDTPDashboard.DomainModel.Entity.Menu_Entity>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+}
+    <br /><br /><br />
+<div class="container mt-5">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6" style="padding: 20px">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0;padding:20px;font-weight: bold" asp-controller="@item.Controller" asp-action="@item.Action">@item.MenuName</a>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+@*<div class="container mt-5">
+        <div class="row" style="padding: 20px">
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px;" asp-controller="BREBChart" asp-action="BREB_HRM_Dashboard"> BREB Human Resource Management Dashboard</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px;" asp-controller="BREBChart" asp-action="BREB_HRF_Dashboard">BREB Human Resource Financial Dashboard</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px;" href="#">BREB Fixed Assets Management Dashboard</a>
+            </div>
+        </div>
+        <div class="row" style="padding: 20px">
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px;" href="#"> BREB Fixed Assets Financial Dashboard</a>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px; line-height:55px" href="#">BREB Procurement Dashboard</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px; line-height:55px" href="#">BREB Finance Dashboard</a>
+            </div>
+        </div>
+        <div class="row" style="padding: 20px">
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px;" asp-controller="BREB_PBSChart" asp-action="BREB_PBS_HRM_Dashboard">BREB PBS Human Resource Management Dashboard</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px;" asp-controller="BREB_PBSChart" asp-action="BREB_PBS_HRM_Part2_Dashboard">BREB PBS Human Resource Management Dashboard Part 2</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-secondary btn-lg btn-block" style="background-color: #1A6BA0;border-color:#1A6BA0; width: 320px; height: 80px;" asp-controller="BREB_PBSChart" asp-action="BREB_PBS_HRF_Dashboard">BREB PBS Human Resource Finance Dashboard</a>
+            </div>
+        </div>
+    </div>*@

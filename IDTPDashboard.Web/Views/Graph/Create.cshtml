@@ -1,0 +1,203 @@
+﻿@model GraphViewModel
+@{
+    ViewData["Title"] = "Create Graph";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+}
+<br />
+
+    @*<div class="mb-4">
+        <h5>Create Graph</h5>
+    </div>*@
+    <h3 style="text-align:center">Create Graph</h3>
+<br />
+<div class="row pl-5">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="card ">
+            <div class="card-body">
+                <form method="post" asp-controller="Graph" asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label class="control-label"><h6>Organization:</h6></label><br />
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="APSCL">
+                            <label class="form-check-label" for="">APSCL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="BPDB">
+                            <label class="form-check-label" for="">BPDB</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="BREB">
+                            <label class="form-check-label" for="">BREB</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="BRPL">
+                            <label class="form-check-label" for="">BRPL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="CPGCBL">
+                            <label class="form-check-label" for="">CPGCBL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="DESCO">
+                            <label class="form-check-label" for="">DESCO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="DPDC">
+                            <label class="form-check-label" for="">DPDC</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="EGCB">
+                            <label class="form-check-label" for="">EGCB</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="NESCO">
+                            <label class="form-check-label" for="">NESCO</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="NWPGCL">
+                            <label class="form-check-label" for="">NWPGCL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="PBS">
+                            <label class="form-check-label" for="">PBS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="PGCB">
+                            <label class="form-check-label" for="">PGCB</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="POWER CELL">
+                            <label class="form-check-label" for="">POWER CELL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="RPCL">
+                            <label class="form-check-label" for="">RPCL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="SREDA">
+                            <label class="form-check-label" for="">SREDA</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="SelectedOrganizations" value="WZPDCL">
+                            <label class="form-check-label" for="">WZPDCL</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"><h6>Module:</h6></label><br />
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="module" id="hr"  onchange="radioButtonChange('HR')">
+                            <label class="form-check-label" for="hr">
+                                Human Resources
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="module" id="fa" onchange="radioButtonChange('FA')">
+                            <label class="form-check-label" for="fa">
+                                Fixed Asset
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="module" id="pr" onchange="radioButtonChange('PR')">
+                            <label class="form-check-label" for="pr">
+                                Procurement
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="module" id="finance" onchange="radioButtonChange('Finance')">
+                            <label class="form-check-label" for="finance">
+                                Finance
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="graphItems">
+                        <label class="control-label"><h6>Graph Data:</h6></label><br />
+                        @*@foreach (var graphitem in Model.DataItems)
+                        {
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="@graphitem.Value" name="DataItems" value="@graphitem.Text" checked="@graphitem.Selected">
+                                <label class="form-check-label" for="@graphitem.Value">@graphitem.Text</label>
+                            </div>
+
+                        }*@
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"><h6>Chart Type:</h6></label><br />
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="bar" value="bar" asp-for="ChartType">
+                            <label class="form-check-label" for="bar" asp-for="ChartType" >
+                                Bar chart
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"  id="stackbar" value="stackbar" asp-for="ChartType">
+                            <label class="form-check-label"  asp-for="ChartType">
+                                Stack Bar chart
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"  id="pie" value="pie" asp-for="ChartType">
+                            <label class="form-check-label" asp-for="ChartType">
+                                Pie chart
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"  id="line" value="line" asp-for="ChartType">
+                            <label class="form-check-label" asp-for="ChartType">
+                                Line chart
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"><h6>Graph Header Title:</h6></label>
+                        <input asp-for="GraphName" class="form-control" />
+                        <span asp-validation-for="GraphName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"><h6>X Axis Title:</h6></label>
+                        <input class="form-control" asp-for="XAxisTitle" />
+                        <span  class="text-danger" asp-validation-for="XAxisTitle"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"><h6>Y Axis Title:</h6></label>
+                        <input  class="form-control" asp-for="YAxisTitle" />
+                        <span class="text-danger" asp-validation-for="YAxisTitle"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary float-right" style="width:200px;">Save</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-md-1"></div>
+    
+</div>
+ 
+<script>
+    function radioButtonChange(module) {
+        $.ajax({
+            url: "/Graph/GetGraphDataByModule",
+            type: "GET",
+            data: { module: module },
+            traditional: true,
+            success: function (result) {
+                console.log(result);
+                $("#graphItems").empty();
+                //$("#SubId").append($('<option/>', { value: -1, text: 'Select sub' }));
+                //$("#NestedId").prop('disabled', true);
+                $.each(result, function (i, item) {
+                    /*$("#graphItems").append('<option value="' + item.value + '"> ' + item.text + ' </option>');*/
+                    $("#graphItems").append(' <div class="form-check form-check-inline"> <input class="form-check-input" type="checkbox" id="' + item.value + '" name="SelectedDataItems" value="' + item.value + '" > <label class="form-check-label" for="' + item.value + '">' +item.value+'</label> </div>');
+                });
+            },
+            error: function () {
+                alert("Something went wrong");
+            }
+        });
+    }
+</script>  
+
+

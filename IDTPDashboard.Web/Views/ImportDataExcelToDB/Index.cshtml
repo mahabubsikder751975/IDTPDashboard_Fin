@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "IDTP Index";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+
+    DateTime a = DateTime.Now.Date;
+}
+<br />
+<h3 style="text-align: center;">Upload General Informations</h3>
+<br />
+<br />
+<div >
+    <form enctype="multipart/form-data" method="post" asp-controller="ImportDataExcelToDB" asp-action="ImportExcelFile">
+        <div class="row" style="text-align: center;">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="file-field">
+                    <div class="btn btn-outline-info btn-sm">
+                        <input type="file" name="FormFile" id="FormFile">
+                    </div><br /><br />
+                    <div class="btn btn-outline-info btn-sm " style="width:300px;background-color:white;color:black;">
+                        Upload Date: <input type="date" name="UploadDate" id="UploadDate" value="@a" required />
+                    </div><br /><br />
+                    <a class="btn btn-info" asp-controller="ImportDataExcelToDB" asp-action="DownloadFile">Download Template</a>
+                    <input class="btn btn-primary" type="submit" value="Upload" /><br /><br /><br />
+                    <h4><b style="color:green;">@ViewBag.Message</b></h4>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+            
+        </div>
+        
+
+                @*<input type="file" name="FormFile" id="FormFile">*@
+
+        
+    </form>
+
+    <br />
+    
+</div>
+<br />
+

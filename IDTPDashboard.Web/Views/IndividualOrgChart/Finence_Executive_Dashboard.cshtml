@@ -1,0 +1,63 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "Finence_Executive_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+    Chart FinanceETotalAssets = (Chart)ViewData["FinanceETotalAssets"];
+    Chart FinanceETotalLiabilities = (Chart)ViewData["FinanceETotalLiabilities"];
+    Chart FinanceETotalEquity = (Chart)ViewData["FinanceETotalEquity"];
+    Chart FinanceETotalDebt = (Chart)ViewData["FinanceETotalDebt"];
+   
+}
+
+<br />
+<h4 style="text-align:center">Finence Executive Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Assets (Last Two FY)</h5>
+                <canvas id="FinanceETotalAssets"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Liabilities (Last Two FY)</h5>
+                <canvas id="FinanceETotalLiabilities"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Equity (Last Two FY)</h5>
+                <canvas id="FinanceETotalEquity"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Debt (Last Two FY)</h5>
+                <canvas id="FinanceETotalDebt"></canvas>
+            </div>
+        </div>
+
+    </div>
+   
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(FinanceETotalAssets.CreateChartCode("FinanceETotalAssets"));
+        @Html.Raw(FinanceETotalLiabilities.CreateChartCode("FinanceETotalLiabilities"));
+        @Html.Raw(FinanceETotalEquity.CreateChartCode("FinanceETotalEquity"));
+        @Html.Raw(FinanceETotalDebt.CreateChartCode("FinanceETotalDebt"));
+       
+    </script>
+}
+
+

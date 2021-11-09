@@ -1,0 +1,108 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "HRFinance_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+
+    string monthYear = DateTime.Now.AddMonths(-1).ToString("MMMM yyyy");
+    string LastYear = DateTime.Now.AddYears(-1).ToString("yyyy");
+    string CurrYear = DateTime.Now.ToString("yyyy");
+
+    Chart salaryByEmployeeCategory = (Chart)ViewData["salaryByEmployeeCategory"];
+    Chart netSalaryByMonth = (Chart)ViewData["netSalaryByMonth"];
+    Chart allowanceDeductionByMonth = (Chart)ViewData["allowanceDeductionByMonth"];
+    Chart salaryByOffices = (Chart)ViewData["salaryByOffices"];
+    Chart grossSalaryExpenditurePieChart = (Chart)ViewData["grossSalaryExpenditurePieChart"];
+    Chart festivalBonusPieChart = (Chart)ViewData["festivalBonusPieChart"];
+    Chart cPFContributionPieChart = (Chart)ViewData["cPFContributionPieChart"];
+}
+
+<br />
+<h4 style="text-align:center">Human Resource Finance Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Salary by Employee Category for Last Month(@monthYear)</h5>
+                <canvas id="salaryByEmployeeCategory"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Salary by Month</h5>
+                <canvas id="netSalaryByMonth"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Allowances and Deductions for Last Month(@monthYear)</h5>
+                <canvas id="allowanceDeductionByMonth"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Salary by Offices for Last Month(@monthYear)</h5>
+                <canvas id="salaryByOffices"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Salary Expenditure for Last Month(@monthYear)</h5>
+                <canvas id="grossSalaryExpenditurePieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Yearly Festival Bonus (FY)</h5>
+                <canvas id="festivalBonusPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+     <div class="col-md-4 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">CPF Contribution</h5>
+                    <canvas id="cPFContributionPieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        @Html.Raw(salaryByEmployeeCategory.CreateChartCode("salaryByEmployeeCategory"));
+        @Html.Raw(netSalaryByMonth.CreateChartCode("netSalaryByMonth"));
+        @Html.Raw(allowanceDeductionByMonth.CreateChartCode("allowanceDeductionByMonth"));
+        @Html.Raw(salaryByOffices.CreateChartCode("salaryByOffices"));
+        @Html.Raw(grossSalaryExpenditurePieChart.CreateChartCode("grossSalaryExpenditurePieChart"));
+        @Html.Raw(festivalBonusPieChart.CreateChartCode("festivalBonusPieChart"));
+        @Html.Raw(cPFContributionPieChart.CreateChartCode("cPFContributionPieChart"));
+
+        //chart.data.labels.forEach(function(value, index, array) {
+        //        var a = [];
+        //        a.push(value.slice(0, 5));
+        //        var i = 1;
+        //        while (value.length > (i * 5))
+        //        {
+        //            a.push(value.slice(i * 5, (i + 1) * 5));
+        //            i++;
+        //        }
+        //        array[index] = a;
+        //    })
+    </script>
+}

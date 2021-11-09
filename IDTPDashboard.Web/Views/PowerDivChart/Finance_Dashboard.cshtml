@@ -1,0 +1,200 @@
+﻿@using ChartJSCore.Models;
+@{
+    ViewData["Title"] = "Finance_Dashboard";
+    Layout = "~/Views/Shared/Site/_Layout.cshtml";
+
+    string CurrYear = DateTime.Now.ToString("yyyy");
+    static string GetLastFinancialYear()
+    {
+        int CurrentYear = (DateTime.Now.Year - 1);
+        int PreviousYear = (DateTime.Now.Year - 2);
+        int NextYear = DateTime.Now.Year;
+        string PreYear = PreviousYear.ToString();
+        string NexYear = NextYear.ToString();
+        string CurYear = CurrentYear.ToString();
+        string FinYear = string.Empty;
+        if (DateTime.Now.Month > 7)
+        {
+            FinYear = CurYear + "-" + NexYear;
+        }
+        else
+        {
+            FinYear = PreYear + "-" + CurYear;
+        }
+        return FinYear;
+    }
+    static string GetCurrFinancialYear()
+    {
+        int CurrentYear = (DateTime.Now.Year);
+        int PreviousYear = (DateTime.Now.Year - 1);
+        int NextYear = (DateTime.Now.Year + 1);
+        string PreYear = PreviousYear.ToString();
+        string NexYear = NextYear.ToString();
+        string CurYear = CurrentYear.ToString();
+        string FinYear = string.Empty;
+        if (DateTime.Now.Month > 7)
+        {
+            FinYear = CurYear + "-" + NexYear;
+        }
+        else
+        {
+            FinYear = PreYear + "-" + CurYear;
+        }
+        return FinYear;
+    }
+
+    //Chart RevenueVsExpense = (Chart)ViewData["RevenueVsExpense"];
+    //Chart NetProfitVsGrossRevenue = (Chart)ViewData["NetProfitVsGrossRevenue"];
+    //Chart AccountReceivableVsCashflow = (Chart)ViewData["AccountReceivableVsCashflow"];
+    //Chart CapitalExpenditureVsOperationalExpenses = (Chart)ViewData["CapitalExpenditureVsOperationalExpenses"];
+    //Chart AccountsPayable = (Chart)ViewData["AccountsPayable"];
+    //Chart AccountsReceivable = (Chart)ViewData["AccountsReceivable"];
+    //Chart YearlyTurnOver = (Chart)ViewData["YearlyTurnOver"];
+    Chart TotalAssetsvsTotalLiabilities = (Chart)ViewData["TotalAssetsvsTotalLiabilities"];
+    Chart TotalEquityvsDebt = (Chart)ViewData["TotalEquityvsDebt"];
+    Chart ExpensevsRevenue = (Chart)ViewData["ExpensevsRevenue"];
+    //Chart GrossProfitvsNetProfit = (Chart)ViewData["GrossProfitvsNetProfit"];
+    Chart ReceivablevsPayable = (Chart)ViewData["ReceivablevsPayable"];
+    Chart UtilityWiseGrossProfit = (Chart)ViewData["UtilityWiseGrossProfit"];
+    Chart UtilityWiseNetProfit = (Chart)ViewData["UtilityWiseNetProfit"];
+    Chart UtilityWiseTurnover = (Chart)ViewData["UtilityWiseTurnover"];
+    Chart UtilityWiseCashAndCashEquivalent = (Chart)ViewData["UtilityWiseCashAndCashEquivalent"];
+    //Chart UtilityWiseCurrentRatio = (Chart)ViewData["UtilityWiseCurrentRatio"];
+    //Chart UtilityWiseQuickRatio = (Chart)ViewData["UtilityWiseQuickRatio"];
+    //Chart UtilityWiseDebtRatio = (Chart)ViewData["UtilityWiseDebtRatio"];
+}
+
+
+<br />
+<h4 style="text-align:center">Finance Dashboard</h4>
+
+<div class="row p-4">
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Asset vs Total Liabilities (3 Fiscal Years)</h5>
+                <canvas id="TotalAssetsvsTotalLiabilities"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total Equity vs Total Debt (3 Fiscal Years)</h5>
+                <canvas id="TotalEquityvsDebt"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Revenue vs Expenditure (3 Fiscal Years)</h5>
+                <canvas id="ExpensevsRevenue"></canvas>
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gross Profit vs Net Profit (Last Two Fiscal Years)</h5>
+                    <canvas id="GrossProfitvsNetProfit"></canvas>
+                </div>
+            </div>
+        </div>*@
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Accounts Receivable vs Payables (3 Fiscal Years)</h5>
+                <canvas id="ReceivablevsPayable"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Gross Profit (@GetLastFinancialYear())</h5>
+                <canvas id="UtilityWiseGrossProfit"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Net Profit (@GetLastFinancialYear())</h5>
+                <canvas id="UtilityWiseNetProfit"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Yearly Turnover (@GetLastFinancialYear())</h5>
+                <canvas id="UtilityWiseTurnover"></canvas>
+            </div>
+        </div>
+    </div>
+
+   <div class="col-md-6 p-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cash & Cash Equivalents (@GetCurrFinancialYear())</h5>
+                    <canvas id="UtilityWiseCashAndCashEquivalent"></canvas>
+                </div>
+            </div>
+
+        </div>
+    @*<div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Current Ratio by Utility (Last Fiscal Year)</h5>
+                <canvas id="UtilityWiseCurrentRatio"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Quick Ratio by Utility (Last Fiscal Year)</h5>
+                <canvas id="UtilityWiseQuickRatio"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 p-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Debt Ratio by Utility (Last Fiscal Year)</h5>
+                <canvas id="UtilityWiseDebtRatio"></canvas>
+            </div>
+        </div>
+    </div>*@
+
+
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+         @*@Html.Raw(RevenueVsExpense.CreateChartCode("RevenueVsExpense"));
+         @Html.Raw(NetProfitVsGrossRevenue.CreateChartCode("NetProfitVsGrossRevenue"));
+         @Html.Raw(AccountReceivableVsCashflow.CreateChartCode("AccountReceivableVsCashflow"));
+         @Html.Raw(CapitalExpenditureVsOperationalExpenses.CreateChartCode("CapitalExpenditureVsOperationalExpenses"));
+         @Html.Raw(AccountsPayable.CreateChartCode("AccountsPayable"));
+         @Html.Raw(AccountsReceivable.CreateChartCode("AccountsReceivable"));
+         @Html.Raw(YearlyTurnOver.CreateChartCode("YearlyTurnOver"));*@
+         @Html.Raw(TotalAssetsvsTotalLiabilities.CreateChartCode("TotalAssetsvsTotalLiabilities"));
+         @Html.Raw(TotalEquityvsDebt.CreateChartCode("TotalEquityvsDebt"));
+         @Html.Raw(ExpensevsRevenue.CreateChartCode("ExpensevsRevenue"));
+         @*@Html.Raw(GrossProfitvsNetProfit.CreateChartCode("GrossProfitvsNetProfit"));*@
+         @Html.Raw(ReceivablevsPayable.CreateChartCode("ReceivablevsPayable"));
+         @Html.Raw(UtilityWiseGrossProfit.CreateChartCode("UtilityWiseGrossProfit"));
+         @Html.Raw(UtilityWiseNetProfit.CreateChartCode("UtilityWiseNetProfit"));
+         @Html.Raw(UtilityWiseTurnover.CreateChartCode("UtilityWiseTurnover"));
+         @Html.Raw(UtilityWiseCashAndCashEquivalent.CreateChartCode("UtilityWiseCashAndCashEquivalent"));
+         @*@Html.Raw(UtilityWiseCurrentRatio.CreateChartCode("UtilityWiseCurrentRatio"));
+         @Html.Raw(UtilityWiseQuickRatio.CreateChartCode("UtilityWiseQuickRatio"));
+         @Html.Raw(UtilityWiseDebtRatio.CreateChartCode("UtilityWiseDebtRatio"));*@
+ 
+    </script>
+}
+
