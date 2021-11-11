@@ -28,13 +28,13 @@ namespace IDTPDashboard.DataAccess.Repository
                     var response = new List<Menu_Entity>();
                     await sql.OpenAsync();
 
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            response.Add(MenuMapToValue(reader));
-                        }
-                    }
+                    // using (var reader = await cmd.ExecuteReaderAsync())
+                    // {
+                    //     while (await reader.ReadAsync())
+                    //     {
+                    //         response.Add(MenuMapToValue(reader));
+                    //     }
+                    // }
 
                     return response;
                 }

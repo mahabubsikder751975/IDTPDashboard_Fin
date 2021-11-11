@@ -25,7 +25,7 @@ namespace IDTPDashboard.DataAccess.Repository
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("usp_GetAuthenticatedUser", sql))
+                using (SqlCommand cmd = new SqlCommand("IDTP_Dashboard_GetAuthenticatedUser", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@username", username));
