@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LAAp34cIBl0HiOfzGwo/Q45V2ZnVjxCKa7fsnTBMUGdLWXVz/4fQj69EknuCsGhA0pQ66dVQ7RzlBHpylgVViA==",
+  "dgSpecHash": "5YadVG/ocuPZWSkXoqtP4nIF//adYagrMCqvL6mD9vDE6cFXbs1MDSD3m50fTkpAHVZblKGisWvy0NSKzKJxzA==",
   "success": true,
-  "projectFilePath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj",
+  "projectFilePath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mahab\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\mahab\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",

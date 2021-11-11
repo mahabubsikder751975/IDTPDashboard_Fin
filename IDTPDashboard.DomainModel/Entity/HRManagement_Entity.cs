@@ -32,8 +32,9 @@ namespace IDTPDashboard.DomainModel.Entity
             OrgWiseRetirementvsNewEmployeeList = new List<OrgWiseRetirementvsNewEmployee>();
             DesignationWiseEmpByJobTypeAndOrgList = new List<DesignationWiseEmpByJobTypeAndOrg>();
             DesignationWiseEmpByQualificationAndOrgList = new List<DesignationWiseEmpByQualificationAndOrg>();
-            //DesignationWiseEmpCountList = new List<DesignationWiseEmpCount>();
+            NetSalaryByMonthList = new List<NetSalaryByMonth>();
         }
+        public List<NetSalaryByMonth> NetSalaryByMonthList { get; set; }
         public List<EmployeeAttendance> EmployeeAttendanceList { get; set; }
         public List<EmployeeOnLeave> EmployeeOnLeaveList { get; set; }
         public List<FilledPostVacantPost> FilledPostVacantPostList { get; set; }

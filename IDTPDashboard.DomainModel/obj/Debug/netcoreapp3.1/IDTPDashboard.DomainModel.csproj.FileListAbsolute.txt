@@ -8,3 +8,13 @@ C:\Software\IDTPDashboard\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTP
 C:\Software\IDTPDashboard\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.dll
 C:\Software\IDTPDashboard\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.pdb
 C:\Software\IDTPDashboard\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.csproj.AssemblyReference.cache
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\bin\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.deps.json
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\bin\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.dll
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\bin\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.pdb
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.csproj.AssemblyReference.cache
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.AssemblyInfoInputs.cache
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.AssemblyInfo.cs
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.csproj.CoreCompileInputs.cache
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.dll
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DomainModel\obj\Debug\netcoreapp3.1\IDTPDashboard.DomainModel.pdb

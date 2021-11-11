@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wryAO9mT14oZE3+Lq5Gmbc8AXelRiWKVOsTTziNT7T6J+2M5E8jiI/a6YAWfHO2/5SzBPTV1VrKP8okrOCa/FA==",
+  "dgSpecHash": "elTIoXi2FXu961cQxuu5xCyuozx6dhO1vow6v10JLy/MjNhkdPF5crFG7dAgMqe2czfnZ4URXp0NP4zUOC2T8A==",
   "success": true,
-  "projectFilePath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj",
+  "projectFilePath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mahab\\.nuget\\packages\\chartjscore\\1.5.8\\chartjscore.1.5.8.nupkg.sha512",
     "C:\\Users\\mahab\\.nuget\\packages\\epplus\\5.7.4\\epplus.5.7.4.nupkg.sha512",

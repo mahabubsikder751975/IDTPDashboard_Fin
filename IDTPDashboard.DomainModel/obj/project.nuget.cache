@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dpQ71mny+mX3Rr6BD7FbIdKLZNr1du1DzfffsDBkpfPYNpY+OJVWZxWKPJ1k8PWMK/q3mrwjmC7yThyVQRoL6Q==",
+  "dgSpecHash": "UYpKRL5L/Vx5NxRymyUMTO4NB1MWu9fZd/aA7qrjNxgyjlvUjHcYG18UHAtZ9GgB95Mtma95TYqe4YDVGO9hhg==",
   "success": true,
-  "projectFilePath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj",
+  "projectFilePath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mahab\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\mahab\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Software\\IDTPDashboard\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj": {}
+    "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj": {}
   },
   "projects": {
-    "C:\\Software\\IDTPDashboard\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj": {
+    "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj",
+        "projectUniqueName": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj",
         "projectName": "IDTPDashboard.DataAccess",
-        "projectPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj",
+        "projectPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj",
         "packagesPath": "C:\\Users\\mahab\\.nuget\\packages\\",
-        "outputPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DataAccess\\obj\\",
+        "outputPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mahab\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Software\\IDTPDashboard\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj": {
-                "projectPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj"
+              "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj": {
+                "projectPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Software\\IDTPDashboard\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj": {
+    "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj",
+        "projectUniqueName": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj",
         "projectName": "IDTPDashboard.DomainModel",
-        "projectPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj",
+        "projectPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DomainModel\\IDTPDashboard.DomainModel.csproj",
         "packagesPath": "C:\\Users\\mahab\\.nuget\\packages\\",
-        "outputPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DomainModel\\obj\\",
+        "outputPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DomainModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mahab\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Software\\IDTPDashboard\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj": {
+    "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Software\\IDTPDashboard\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj",
+        "projectUniqueName": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj",
         "projectName": "IDTPDashboard.Web",
-        "projectPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj",
+        "projectPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.Web\\IDTPDashboard.Web.csproj",
         "packagesPath": "C:\\Users\\mahab\\.nuget\\packages\\",
-        "outputPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.Web\\obj\\",
+        "outputPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mahab\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -172,8 +172,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Software\\IDTPDashboard\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj": {
-                "projectPath": "C:\\Software\\IDTPDashboard\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj"
+              "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj": {
+                "projectPath": "C:\\Software\\IDTPDashboard_Fin\\IDTPDashboard_Fin\\IDTPDashboard.DataAccess\\IDTPDashboard.DataAccess.csproj"
               }
             }
           }
