@@ -18,10 +18,10 @@ namespace IDTPDashboard.Web.Controllers
     [Authorize()]
     public class IDTPChartController : Controller
     {
-        private readonly IHRManagement_Repository _repositoryHRManagement;
+        private readonly IIDTPDashboard_Repository _repositoryHRManagement;
 
         public IDTPChartController(
-            IHRManagement_Repository repositoryHRManagement)            
+            IIDTPDashboard_Repository repositoryHRManagement)            
         {
             _repositoryHRManagement = repositoryHRManagement ?? throw new ArgumentNullException(nameof(repositoryHRManagement));
         }

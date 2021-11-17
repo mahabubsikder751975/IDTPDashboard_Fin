@@ -236,8 +236,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -259,8 +259,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -311,8 +311,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -334,8 +334,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.PowerDivChartController.HRManagement_Dashboard() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\PowerDivChartController.cs:line 60
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -357,8 +357,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.PowerDivChartController.HRManagement_Dashboard() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\PowerDivChartController.cs:line 60
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -416,8 +416,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -439,8 +439,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -462,8 +462,8 @@ System.IndexOutOfRangeException: EmpQuantity
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 378
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 170
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.OrgPostWiseUpcommingRetirmentMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 378
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 170
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -500,7 +500,7 @@ System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure
    at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
    at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
 --- End of stack trace from previous location where exception was thrown ---
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetPostWiseEmploymentStatus() in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 458
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetPostWiseEmploymentStatus() in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 458
    at IDTPDashboard.Web.Controllers.PowerDivChartController.GetOrgWiseOfficerStaffEmpData(String org) in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\PowerDivChartController.cs:line 3360
    at lambda_method(Closure , Object )
    at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
@@ -535,7 +535,7 @@ System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure
    at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
    at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
 --- End of stack trace from previous location where exception was thrown ---
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetPostWiseEmploymentStatus() in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 458
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetPostWiseEmploymentStatus() in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 458
    at IDTPDashboard.Web.Controllers.PowerDivChartController.GetOrgWiseOfficerStaffEmpData(String org) in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\PowerDivChartController.cs:line 3360
    at lambda_method(Closure , Object )
    at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
@@ -579,8 +579,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 128
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 325
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 128
    at IDTPDashboard.Web.Controllers.PowerDivChartController.HRManagement_Dashboard() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\PowerDivChartController.cs:line 60
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -614,8 +614,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 128
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 325
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 128
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)

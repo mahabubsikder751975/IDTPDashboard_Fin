@@ -98,7 +98,7 @@ System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keywo
    at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
    at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
 --- End of stack trace from previous location where exception was thrown ---
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 47
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 47
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)

@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 
 namespace IDTPDashboard.DataAccess.Repositoty 
 {
-    public class HRManagement_Repository : IHRManagement_Repository
+    public class IDTPDashboard_Repository : IIDTPDashboard_Repository
     {
         private readonly string _connectionString;
-        public HRManagement_Repository(IConfiguration configuration)
+        public IDTPDashboard_Repository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("AzureDbConnection");
         }

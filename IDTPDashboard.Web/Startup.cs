@@ -38,7 +38,7 @@ namespace IDTPDashboard.Web
            // services.AddScoped<IGraphRepository, GraphRepository>();
 
             //charts
-            services.AddScoped<IHRManagement_Repository, HRManagement_Repository>();
+            services.AddScoped<IIDTPDashboard_Repository, IDTPDashboard_Repository>();
             //services.AddScoped<IHRManagement_Part2_Repository, HRManagement_Part2_Repository>();
            // services.AddScoped<IHRFinance_Repository, HRFinance_Repository>();
            // services.AddScoped<IFAManagement_Repository, FAManagement_Repository>();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IDTPDashboard.DataAccess.Interface
 {
-    public interface IHRManagement_Repository
+    public interface IIDTPDashboard_Repository
     {
         Task<HRManagement_Entity> GetAllReports(string Organization);        
         // Task<PagedList<DesignationWiseEmpCount>> GetDesignationWiseEmployeeCount(string org, string postType, string filter,int offset, int pageSize);

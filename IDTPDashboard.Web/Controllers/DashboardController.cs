@@ -18,13 +18,13 @@ namespace IDTPDashboard.Web.Controllers
     {
         private readonly IMenu_Repository _repository;
        // private readonly IParticularsRepository _particularsRepository;
-        private readonly IHRManagement_Repository _repositoryHRManagement;
+        private readonly IIDTPDashboard_Repository _repositoryHRManagement;
        // private readonly IFinance_Repository _repositoryFinance;
        // private readonly ILanding_Repository _repositoryLanding;
       //  private readonly IPR_Repository _repositoryPR;
 //        private readonly IFAManagement_Repository _repositoryFAManagement;
         public DashboardController(IMenu_Repository repository,
-        IHRManagement_Repository repositoryHRManagement
+        IIDTPDashboard_Repository repositoryHRManagement
         )
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));

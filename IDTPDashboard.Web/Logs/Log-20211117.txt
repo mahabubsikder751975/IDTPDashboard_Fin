@@ -26,8 +26,8 @@ System.IndexOutOfRangeException: TransactionType
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionCountByTypeDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 158
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 63
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionCountByTypeDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 158
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 63
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -49,8 +49,8 @@ System.IndexOutOfRangeException: Organization
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 167
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 167
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -72,8 +72,8 @@ System.IndexOutOfRangeException: Organization
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 167
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 167
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -95,8 +95,8 @@ System.IndexOutOfRangeException: Organization
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 167
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 167
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -118,8 +118,8 @@ System.IndexOutOfRangeException: Organization
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 167
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 167
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -147,8 +147,8 @@ System.IndexOutOfRangeException: Organization
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 167
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 167
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -170,8 +170,8 @@ System.IndexOutOfRangeException: Organization
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 167
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 167
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -223,8 +223,8 @@ System.IndexOutOfRangeException: FIVID
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsCountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 205
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 93
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionsCountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 205
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 93
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -247,3 +247,9 @@ System.IndexOutOfRangeException: FIVID
 2021-11-17T13:33:17.4857179+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
 2021-11-17T13:33:17.4857701+06:00  [INF] Hosting environment: "Development" (c3307c92)
 2021-11-17T13:33:17.4858131+06:00  [INF] Content root path: "C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web" (b5d60022)
+2021-11-17T14:35:36.1687752+06:00  [INF] Application is shutting down... (90f52c38)
+2021-11-17T14:36:09.7007599+06:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-11-17T14:36:09.7042495+06:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-11-17T14:36:09.7045597+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-11-17T14:36:09.7046281+06:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-11-17T14:36:09.7046467+06:00  [INF] Content root path: "C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web" (b5d60022)

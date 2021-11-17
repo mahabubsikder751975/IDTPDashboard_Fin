@@ -8,8 +8,8 @@ System.IndexOutOfRangeException: OfficersOnLeave
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.EmployeeOnLeaveMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 226
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 68
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.EmployeeOnLeaveMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 226
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 68
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -133,8 +133,8 @@ System.IndexOutOfRangeException: Employee_Job_Status_Code
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsSettledUnsettledDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 268
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 92
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionsSettledUnsettledDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 268
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 92
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -162,8 +162,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -185,8 +185,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -208,8 +208,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -237,8 +237,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -260,8 +260,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -283,8 +283,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -306,8 +306,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -335,8 +335,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -364,8 +364,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -393,8 +393,8 @@ System.IndexOutOfRangeException: Post Type
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 238
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 74
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.FilledPostVacantPostMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 238
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 74
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -434,8 +434,8 @@ System.IndexOutOfRangeException: TotalTour
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 305
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 116
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 305
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 116
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -475,8 +475,8 @@ System.IndexOutOfRangeException: totalemployee
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 128
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 325
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 128
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -641,8 +641,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -664,8 +664,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -687,8 +687,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -710,8 +710,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -744,7 +744,7 @@ Incorrect syntax near ','.
    at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
    at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
 --- End of stack trace from previous location where exception was thrown ---
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 47
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 47
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -779,7 +779,7 @@ Incorrect syntax near ','.
    at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
    at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
 --- End of stack trace from previous location where exception was thrown ---
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 47
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 47
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -814,7 +814,7 @@ Incorrect syntax near ','.
    at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
    at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
 --- End of stack trace from previous location where exception was thrown ---
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 47
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 47
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -848,7 +848,7 @@ System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keywo
    at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
    at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
 --- End of stack trace from previous location where exception was thrown ---
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 47
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 47
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -872,8 +872,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -895,8 +895,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -918,8 +918,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -941,8 +941,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -964,8 +964,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -987,8 +987,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -1010,8 +1010,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -1033,8 +1033,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -1056,8 +1056,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -1079,8 +1079,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
@@ -1102,8 +1102,8 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.IDTPDashboard_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\IDTPDashboard_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
