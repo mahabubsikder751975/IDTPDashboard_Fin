@@ -133,7 +133,7 @@ System.IndexOutOfRangeException: Employee_Job_Status_Code
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.EmployeeJobStatusMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 268
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsSettledUnsettledDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 268
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 92
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -434,7 +434,7 @@ System.IndexOutOfRangeException: TotalTour
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.ForeignTourOrganizationWiseMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 305
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 305
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 116
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -475,7 +475,7 @@ System.IndexOutOfRangeException: totalemployee
    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
    at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
    at System.Data.SqlClient.SqlDataReader.get_Item(String name)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 128
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 3539
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -641,7 +641,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.ForeignTourOrganizationWiseMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -664,7 +664,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.ForeignTourOrganizationWiseMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -687,7 +687,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.ForeignTourOrganizationWiseMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -710,7 +710,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.ForeignTourOrganizationWiseMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TransactionsAmountTodayByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 228
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 81
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -872,7 +872,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -895,7 +895,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -918,7 +918,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -941,7 +941,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -964,7 +964,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -987,7 +987,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -1010,7 +1010,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -1033,7 +1033,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -1056,7 +1056,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -1079,7 +1079,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -1102,7 +1102,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.RetirementvsNewEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.NetDebitCapPositionByFIDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 209
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 69
    at IDTPDashboard.Web.Controllers.IDTPChartController.IDTPDashboard1() in C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.Web\Controllers\IDTPChartController.cs:line 35
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)

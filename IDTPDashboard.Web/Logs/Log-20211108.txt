@@ -579,7 +579,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 128
    at IDTPDashboard.Web.Controllers.PowerDivChartController.HRManagement_Dashboard() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\PowerDivChartController.cs:line 60
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
@@ -614,7 +614,7 @@ System.FormatException: Input string was not in a correct format.
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Number.ParseInt64(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
    at System.Convert.ToInt64(String value)
-   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalEmployeeMapToValue(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
+   at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.TotalNumberOfUsersDataPurser(SqlDataReader reader) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 325
    at IDTPDashboard.DataAccess.Repositoty.HRManagement_Repository.GetAllReports(String Organization) in C:\Software\IDTPDashboard\IDTPDashboard.DataAccess\Repository\HRManagement_Repository.cs:line 128
    at IDTPDashboard.Web.Controllers.DashboardController.PowerDivIndex() in C:\Software\IDTPDashboard\IDTPDashboard.Web\Controllers\DashboardController.cs:line 46
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
