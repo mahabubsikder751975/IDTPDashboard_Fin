@@ -14,7 +14,7 @@ namespace IDTPDashboard.DataAccess.Interface
         // Task<List<OrgPostWiseEmp>> GetPostWiseEmploymentStatus();
         // Task<List<OrgWiseEmpByJobStatus>> GetOrgWiseEmpByJobStatus(string jobStatus);
         // Task<List<OrgWiseEmpByQualification>> GetOrgWiseEmpByQualification(string qualificaion);
-        // Task<List<OrgWiseRetirementvsNewEmployee>> GetOrgWiseRetirementvsNewEmployee(string organization);
+        // Task<List<OrgWiseNetDebitCapPositionByFI>> GetOrgWiseNetDebitCapPositionByFI(string organization);
         // Task<List<DesignationWiseEmpByJobTypeAndOrg>> GetDesignationWiseEmpByJobTypeAndOrg(string org, string jobStatus);
         // Task<List<DesignationWiseEmpByQualificationAndOrg>> GetDesignationWiseEmpByQualificationAndOrg(string org, string qualification);
     }

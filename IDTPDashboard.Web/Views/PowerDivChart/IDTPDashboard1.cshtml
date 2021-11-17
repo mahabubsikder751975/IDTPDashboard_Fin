@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <canvas id="filledPostVacantPosts"></canvas>
+                <canvas id="rtpStatusByFIs"></canvas>
                 
             </div>
         </div>
@@ -90,7 +90,7 @@
                         </button>
                     </div>
                 </div>
-                <canvas id="retirementvsNewEmployee"></canvas>
+                <canvas id="netDebitCapPositionByFI"></canvas>
                 <div id="G4L3DesigWiseEmployeeCountForRetirementVsNew" style="display:none;">
                     <table id="tblG4L3DesigWiseEmployeeCountForRetirementVsNew" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
                         <thead>
@@ -132,7 +132,7 @@
                         </button>
                     </div>
                 </div>
-                <canvas id="foreignTourOrganizationWise"></canvas>
+                <canvas id="transactionsAmountTodayByFI"></canvas>
                 <div id="G5L3EmployeeListByForeignTourPurpose" style="display:none;">
                     <table id="tblG5L3EmployeeListByForeignTourPurpose" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
                         <thead>
@@ -165,7 +165,7 @@
                         </button>
                     </div>
                 </div>
-                <canvas id="netSalaryByMonth"></canvas>
+                <canvas id="transactionAmountBySettlementCycleId"></canvas>
                 <div id="G6L3MonthlySalarySummary" style="display:none;">
                     <canvas id="monthlySalarySummary"></canvas>
                 </div>
@@ -199,7 +199,7 @@
                         </button>
                     </div>
                 </div>
-                <canvas id="employeeJobStatusPieChart"></canvas>
+                <canvas id="transactionsSettledUnsettledPieChart"></canvas>
                 <div id="G7L3DesignationWiseEmployeeCount" style="display:none;">
                     <table id="tblG7L3DesignationWiseEmployeeCount" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
                         <thead>
@@ -242,7 +242,7 @@
                         </button>
                     </div>
                 </div>
-                <canvas id="employeeQualifcationPieChart"></canvas>
+                <canvas id="transactionCountByTypePieChart"></canvas>
                 <div id="G8L3DesignationWiseEmployeeCount" style="display:none;">
                     <table id="tblG8L3DesignationWiseEmployeeCount" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
                         <thead>
@@ -389,7 +389,7 @@
                     var value = chartData1.datasets[0].data[idx];
                     
                     chart1.destroy();
-                    //loadEmployeeJobStatus(label);
+                    //loadTransactionsSettledUnsettled(label);
                     OrgOfficerStaffWiseEmpChart(label);
                 }
             }; *@
@@ -549,11 +549,11 @@
 
         function graphTwoNavigation() {
             if ($('#G2L3DesignationList').is(":visible")) {
-                $('#filledPostVacantPosts').show();
+                $('#rtpStatusByFIs').show();
                 $('#G2L3DesignationList').hide();
                 $('#G2ChartTitle').text(chartHelper.getChartTitle('G2L2ChartTitle'));
             }
-            else if ($('#filledPostVacantPosts').is(":visible")) {
+            else if ($('#rtpStatusByFIs').is(":visible")) {
                 $('#btnBack2').hide();
                 chart2.destroy();
                 loadEmploymentStatusChart();
@@ -564,13 +564,13 @@
             chartHelper.setChartTitle('G2L1ChartTitle', 'Employment Status of Bangladesh Bank');
             $('#G2ChartTitle').text(chartHelper.getChartTitle('G2L1ChartTitle'));
 
-            var filledPostVacantPosts =@Html.Raw(Json.Serialize(@ViewBag.filledPostVacantPosts));
-            var canvas = document.getElementById("filledPostVacantPosts");
+            var rtpStatusByFIs =@Html.Raw(Json.Serialize(@ViewBag.rtpStatusByFIs));
+            var canvas = document.getElementById("rtpStatusByFIs");
             var ctx = canvas.getContext("2d");
-            var xValues = filledPostVacantPosts.map(o => o.postType);
-            var yValues = filledPostVacantPosts.map(v => v.sanctionPosts);
-            var y2Values = filledPostVacantPosts.map(a => a.filledPosts);
-            var y3Values = filledPostVacantPosts.map(b => b.vacantPosts);
+            var xValues = rtpStatusByFIs.map(o => o.postType);
+            var yValues = rtpStatusByFIs.map(v => v.sanctionPosts);
+            var y2Values = rtpStatusByFIs.map(a => a.filledPosts);
+            var y3Values = rtpStatusByFIs.map(b => b.vacantPosts);
 
             var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
@@ -622,7 +622,7 @@
             chartHelper.setChartTitle('G2L2ChartTitle', 'Employment Status (' + postType + '-' + orgPosts + ')');
             $('#G2ChartTitle').text(chartHelper.getChartTitle('G2L2ChartTitle'));
 
-            var canvas = document.getElementById("filledPostVacantPosts");
+            var canvas = document.getElementById("rtpStatusByFIs");
             var ctx = canvas.getContext("2d");
             var xValues = orgWiseEmploymentStatusChartData.map(o => o.organization);
             var yValues;
@@ -655,7 +655,7 @@
                     var value = chartData2.datasets[0].data[idx];
                     
                     //loadChildGraph(label);
-                    $('#filledPostVacantPosts').hide();
+                    $('#rtpStatusByFIs').hide();
                     $('#G2L3DesignationList').show();
                     loadDesignationWiseOrgPost(postType, label);
                 }
@@ -763,7 +763,7 @@
                     //console.log(url);
                     //alert(url);
                     chart3.destroy();
-                    //loadEmployeeJobStatus(label);
+                    //loadTransactionsSettledUnsettled(label);
                     PostWiseUpcommingRetirmentChart(label);
                 }
 
@@ -866,7 +866,7 @@
         var chart4;
         //Load Document
         $(document).ready(function () {
-            //retirementvsNewEmployee
+            //netDebitCapPositionByFI
              //Graph 04 level 01 data loading
             loadRetirementVsNewEmpChart();
         });
@@ -878,11 +878,11 @@
                 $('#G4ChartTitle').text(chartHelper.getChartTitle('G4L3ChartTitle'));
             }
             else if ($('#G4L3DesigWiseEmployeeCountForRetirementVsNew').is(":visible")) {
-                $('#retirementvsNewEmployee').show();
+                $('#netDebitCapPositionByFI').show();
                 $('#G4L3DesigWiseEmployeeCountForRetirementVsNew').hide();
                 $('#G4ChartTitle').text(chartHelper.getChartTitle('G4L2ChartTitle'));
             }
-            else if ($('#retirementvsNewEmployee').is(":visible")) {
+            else if ($('#netDebitCapPositionByFI').is(":visible")) {
                 chart4.destroy();
                 $('#btnBack4').hide();
                 loadRetirementVsNewEmpChart();
@@ -894,12 +894,12 @@
             chartHelper.setChartTitle('G4L1ChartTitle', 'Retired vs New Employee Last Year');
             $('#G4ChartTitle').text(chartHelper.getChartTitle('G4L1ChartTitle'));
 
-            var retirementvsNewEmployee =@Html.Raw(Json.Serialize(@ViewBag.retirementvsNewEmployee));
-            var canvas = document.getElementById("retirementvsNewEmployee");
+            var netDebitCapPositionByFI =@Html.Raw(Json.Serialize(@ViewBag.netDebitCapPositionByFI));
+            var canvas = document.getElementById("netDebitCapPositionByFI");
             var ctx = canvas.getContext("2d");
-            var xValues = retirementvsNewEmployee.map(o => o.organization);
-            var yValues = retirementvsNewEmployee.map(v => v.retirement);
-            var y2Values = retirementvsNewEmployee.map(a => a.newEmployee);
+            var xValues = netDebitCapPositionByFI.map(o => o.organization);
+            var yValues = netDebitCapPositionByFI.map(v => v.retirement);
+            var y2Values = netDebitCapPositionByFI.map(a => a.newEmployee);
 
             var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
@@ -943,7 +943,7 @@
                     //console.log(url);
                     //alert(url);
                     chart4.destroy();
-                    //loadEmployeeJobStatus(label);
+                    //loadTransactionsSettledUnsettled(label);
                     PostWiseRetirementVsNewEmpChart(label);
                 }
 
@@ -951,7 +951,7 @@
         }
         //Graph 04 level 02 data pulling
         function PostWiseRetirementVsNewEmpChart(org) {           
-            fetch('@Url.Content("~/")' +'PowerDivChart/GetOrgWiseRetirementvsNewEmployeeData?org=' + org)
+            fetch('@Url.Content("~/")' +'PowerDivChart/GetOrgWiseNetDebitCapPositionByFIData?org=' + org)
                 .then(response => response.json())
                 .then(data => loadPostWiseRetirementVsNewEmp(data, org))
                 .catch(error => console.error('Unable to get items.', error));
@@ -963,7 +963,7 @@
             chartHelper.setChartTitle('G4L2ChartTitle', org + ' - Retired vs New Employee Last Year');
             $('#G4ChartTitle').text(chartHelper.getChartTitle('G4L2ChartTitle'));
 
-            var canvas = document.getElementById("retirementvsNewEmployee");
+            var canvas = document.getElementById("netDebitCapPositionByFI");
             var ctx = canvas.getContext("2d");
             var xValues = PostWiseRetirementVsNewEmp.map(o => o.postType);
             var yValues = PostWiseRetirementVsNewEmp.map(v => v.newEmployee);
@@ -993,7 +993,7 @@
                     var value9 = chart4.data.datasets[clickedDatasetIndex].data[clickedElementindex];
                     var label10 = chart4.data.datasets[clickedDatasetIndex].label;
                     //alert("Clicked: " + label9 + " - " + label10 + " - " + value9);
-                    $('#retirementvsNewEmployee').hide();
+                    $('#netDebitCapPositionByFI').hide();
                     $('#G4L3DesigWiseEmployeeCountForRetirementVsNew').show();
                     getDesignationWiseEmpCountForRetirementVsNew(org, label9, label10);
                 }
@@ -1102,7 +1102,7 @@
         var chart5;
         //Load Document
         $(document).ready(function () {
-            //foreignTourOrganizationWise
+            //transactionsAmountTodayByFI
             //Graph 05 level 01 data loading
             loadforeignTourOrgWiseChart();
 
@@ -1111,11 +1111,11 @@
 
         function loadMain5() {
             if ($('#G5L3EmployeeListByForeignTourPurpose').is(":visible")) {
-                $('#foreignTourOrganizationWise').show();
+                $('#transactionsAmountTodayByFI').show();
                 $('#G5L3EmployeeListByForeignTourPurpose').hide();
                 $('#G5ChartTitle').text(chartHelper.getChartTitle('G5L2ChartTitle'));
             }
-            else if ($('#foreignTourOrganizationWise').is(":visible")) {
+            else if ($('#transactionsAmountTodayByFI').is(":visible")) {
                 $('#btnBack5').hide();
                 chart5.destroy();
                 //$('#chartTitle5').text('Employee Foreign Tour');                
@@ -1127,11 +1127,11 @@
             chartHelper.setChartTitle('G5L1ChartTitle', 'Employee Foreign Tour (2021)');
             $('#G5ChartTitle').text(chartHelper.getChartTitle('G5L1ChartTitle'));
 
-            var foreignTourOrganizationWise =@Html.Raw(Json.Serialize(@ViewBag.foreignTourOrganizationWise));
-            var canvas = document.getElementById("foreignTourOrganizationWise");
+            var transactionsAmountTodayByFI =@Html.Raw(Json.Serialize(@ViewBag.transactionsAmountTodayByFI));
+            var canvas = document.getElementById("transactionsAmountTodayByFI");
             var ctx = canvas.getContext("2d");
-            var xValues = foreignTourOrganizationWise.map(o => o.organization);
-            var yValues = foreignTourOrganizationWise.map(v => v.tourCount);
+            var xValues = transactionsAmountTodayByFI.map(o => o.organization);
+            var yValues = transactionsAmountTodayByFI.map(v => v.tourCount);
 
             var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
@@ -1156,7 +1156,7 @@
                     //console.log(url);
                     //alert(url);
                     chart5.destroy();
-                    //loadEmployeeJobStatus(label);
+                    //loadTransactionsSettledUnsettled(label);
                     ForeignTourOrgWiseChart(label);
                 }
 
@@ -1176,7 +1176,7 @@
             chartHelper.setChartTitle('G5L2ChartTitle', org + ' - Foreign Tour (2021)');
             $('#G5ChartTitle').text(chartHelper.getChartTitle('G5L2ChartTitle'));
 
-            var canvas = document.getElementById("foreignTourOrganizationWise");
+            var canvas = document.getElementById("transactionsAmountTodayByFI");
             var ctx = canvas.getContext("2d");
             var xValues = foreignTourOrgWiseChart.map(o => o.tourPurpose);
             var yValues = foreignTourOrgWiseChart.map(v => v.totalTour);
@@ -1199,7 +1199,7 @@
                     var value = chartData5.datasets[0].data[idx];
 
                     
-                    $('#foreignTourOrganizationWise').hide();
+                    $('#transactionsAmountTodayByFI').hide();
                     $('#G5L3EmployeeListByForeignTourPurpose').show();
                     getEmployeeListByForeignTourPurpose(org,label);
                 }
@@ -1268,9 +1268,9 @@
         var chart61;
         //Load Document
         $(document).ready(function () {
-            //netSalaryByMonth
+            //transactionAmountBySettlementCycleId
            //Graph 06 level 01 data loading
-            loadnetSalaryByMonthChart();
+            loadtransactionAmountBySettlementCycleIdChart();
 
         });
 
@@ -1281,26 +1281,26 @@
                 $('#G6ChartTitle').text(chartHelper.getChartTitle('G6L3ChartTitle'));
             }
             else if ($('#G6L3MonthlySalarySummary').is(":visible")) {
-                $('#netSalaryByMonth').show();
+                $('#transactionAmountBySettlementCycleId').show();
                 $('#G6L3MonthlySalarySummary').hide();
                 $('#G6ChartTitle').text(chartHelper.getChartTitle('G6L2ChartTitle'));
             }
-            else if ($('#netSalaryByMonth').is(":visible")) {
+            else if ($('#transactionAmountBySettlementCycleId').is(":visible")) {
                 $('#btnBack6').hide();
                 chart6.destroy();                
-                loadnetSalaryByMonthChart();
+                loadtransactionAmountBySettlementCycleIdChart();
             }
 
         }
-        function loadnetSalaryByMonthChart() {
+        function loadtransactionAmountBySettlementCycleIdChart() {
             chartHelper.setChartTitle('G6L1ChartTitle', 'Total Salary by Month');
             $('#G6ChartTitle').text(chartHelper.getChartTitle('G6L1ChartTitle'));
 
-            var netSalaryByMonth =@Html.Raw(Json.Serialize(@ViewBag.netSalaryByMonth));
-            var canvas = document.getElementById("netSalaryByMonth");
+            var transactionAmountBySettlementCycleId =@Html.Raw(Json.Serialize(@ViewBag.transactionAmountBySettlementCycleId));
+            var canvas = document.getElementById("transactionAmountBySettlementCycleId");
             var ctx = canvas.getContext("2d");
-            var xValues = netSalaryByMonth.map(o => o.salaryDate);
-            var yValues = netSalaryByMonth.map(v => v.totalSalary);
+            var xValues = transactionAmountBySettlementCycleId.map(o => o.salaryDate);
+            var yValues = transactionAmountBySettlementCycleId.map(v => v.totalSalary);
 
             var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
@@ -1325,31 +1325,31 @@
                     //console.log(url);
                     //alert(url);
                     chart6.destroy();
-                    //loadEmployeeJobStatus(label);
-                    NetSalaryByMonthChart(label);
+                    //loadTransactionsSettledUnsettled(label);
+                    TransactionAmountBySettlementCycleIdChart(label);
                 }
 
             };
         }
           //Graph 06 level 02 data pulling
-        function NetSalaryByMonthChart(salaryDate) {            
+        function TransactionAmountBySettlementCycleIdChart(salaryDate) {            
             //$('#chartTitle6').text(salaryDate + ' - Salary');
-            fetch('@Url.Content("~/")'+'PowerDivChart/GetNetSalaryByMonthData?salaryDate=' + salaryDate)
+            fetch('@Url.Content("~/")'+'PowerDivChart/GetTransactionAmountBySettlementCycleIdData?salaryDate=' + salaryDate)
                 .then(response => response.json())
-                .then(data => loadNetSalaryByMonthChart(data, salaryDate))
+                .then(data => loadTransactionAmountBySettlementCycleIdChart(data, salaryDate))
                 .catch(error => console.error('Unable to get items.', error));
         }
 
          //Graph 06 level 02 data loading
-        function loadNetSalaryByMonthChart(netSalaryByMonthChart, salaryDate) {
+        function loadTransactionAmountBySettlementCycleIdChart(transactionAmountBySettlementCycleIdChart, salaryDate) {
             $('#btnBack6').show();
             chartHelper.setChartTitle('G6L2ChartTitle', salaryDate + ' - Salary');
             $('#G6ChartTitle').text(chartHelper.getChartTitle('G6L2ChartTitle'));
 
-            var canvas = document.getElementById("netSalaryByMonth");
+            var canvas = document.getElementById("transactionAmountBySettlementCycleId");
             var ctx = canvas.getContext("2d");
-            var xValues = netSalaryByMonthChart.map(o => o.organization);
-            var yValues = netSalaryByMonthChart.map(v => v.totalSalary);
+            var xValues = transactionAmountBySettlementCycleIdChart.map(o => o.organization);
+            var yValues = transactionAmountBySettlementCycleIdChart.map(v => v.totalSalary);
             //var dsColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
                 label: 'Total Salary',
@@ -1368,7 +1368,7 @@
                     var label = chartData6.labels[idx];
                     var value = chartData6.datasets[0].data[idx];
                     
-                    $('#netSalaryByMonth').hide();
+                    $('#transactionAmountBySettlementCycleId').hide();
                     $('#G6L3MonthlySalarySummary').show();
                     getMonthlySalaryData(label, salaryDate);
                 }
@@ -1468,9 +1468,9 @@
         var chart7;
         //Load Document
         $(document).ready(function () {
-            //employeeJobStatusPieChart
+            //transactionsSettledUnsettledPieChart
             //Graph 07 level 01 data loading
-            loademployeeJobStatusPieChart();
+            loadtransactionsSettledUnsettledPieChart();
         });
 
         function loadMain7() {
@@ -1480,25 +1480,25 @@
                 $('#G7ChartTitle').text(chartHelper.getChartTitle('G7L3ChartTitle'));
             }
            else if ($('#G7L3DesignationWiseEmployeeCount').is(":visible")) {
-                $('#employeeJobStatusPieChart').show();
+                $('#transactionsSettledUnsettledPieChart').show();
                 $('#G7L3DesignationWiseEmployeeCount').hide();
                 $('#G7ChartTitle').text(chartHelper.getChartTitle('G7L2ChartTitle'));
             }
-            else if ($('#employeeJobStatusPieChart').is(":visible")) {
+            else if ($('#transactionsSettledUnsettledPieChart').is(":visible")) {
                 $('#btnBack7').hide();
                 chart7.destroy();
-                loademployeeJobStatusPieChart();
+                loadtransactionsSettledUnsettledPieChart();
             }            
         }
-        function loademployeeJobStatusPieChart() {
+        function loadtransactionsSettledUnsettledPieChart() {
             chartHelper.setChartTitle('G7L1ChartTitle', 'Employee Job Status');
             $('#G7ChartTitle').text(chartHelper.getChartTitle('G7L1ChartTitle'));
 
-            var employeeJobStatusPieChart =@Html.Raw(Json.Serialize(@ViewBag.employeeJobStatusPieChart));
-            var canvas = document.getElementById("employeeJobStatusPieChart");
+            var transactionsSettledUnsettledPieChart =@Html.Raw(Json.Serialize(@ViewBag.transactionsSettledUnsettledPieChart));
+            var canvas = document.getElementById("transactionsSettledUnsettledPieChart");
             var ctx = canvas.getContext("2d");
-            var xValues = employeeJobStatusPieChart.map(o => o.jobStatus);
-            var yValues = employeeJobStatusPieChart.map(v => v.totalEmployee);
+            var xValues = transactionsSettledUnsettledPieChart.map(o => o.jobStatus);
+            var yValues = transactionsSettledUnsettledPieChart.map(v => v.totalNumberOfUsers);
 
             var barColors = ["#01B8AA","#DD780A", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
@@ -1523,14 +1523,14 @@
                     //console.log(url);
                     //alert(url);
                     chart7.destroy();
-                    //loadEmployeeJobStatus(label);
-                    EmployeeJobStatusPieChart(label);
+                    //loadTransactionsSettledUnsettled(label);
+                    TransactionsSettledUnsettledPieChart(label);
                 }
 
             };
         }
         //Graph 07 level 02 data pulling
-        function EmployeeJobStatusPieChart(jobStatus) {
+        function TransactionsSettledUnsettledPieChart(jobStatus) {
             fetch('@Url.Content("~/")'+'PowerDivChart/GetOrgWiseEmpByJobStatusData?jobStatus=' + jobStatus)
                 .then(response => response.json())
                 .then(data => loadOrgWiseEmpByJobStatusChart(data, jobStatus))
@@ -1543,7 +1543,7 @@
             chartHelper.setChartTitle('G7L2ChartTitle', jobStatus + ' - Employees');
             $('#G7ChartTitle').text(chartHelper.getChartTitle('G7L2ChartTitle'));
 
-            var canvas = document.getElementById("employeeJobStatusPieChart");
+            var canvas = document.getElementById("transactionsSettledUnsettledPieChart");
             var ctx = canvas.getContext("2d");
             var xValues = orgWiseEmpByJobStatus.map(o => o.organization);
             var yValues = orgWiseEmpByJobStatus.map(v => v.totalEmp);
@@ -1570,7 +1570,7 @@
                     //alert(url);
                     getDesignationWiseEmpByJobType(label, jobStatus);
                     //$('#searchBox3').show();
-                    $('#employeeJobStatusPieChart').hide();
+                    $('#transactionsSettledUnsettledPieChart').hide();
                     $('#G7L3DesignationWiseEmployeeCount').show();
                 }
             };
@@ -1682,7 +1682,7 @@
         var chart8;
         //Load Document
         $(document).ready(function () {
-            //employeeQualifcationPieChart
+            //transactionCountByTypePieChart
              //Graph 08 level 01 data loading
             loademployeeQualificationPieChart();
 
@@ -1691,11 +1691,11 @@
 
         function loadMain8() {
             if ($('#G8L3DesignationWiseEmployeeCount').is(":visible")) {
-                $('#employeeQualifcationPieChart').show();
+                $('#transactionCountByTypePieChart').show();
                 $('#G8L3DesignationWiseEmployeeCount').hide();
                 $('#G8ChartTitle').text(chartHelper.getChartTitle('G8L2ChartTitle'));
             }
-            else if ($('#employeeJobStatusPieChart').is(":visible")) {
+            else if ($('#transactionsSettledUnsettledPieChart').is(":visible")) {
                 $('#btnBack8').hide();
                 chart8.destroy();                
                 loademployeeQualificationPieChart();
@@ -1706,11 +1706,11 @@
             chartHelper.setChartTitle('G8L1ChartTitle', 'Employee Qualification');
             $('#G8ChartTitle').text(chartHelper.getChartTitle('G8L1ChartTitle'));
 
-            var employeeQualifcationPieChart =@Html.Raw(Json.Serialize(@ViewBag.employeeQualifcationPieChart));
-            var canvas = document.getElementById("employeeQualifcationPieChart");
+            var transactionCountByTypePieChart =@Html.Raw(Json.Serialize(@ViewBag.transactionCountByTypePieChart));
+            var canvas = document.getElementById("transactionCountByTypePieChart");
             var ctx = canvas.getContext("2d");
-            var xValues = employeeQualifcationPieChart.map(o => o.qualification);
-            var yValues = employeeQualifcationPieChart.map(v => v.total);
+            var xValues = transactionCountByTypePieChart.map(o => o.qualification);
+            var yValues = transactionCountByTypePieChart.map(v => v.total);
 
             var barColors = ["#01B8AA","#DD780A", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
@@ -1735,7 +1735,7 @@
                     //console.log(url);
                     //alert(url);
                     chart8.destroy();
-                    //loadEmployeeJobStatus(label);
+                    //loadTransactionsSettledUnsettled(label);
                     EmployeeQualificationPieChart(label);
                 }
 
@@ -1755,7 +1755,7 @@
             chartHelper.setChartTitle('G8L2ChartTitle', qualificaion + ' - Qualified Employees');
             $('#G8ChartTitle').text(chartHelper.getChartTitle('G8L2ChartTitle'));
 
-            var canvas = document.getElementById("employeeQualifcationPieChart");
+            var canvas = document.getElementById("transactionCountByTypePieChart");
             var ctx = canvas.getContext("2d");
             var xValues = orgWiseEmpByQualification.map(o => o.organization);
             var yValues = orgWiseEmpByQualification.map(v => v.total);
@@ -1782,7 +1782,7 @@
                     //alert(url);
                     getDesignationWiseEmpByQualification(label, qualificaion);
                     //$('#searchBox3').show();
-                    $('#employeeQualifcationPieChart').hide();
+                    $('#transactionCountByTypePieChart').hide();
                     $('#G8L3DesignationWiseEmployeeCount').show();
                 }
             };

@@ -1,17 +1,17 @@
 USE [ERP_ProcedureDB]
-DROP PROCEDURE IF EXISTS [dbo].[uspHRMForeignTourOrganizationWise]
+DROP PROCEDURE IF EXISTS [dbo].[uspHRMTransactionsAmountTodayByFI]
 GO
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE [dbo].[uspHRMForeignTourOrganizationWise]
+CREATE PROCEDURE [dbo].[uspHRMTransactionsAmountTodayByFI]
 @Organization varchar(20)
 AS
 /*Testing
-exec uspHRMForeignTourOrganizationWise 'PGCB'
-exec uspHRMForeignTourOrganizationWise 'BREB'
-exec uspHRMForeignTourOrganizationWise 'NWPGCL'
+exec uspHRMTransactionsAmountTodayByFI 'PGCB'
+exec uspHRMTransactionsAmountTodayByFI 'BREB'
+exec uspHRMTransactionsAmountTodayByFI 'NWPGCL'
 
 */
 BEGIN

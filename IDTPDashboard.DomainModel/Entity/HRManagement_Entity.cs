@@ -10,54 +10,54 @@ namespace IDTPDashboard.DomainModel.Entity
         {
             EmployeeAttendanceList = new List<EmployeeAttendance>();
             EmployeeOnLeaveList = new List<EmployeeOnLeave>();
-            FilledPostVacantPostList = new List<FilledPostVacantPost>();
+            RTPStatusByFIList = new List<RTPStatusByFI>();
             UpcommingRetirementList = new List<UpcommingRetirement>();
             EmployeePerformanceList = new List<EmployeePerformance>();
-            EmployeeJobStatusList = new List<EmployeeJobStatus>();
-            EmployeeQualifcationList = new List<EmployeeQualifcation>();
-            RetirementvsNewEmployeeList = new List<RetirementvsNewEmployee>();
-            UpcommingRetirementCompanyWiseList = new List<UpcommingRetirementCompanyWise>();
-            ForeignTourOrganizationWiseList = new List<ForeignTourOrganizationWise>();
-            FilledPostVacantPostUtilityWiseList = new List<FilledPostVacantPostUtilityWise>();
-            TotalEmployeeList = new List<TotalEmployee>();
+            TransactionsSettledUnsettledList = new List<TransactionsSettledUnsettled>();
+            TransactionCountByTypeList = new List<TransactionCountByType>();
+            NetDebitCapPositionByFIList = new List<NetDebitCapPositionByFI>();
+            RegisteredUsersByFIList = new List<RegisteredUsersByFI>();
+            TransactionsAmountTodayByFIList = new List<TransactionsAmountTodayByFI>();
+            RTPStatusByFIUtilityWiseList = new List<RTPStatusByFIUtilityWise>();
+            TotalNumberOfUsersList = new List<TotalNumberOfUsers>();
             ForeignTourCategoryWiseList = new List<ForeignTourCategoryWise>();
             ForeignTourPurposeWiseOfficialList = new List<ForeignTourPurposeWiseOfficial>();
             ForeignTourPurposeWisePersonalList = new List<ForeignTourPurposeWisePersonal>();
-            TotalEmployeeUtilityWiseList = new List<TotalEmployeeUtilityWise>();
+            TransactionsCountTodayByFIList = new List<TransactionsCountTodayByFI>();
             UtilitywiseLastFiscalYearSalaryList = new List<UtilitywiseLastFiscalYearSalary>();
             OrgPostWiseEmpList = new List<OrgPostWiseEmp>();
             OrgPostWiseUpcommingRetirmentList = new List<OrgPostWiseUpcommingRetirment>();
             OrgWiseEmpByJobStatusList = new List<OrgWiseEmpByJobStatus>();
             OrgWiseEmpByQualificationList = new List<OrgWiseEmpByQualification>();
-            OrgWiseRetirementvsNewEmployeeList = new List<OrgWiseRetirementvsNewEmployee>();
+            OrgWiseNetDebitCapPositionByFIList = new List<OrgWiseNetDebitCapPositionByFI>();
             DesignationWiseEmpByJobTypeAndOrgList = new List<DesignationWiseEmpByJobTypeAndOrg>();
             DesignationWiseEmpByQualificationAndOrgList = new List<DesignationWiseEmpByQualificationAndOrg>();
-            NetSalaryByMonthList = new List<NetSalaryByMonth>();
+            TransactionAmountBySettlementCycleIdList = new List<TransactionAmountBySettlementCycleId>();
         }
-        public List<NetSalaryByMonth> NetSalaryByMonthList { get; set; }
+        public List<TransactionAmountBySettlementCycleId> TransactionAmountBySettlementCycleIdList { get; set; }
         public List<EmployeeAttendance> EmployeeAttendanceList { get; set; }
         public List<EmployeeOnLeave> EmployeeOnLeaveList { get; set; }
-        public List<FilledPostVacantPost> FilledPostVacantPostList { get; set; }
+        public List<RTPStatusByFI> RTPStatusByFIList { get; set; }
         public List<UpcommingRetirement> UpcommingRetirementList { get; set; }
         public List<EmployeePerformance> EmployeePerformanceList { get; set; }
-        public List<EmployeeJobStatus> EmployeeJobStatusList { get; set; }
-        public List<EmployeeQualifcation> EmployeeQualifcationList { get; set; }
-        public List<RetirementvsNewEmployee> RetirementvsNewEmployeeList { get; set; }
-        public List<UpcommingRetirementCompanyWise> UpcommingRetirementCompanyWiseList { get; set; }
-        public List<ForeignTourOrganizationWise> ForeignTourOrganizationWiseList { get; set; }
-        public List<FilledPostVacantPostUtilityWise> FilledPostVacantPostUtilityWiseList { get; set; }
-        public List<TotalEmployee> TotalEmployeeList { get; set; }
+        public List<TransactionsSettledUnsettled> TransactionsSettledUnsettledList { get; set; }
+        public List<TransactionCountByType> TransactionCountByTypeList { get; set; }
+        public List<NetDebitCapPositionByFI> NetDebitCapPositionByFIList { get; set; }
+        public List<RegisteredUsersByFI> RegisteredUsersByFIList { get; set; }
+        public List<TransactionsAmountTodayByFI> TransactionsAmountTodayByFIList { get; set; }
+        public List<RTPStatusByFIUtilityWise> RTPStatusByFIUtilityWiseList { get; set; }
+        public List<TotalNumberOfUsers> TotalNumberOfUsersList { get; set; }
         public List<ForeignTourCategoryWise> ForeignTourCategoryWiseList { get; set; }
         public List<ForeignTourPurposeWiseOfficial> ForeignTourPurposeWiseOfficialList { get; set; }
         public List<ForeignTourPurposeWisePersonal> ForeignTourPurposeWisePersonalList { get; set; }
-        public List<TotalEmployeeUtilityWise> TotalEmployeeUtilityWiseList { get; set; }
+        public List<TransactionsCountTodayByFI> TransactionsCountTodayByFIList { get; set; }
         public List<UtilitywiseLastFiscalYearSalary> UtilitywiseLastFiscalYearSalaryList { get; set; }
         public List<OrgPostWiseEmp> OrgPostWiseEmpList { get; set; }
         public List<OrgPostWiseUpcommingRetirment> OrgPostWiseUpcommingRetirmentList { get; set; }
         public List<DesignationWiseEmpCount> DesignationWiseEmpCountList { get; set; }
         public List<OrgWiseEmpByJobStatus> OrgWiseEmpByJobStatusList { get; set; }
         public List<OrgWiseEmpByQualification> OrgWiseEmpByQualificationList { get; set; }
-        public List<OrgWiseRetirementvsNewEmployee> OrgWiseRetirementvsNewEmployeeList { get; set; }
+        public List<OrgWiseNetDebitCapPositionByFI> OrgWiseNetDebitCapPositionByFIList { get; set; }
         public List<DesignationWiseEmpByJobTypeAndOrg> DesignationWiseEmpByJobTypeAndOrgList { get; set; }
         public List<DesignationWiseEmpByQualificationAndOrg> DesignationWiseEmpByQualificationAndOrgList { get; set; }
     }
@@ -68,10 +68,10 @@ namespace IDTPDashboard.DomainModel.Entity
         public int Absent { get; set; }
         public int SequenceNo { get; set; }
     }
-    public class EmployeeJobStatus
+    public class TransactionsSettledUnsettled
     {
         public string JobStatus { get; set; }
-        public int TotalEmployee { get; set; }
+        public int TotalNumberOfUsers { get; set; }
     }
 
     public class EmployeeOnLeave
@@ -88,12 +88,12 @@ namespace IDTPDashboard.DomainModel.Entity
         public int NoOfOfficers { get; set; }
         public int SequenceNo { get; set; }
     }
-    public class EmployeeQualifcation
+    public class TransactionCountByType
     {
         public string Qualification { get; set; }
         public int Total { get; set; }
     }
-    public class FilledPostVacantPost
+    public class RTPStatusByFI
     {
         public string PostType { get; set; }
         public int SanctionPosts { get; set; }
@@ -106,30 +106,30 @@ namespace IDTPDashboard.DomainModel.Entity
         public int Count { get; set; }
         public int SequenceNo { get; set; }
     }
-    public class RetirementvsNewEmployee
+    public class NetDebitCapPositionByFI
     {
         public string Organization { get; set; }
         public long Retirement { get; set; }
         public long NewEmployee { get; set; }
     }
-    public class UpcommingRetirementCompanyWise
+    public class RegisteredUsersByFI
     {
         public string Organization { get; set; }
         public long Employee { get; set; }
     }
-    public class ForeignTourOrganizationWise
+    public class TransactionsAmountTodayByFI
     {
         public string Organization { get; set; }
         public long TourCount { get; set; }
     }
-    public class FilledPostVacantPostUtilityWise
+    public class RTPStatusByFIUtilityWise
     {
         public string Organization { get; set; }
         public int SanctionPosts { get; set; }
         public int FilledPosts { get; set; }
         public int VacantPosts { get; set; }
     }
-    public class TotalEmployee
+    public class TotalNumberOfUsers
     {
         public long totalemployee { get; set; }
     }
@@ -148,7 +148,7 @@ namespace IDTPDashboard.DomainModel.Entity
         public string TourPurpose { get; set; }
         public int TotalTour { get; set; }
     }
-    public class TotalEmployeeUtilityWise
+    public class TransactionsCountTodayByFI
     {
         public string Organization { get; set; }
         public long totalemployee { get; set; }
@@ -188,7 +188,7 @@ namespace IDTPDashboard.DomainModel.Entity
         public string Organization { get; set; }
         public int Total { get; set; }
     }
-    public class OrgWiseRetirementvsNewEmployee
+    public class OrgWiseNetDebitCapPositionByFI
     {
         public string PostType { get; set; }
         public int Retirement { get; set; }

@@ -9,22 +9,22 @@ namespace IDTPDashboard.DomainModel.Entity
         public HRFinance_Entity()
         {
             SalaryByEmployeeCategoryList = new List<SalaryByEmployeeCategory>();
-            NetSalaryByMonthList = new List<NetSalaryByMonth>();
+            TransactionAmountBySettlementCycleIdList = new List<TransactionAmountBySettlementCycleId>();
             AllowanceDeductionByMonthList = new List<AllowanceDeductionByMonth>();
             SalaryByOfficesList = new List<SalaryByOffices>();
             GrossSalaryExpenditureList = new List<GrossSalaryExpenditure>();
             FestivalBonusList = new List<FestivalBonus>();
             CPFContributionList = new List<CPFContribution>();
-            OrgWiseNetSalaryByMonthList = new List<OrgWiseNetSalaryByMonth>();
+            OrgWiseTransactionAmountBySettlementCycleIdList = new List<OrgWiseTransactionAmountBySettlementCycleId>();
         }
         public List<SalaryByEmployeeCategory> SalaryByEmployeeCategoryList { get; set; }
-        public List<NetSalaryByMonth> NetSalaryByMonthList { get; set; }
+        public List<TransactionAmountBySettlementCycleId> TransactionAmountBySettlementCycleIdList { get; set; }
         public List<AllowanceDeductionByMonth> AllowanceDeductionByMonthList { get; set; }
         public List<SalaryByOffices> SalaryByOfficesList { get; set; }
         public List<GrossSalaryExpenditure> GrossSalaryExpenditureList { get; set; }
         public List<FestivalBonus> FestivalBonusList { get; set; }
         public List<CPFContribution> CPFContributionList { get; set; }
-        public List<OrgWiseNetSalaryByMonth> OrgWiseNetSalaryByMonthList { get; set; }
+        public List<OrgWiseTransactionAmountBySettlementCycleId> OrgWiseTransactionAmountBySettlementCycleIdList { get; set; }
     }
     public class SalaryByEmployeeCategory
     {
@@ -38,7 +38,7 @@ namespace IDTPDashboard.DomainModel.Entity
         public string OfficeName { get; set; }
         public string PBSName { get; set; }
     }
-    public class NetSalaryByMonth
+    public class TransactionAmountBySettlementCycleId
     {
         public string SalaryDate { get; set; }
         public double TotalSalary { get; set; }
@@ -78,7 +78,7 @@ namespace IDTPDashboard.DomainModel.Entity
         public string OfficeName { get; set; }
         public string PBSName { get; set; }
     }
-    public class OrgWiseNetSalaryByMonth
+    public class OrgWiseTransactionAmountBySettlementCycleId
     {
         public double TotalSalary { get; set; }
         public string Organization { get; set; }

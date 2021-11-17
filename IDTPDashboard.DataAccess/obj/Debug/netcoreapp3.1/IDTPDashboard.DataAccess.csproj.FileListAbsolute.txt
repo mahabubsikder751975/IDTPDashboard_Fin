@@ -22,3 +22,4 @@ C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\obj\Deb
 C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\obj\Debug\netcoreapp3.1\IDTPDashboard.DataAccess.csproj.CoreCompileInputs.cache
 C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\obj\Debug\netcoreapp3.1\IDTPDashboard.DataAccess.dll
 C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\obj\Debug\netcoreapp3.1\IDTPDashboard.DataAccess.pdb
+C:\Software\IDTPDashboard_Fin\IDTPDashboard_Fin\IDTPDashboard.DataAccess\obj\Debug\netcoreapp3.1\IDTPDashboard.DataAccess.csproj.CopyComplete

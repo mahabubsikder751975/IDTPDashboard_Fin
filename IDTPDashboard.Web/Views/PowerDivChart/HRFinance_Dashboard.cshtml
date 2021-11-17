@@ -3,7 +3,7 @@
     ViewData["Title"] = "HRFinance_Dashboard";
     Layout = "~/Views/Shared/Site/_Layout.cshtml";
     //Chart salaryByEmployeeCategory = (Chart)ViewData["salaryByEmployeeCategory"];
-    Chart netSalaryByMonth = (Chart)ViewData["netSalaryByMonth"];
+    Chart transactionAmountBySettlementCycleId = (Chart)ViewData["transactionAmountBySettlementCycleId"];
     //Chart allowanceDeductionByMonth = (Chart)ViewData["allowanceDeductionByMonth"];
     Chart salaryByOffices = (Chart)ViewData["salaryByOffices"];
     //Chart grossSalaryExpenditurePieChart = (Chart)ViewData["grossSalaryExpenditurePieChart"];
@@ -28,7 +28,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Total Salary by Month</h5>
-                <canvas id="netSalaryByMonth"></canvas>
+                <canvas id="transactionAmountBySettlementCycleId"></canvas>
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@
 @section Scripts {
     <script type="text/javascript">
         @*@Html.Raw(salaryByEmployeeCategory.CreateChartCode("salaryByEmployeeCategory"));*@
-        @Html.Raw(netSalaryByMonth.CreateChartCode("netSalaryByMonth"));
+        @Html.Raw(transactionAmountBySettlementCycleId.CreateChartCode("transactionAmountBySettlementCycleId"));
         @*@Html.Raw(allowanceDeductionByMonth.CreateChartCode("allowanceDeductionByMonth"));*@
         @Html.Raw(salaryByOffices.CreateChartCode("salaryByOffices"));
         @*@Html.Raw(grossSalaryExpenditurePieChart.CreateChartCode("grossSalaryExpenditurePieChart"));

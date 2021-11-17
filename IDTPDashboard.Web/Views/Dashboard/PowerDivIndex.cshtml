@@ -25,11 +25,11 @@
 @using ChartJSCore.Models;
 @{
     //Chart UtilityWiseTurnover = (Chart)ViewData["UtilityWiseTurnover"];
-    //Chart totalEmployeeUtilityWise = (Chart)ViewData["totalEmployeeUtilityWise"];
+    //Chart transactionsCountTodayByFI = (Chart)ViewData["transactionsCountTodayByFI"];
     Chart TotalPowerPlants = (Chart)ViewData["TotalPowerPlants"];
     Chart TotalInstalledCapacityMW = (Chart)ViewData["TotalInstalledCapacityMW"];
     //Chart procurementValuebyOffice = (Chart)ViewData["procurementValuebyOffice"];
-    //Chart TotalEmployeeByStatus = (Chart)ViewData["TotalEmployeeByStatus"];
+    //Chart TotalNumberOfUsersByStatus = (Chart)ViewData["TotalNumberOfUsersByStatus"];
     Chart FinancialPosition = (Chart)ViewData["FinancialPosition"];
     Chart APPUtilizedUnutilized = (Chart)ViewData["APPUtilizedUnutilized"];
     //Chart fuelWisePowerPlant = (Chart)ViewData["fuelWisePowerPlant"];
@@ -69,7 +69,7 @@
         @*<div class="card container mt-2">
             <div class="card-body">
                 <h5 class="card-title">Total Employee by Utility</h5>
-                <canvas id="totalEmployeeUtilityWise"></canvas>
+                <canvas id="transactionsCountTodayByFI"></canvas>
             </div>
         </div>
         <div class="card container mt-2">
@@ -81,7 +81,7 @@
         <div class="card container" >
             <div class="card-body">
                 <h6 class="card-title">Employment Status</h6>
-                <canvas id="TotalEmployeeByStatus"></canvas>
+                <canvas id="TotalNumberOfUsersByStatus"></canvas>
             </div>
         </div>
         <div class="card container mt-2">
@@ -135,11 +135,11 @@
 </div>
 @section Scripts {
     <script type="text/javascript">
-         @*@Html.Raw(totalEmployeeUtilityWise.CreateChartCode("totalEmployeeUtilityWise"));
+         @*@Html.Raw(transactionsCountTodayByFI.CreateChartCode("transactionsCountTodayByFI"));
          @Html.Raw(UtilityWiseTurnover.CreateChartCode("UtilityWiseTurnover"));*@
          @Html.Raw(TotalPowerPlants.CreateChartCode("TotalPowerPlants"));
          @Html.Raw(TotalInstalledCapacityMW.CreateChartCode("TotalInstalledCapacityMW"));
-         @*@Html.Raw(TotalEmployeeByStatus.CreateChartCode("TotalEmployeeByStatus"));*@
+         @*@Html.Raw(TotalNumberOfUsersByStatus.CreateChartCode("TotalNumberOfUsersByStatus"));*@
          @Html.Raw(FinancialPosition.CreateChartCode("FinancialPosition"));
          @Html.Raw(APPUtilizedUnutilized.CreateChartCode("APPUtilizedUnutilized"));
          @*@Html.Raw(fuelWisePowerPlant.CreateChartCode("fuelWisePowerPlant"));*@
@@ -151,11 +151,11 @@
         loadTotalEmpStatusChart();
     });
     function loadTotalEmpStatusChart() {
-            var totalEmployeeByStatus =@Html.Raw(Json.Serialize(@ViewBag.totalEmployeeByStatus));
-            var canvas = document.getElementById("TotalEmployeeByStatus");
+            var totalNumberOfUsersByStatus =@Html.Raw(Json.Serialize(@ViewBag.totalNumberOfUsersByStatus));
+            var canvas = document.getElementById("TotalNumberOfUsersByStatus");
             var ctx = canvas.getContext("2d");
-        var xValues = totalEmployeeByStatus.map(o => o.type);
-        var yValues = totalEmployeeByStatus.map(v => v.employeeCount/1000);
+        var xValues = totalNumberOfUsersByStatus.map(o => o.type);
+        var yValues = totalNumberOfUsersByStatus.map(v => v.employeeCount/1000);
             //var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
         var dataSet = {
                 //barPercentage: 0.5,

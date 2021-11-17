@@ -420,7 +420,7 @@ namespace IDTPDashboard.Web.Helper
 
             return chart;
         }
-        public static Chart FilledPostVacantPosts()
+        public static Chart RTPStatusByFIs()
         {
             Chart chart = new Chart();
             chart.Type = Enums.ChartType.Bar;

@@ -10,12 +10,12 @@
 
     Chart attendanceInfo = (Chart)ViewData["attendanceInfo"];
     Chart employeeOnLeave = (Chart)ViewData["employeeOnLeave"];
-    Chart filledPostVacantPosts = (Chart)ViewData["filledPostVacantPosts"];
+    Chart rtpStatusByFIs = (Chart)ViewData["rtpStatusByFIs"];
     Chart upcommingRetirement = (Chart)ViewData["upcommingRetirement"];
     Chart employeePerformancePieChart = (Chart)ViewData["employeePerformancePieChart"];
-    Chart employeeJobStatusPieChart = (Chart)ViewData["employeeJobStatusPieChart"];
-    Chart employeeQualifcationPieChart = (Chart)ViewData["employeeQualifcationPieChart"];
-    //Chart retirementvsNewEmployee = (Chart)ViewData["retirementvsNewEmployee"];
+    Chart transactionsSettledUnsettledPieChart = (Chart)ViewData["transactionsSettledUnsettledPieChart"];
+    Chart transactionCountByTypePieChart = (Chart)ViewData["transactionCountByTypePieChart"];
+    //Chart netDebitCapPositionByFI = (Chart)ViewData["netDebitCapPositionByFI"];
     Chart foreignTourCategoryWisePieChart = (Chart)ViewData["foreignTourCategoryWisePieChart"];
     Chart foreignTourPurposeWiseOfficialPieChart = (Chart)ViewData["foreignTourPurposeWiseOfficialPieChart"];
     Chart foreignTourPurposeWisePersonalPieChart = (Chart)ViewData["foreignTourPurposeWisePersonalPieChart"];
@@ -31,7 +31,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Employment Status</h5>
-                <canvas id="filledPostVacantPosts"></canvas>
+                <canvas id="rtpStatusByFIs"></canvas>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Retirement vs New Employee for Last Year(@LastYear) - Utility wise</h5>
-                    <canvas id="retirementvsNewEmployee"></canvas>
+                    <canvas id="netDebitCapPositionByFI"></canvas>
                 </div>
             </div>
         </div>*@
@@ -81,7 +81,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Employee Job Status</h5>
-                <canvas id="employeeJobStatusPieChart"></canvas>
+                <canvas id="transactionsSettledUnsettledPieChart"></canvas>
             </div>
         </div>
     </div>
@@ -90,7 +90,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Employee Qualification</h5>
-                <canvas id="employeeQualifcationPieChart"></canvas>
+                <canvas id="transactionCountByTypePieChart"></canvas>
             </div>
         </div>
     </div>
@@ -128,12 +128,12 @@
     <script type="text/javascript">
         @Html.Raw(attendanceInfo.CreateChartCode("attendanceInfo"));
         @Html.Raw(employeeOnLeave.CreateChartCode("employeeOnLeave"));
-          @*@Html.Raw(retirementvsNewEmployee.CreateChartCode("retirementvsNewEmployee"));*@
-        @Html.Raw(filledPostVacantPosts.CreateChartCode("filledPostVacantPosts"));
+          @*@Html.Raw(netDebitCapPositionByFI.CreateChartCode("netDebitCapPositionByFI"));*@
+        @Html.Raw(rtpStatusByFIs.CreateChartCode("rtpStatusByFIs"));
         @Html.Raw(upcommingRetirement.CreateChartCode("upcommingRetirement"));
         @Html.Raw(employeePerformancePieChart.CreateChartCode("employeePerformancePieChart"));
-        @Html.Raw(employeeJobStatusPieChart.CreateChartCode("employeeJobStatusPieChart"));
-        @Html.Raw(employeeQualifcationPieChart.CreateChartCode("employeeQualifcationPieChart"));
+        @Html.Raw(transactionsSettledUnsettledPieChart.CreateChartCode("transactionsSettledUnsettledPieChart"));
+        @Html.Raw(transactionCountByTypePieChart.CreateChartCode("transactionCountByTypePieChart"));
         @Html.Raw(foreignTourCategoryWisePieChart.CreateChartCode("foreignTourCategoryWisePieChart"));
         @Html.Raw(foreignTourPurposeWiseOfficialPieChart.CreateChartCode("foreignTourPurposeWiseOfficialPieChart"));
         @Html.Raw(foreignTourPurposeWisePersonalPieChart.CreateChartCode("foreignTourPurposeWisePersonalPieChart"));

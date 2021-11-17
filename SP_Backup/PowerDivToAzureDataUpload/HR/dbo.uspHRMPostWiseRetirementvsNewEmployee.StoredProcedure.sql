@@ -1,18 +1,18 @@
 Use [ERP_ProcedureDB]
 
-DROP PROCEDURE IF EXISTS [dbo].[uspHRMPostWiseRetirementvsNewEmployee]
+DROP PROCEDURE IF EXISTS [dbo].[uspHRMPostWiseNetDebitCapPositionByFI]
 GO
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE [dbo].[uspHRMPostWiseRetirementvsNewEmployee]
+CREATE PROCEDURE [dbo].[uspHRMPostWiseNetDebitCapPositionByFI]
 @Organization varchar(20)
 AS
 /*Testing
-exec uspHRMPostWiseRetirementvsNewEmployee 'APSCL'
-exec uspHRMPostWiseRetirementvsNewEmployee 'BREB'
-exec uspHRMPostWiseRetirementvsNewEmployee 'PBS'
+exec uspHRMPostWiseNetDebitCapPositionByFI 'APSCL'
+exec uspHRMPostWiseNetDebitCapPositionByFI 'BREB'
+exec uspHRMPostWiseNetDebitCapPositionByFI 'PBS'
 
 */
 BEGIN

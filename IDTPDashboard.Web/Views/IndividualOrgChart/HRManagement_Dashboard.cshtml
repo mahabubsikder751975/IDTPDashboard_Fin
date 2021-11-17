@@ -9,10 +9,10 @@
     string CurrYear = DateTime.Now.ToString("yyyy");
 
 
-    Chart filledPostVacantPosts = (Chart)ViewData["filledPostVacantPosts"];
-    Chart employeeJobStatusPieChart = (Chart)ViewData["employeeJobStatusPieChart"];
-    Chart employeeQualifcationPieChart = (Chart)ViewData["employeeQualifcationPieChart"];
-    Chart retirementvsNewEmployee = (Chart)ViewData["retirementvsNewEmployee"];
+    Chart rtpStatusByFIs = (Chart)ViewData["rtpStatusByFIs"];
+    Chart transactionsSettledUnsettledPieChart = (Chart)ViewData["transactionsSettledUnsettledPieChart"];
+    Chart transactionCountByTypePieChart = (Chart)ViewData["transactionCountByTypePieChart"];
+    Chart netDebitCapPositionByFI = (Chart)ViewData["netDebitCapPositionByFI"];
     Chart foreignTourCategoryWisePieChart = (Chart)ViewData["foreignTourCategoryWisePieChart"];
     Chart foreignTourPurposeWiseOfficialPieChart = (Chart)ViewData["foreignTourPurposeWiseOfficialPieChart"];
     Chart foreignTourPurposeWisePersonalPieChart = (Chart)ViewData["foreignTourPurposeWisePersonalPieChart"];
@@ -30,7 +30,7 @@
     Chart MaleFemaleRatioStaff = (Chart)ViewData["MaleFemaleRatioStaff"];
 
     //HRF
-    Chart netSalaryByMonth = (Chart)ViewData["netSalaryByMonth"];
+    Chart transactionAmountBySettlementCycleId = (Chart)ViewData["transactionAmountBySettlementCycleId"];
     Chart salaryByOffices = (Chart)ViewData["salaryByOffices"];
 }
 
@@ -44,7 +44,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Employment Status</h5>
-                <canvas id="filledPostVacantPosts"></canvas>
+                <canvas id="rtpStatusByFIs"></canvas>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Retirement vs New Employee for Last Year(@LastYear)</h5>
-                <canvas id="retirementvsNewEmployee"></canvas>
+                <canvas id="netDebitCapPositionByFI"></canvas>
             </div>
         </div>
     </div>
@@ -110,7 +110,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Total Salary by Month</h5>
-                <canvas id="netSalaryByMonth"></canvas>
+                <canvas id="transactionAmountBySettlementCycleId"></canvas>
             </div>
         </div>
     </div>
@@ -162,7 +162,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Employee Job Status</h5>
-                <canvas id="employeeJobStatusPieChart"></canvas>
+                <canvas id="transactionsSettledUnsettledPieChart"></canvas>
             </div>
         </div>
     </div>
@@ -171,7 +171,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Employee Qualification</h5>
-                <canvas id="employeeQualifcationPieChart"></canvas>
+                <canvas id="transactionCountByTypePieChart"></canvas>
             </div>
         </div>
     </div>
@@ -208,11 +208,11 @@
 @section Scripts {
     <script type="text/javascript">
 
-        @Html.Raw(retirementvsNewEmployee.CreateChartCode("retirementvsNewEmployee"));
-        @Html.Raw(filledPostVacantPosts.CreateChartCode("filledPostVacantPosts"));
+        @Html.Raw(netDebitCapPositionByFI.CreateChartCode("netDebitCapPositionByFI"));
+        @Html.Raw(rtpStatusByFIs.CreateChartCode("rtpStatusByFIs"));
         @Html.Raw(upcommingRetirement.CreateChartCode("upcommingRetirement"));
-        @Html.Raw(employeeJobStatusPieChart.CreateChartCode("employeeJobStatusPieChart"));
-        @Html.Raw(employeeQualifcationPieChart.CreateChartCode("employeeQualifcationPieChart"));
+        @Html.Raw(transactionsSettledUnsettledPieChart.CreateChartCode("transactionsSettledUnsettledPieChart"));
+        @Html.Raw(transactionCountByTypePieChart.CreateChartCode("transactionCountByTypePieChart"));
         @Html.Raw(foreignTourCategoryWisePieChart.CreateChartCode("foreignTourCategoryWisePieChart"));
         @Html.Raw(foreignTourPurposeWiseOfficialPieChart.CreateChartCode("foreignTourPurposeWiseOfficialPieChart"));
         @Html.Raw(foreignTourPurposeWisePersonalPieChart.CreateChartCode("foreignTourPurposeWisePersonalPieChart"));
@@ -227,7 +227,7 @@
         @Html.Raw(MaleFemaleRatioOfficer.CreateChartCode("MaleFemaleRatioOfficer"));
         @Html.Raw(MaleFemaleRatioStaff.CreateChartCode("MaleFemaleRatioStaff"));
 
-        @Html.Raw(netSalaryByMonth.CreateChartCode("netSalaryByMonth"));
+        @Html.Raw(transactionAmountBySettlementCycleId.CreateChartCode("transactionAmountBySettlementCycleId"));
         @Html.Raw(salaryByOffices.CreateChartCode("salaryByOffices"));
     </script>
 }

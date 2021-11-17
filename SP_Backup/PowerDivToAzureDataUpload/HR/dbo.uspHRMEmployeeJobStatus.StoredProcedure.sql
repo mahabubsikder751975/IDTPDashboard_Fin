@@ -1,17 +1,17 @@
 Use [ERP_ProcedureDB]
-DROP PROCEDURE IF EXISTS [dbo].[uspHRMEmployeeJobStatus]
+DROP PROCEDURE IF EXISTS [dbo].[uspHRMTransactionsSettledUnsettled]
 GO
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE [dbo].[uspHRMEmployeeJobStatus]
+CREATE PROCEDURE [dbo].[uspHRMTransactionsSettledUnsettled]
 @Organization varchar(20)
 AS
 /*Testing
-exec uspHRMEmployeeJobStatus 'CPGCBL'
-exec uspHRMEmployeeJobStatus 'BREB'
-exec uspHRMEmployeeJobStatus 'BPDB'
+exec uspHRMTransactionsSettledUnsettled 'CPGCBL'
+exec uspHRMTransactionsSettledUnsettled 'BREB'
+exec uspHRMTransactionsSettledUnsettled 'BPDB'
 */
 BEGIN
 	CREATE TABLE #HRM_Employee_Job_Status(

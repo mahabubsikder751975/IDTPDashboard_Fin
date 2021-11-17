@@ -41,7 +41,7 @@ namespace IDTPDashboard.Web.Controllers
         {
             var companyName = HttpContext.User.FindFirstValue("Organization");
             HRManagement_Entity hRManagement_Entity = await _repositoryHRManagement.GetAllReports(companyName);
-            Chart totalEmployeeUtilityWise = TotalEmployeeUtilityWisePieChart(hRManagement_Entity.TotalEmployeeUtilityWiseList);
+            Chart transactionsCountTodayByFI = TransactionsCountTodayByFIPieChart(hRManagement_Entity.TransactionsCountTodayByFIList);
             // Finance_Entity finance_Entity = await _repositoryFinance.GetAllReports(companyName);
             // Chart UtilityWiseTurnover = UtilityWiseTurnoverPieChart(finance_Entity.UtilityWiseTurnoverList.ToList());
             //Chart ExpensevsRevenue = ExpensevsRevenuePieChart(finance_Entity.ExpensevsRevenueList.ToList());
@@ -54,7 +54,7 @@ namespace IDTPDashboard.Web.Controllers
             // Landing_Entity landing_Entity = await _repositoryLanding.GetAllReports();
             // Chart TotalPowerPlants = TotalPowerPlantsPieChart(landing_Entity.TotalPowerPlantList.ToList());
             // Chart TotalInstalledCapacityMW = TotalInstalledCapacityMWPieChart(landing_Entity.TotalInstalledCapacityMWList.ToList());
-            // Chart TotalEmployeeByStatus = TotalEmployeeByStatusBarChart(landing_Entity.TotalEmployeeByStatusesList.ToList());
+            // Chart TotalNumberOfUsersByStatus = TotalNumberOfUsersByStatusBarChart(landing_Entity.TotalNumberOfUsersByStatusesList.ToList());
             // Chart TotalExpenceRevenues = TotalExpenceRevenuesPieChart(landing_Entity.TotalExpenceRevenuesList.ToList());
             // Chart APPUtilizedUnutilized = APPUtilizedUnutilizedPieChart(landing_Entity.appUtilizedUnutilizedList.ToList());
             // Chart AccReceivableAndPayable = AccReceivableAndPayableBarChart(landing_Entity.AccReceivableAndPayableList.ToList());
@@ -62,18 +62,18 @@ namespace IDTPDashboard.Web.Controllers
              List<Menu_Entity> menuList = await _repository.GetAllMenu(companyName);
             // List<Particular> particulars = await _particularsRepository.GetParticulars(companyName);
 
-            ViewData["totalEmployeeUtilityWise"] = totalEmployeeUtilityWise;
+            ViewData["transactionsCountTodayByFI"] = transactionsCountTodayByFI;
             // ViewData["UtilityWiseTurnover"] = UtilityWiseTurnover;
             // ViewData["procurementValuebyOffice"] = procurementValuebyOffice;
             // ViewData["TotalPowerPlants"] = TotalPowerPlants;
             // ViewData["TotalInstalledCapacityMW"] = TotalInstalledCapacityMW;
-            // ViewData["TotalEmployeeByStatus"] = TotalEmployeeByStatus;
+            // ViewData["TotalNumberOfUsersByStatus"] = TotalNumberOfUsersByStatus;
             // if (particulars.Count > 0)
             // {
             //     ViewData["ParticularsDate"] = particulars[0].LastUpdatedDate.ToString("dd-MMM-yy");
             //     ViewData["particulars"] = particulars;
             // }           
-            // ViewData["totalEmployeeByStatus"] = landing_Entity.TotalEmployeeByStatusesList.ToList();
+            // ViewData["totalNumberOfUsersByStatus"] = landing_Entity.TotalNumberOfUsersByStatusesList.ToList();
             // ViewData["TotalExpenceRevenues"] = TotalExpenceRevenues;
             // ViewData["APPUtilizedUnutilized"] = APPUtilizedUnutilized;
             // ViewData["fuelWisePowerPlant"] = fuelWisePowerPlant;
@@ -82,10 +82,10 @@ namespace IDTPDashboard.Web.Controllers
 
             return View(menuList);
         }
-        private Chart TotalEmployeeUtilityWisePieChart(List<TotalEmployeeUtilityWise> totalEmployeeUtilityWise)
+        private Chart TransactionsCountTodayByFIPieChart(List<TransactionsCountTodayByFI> transactionsCountTodayByFI)
         {
             string[] colorList = ChartHelper.GetColorList();
-            List<double?> countValue = totalEmployeeUtilityWise.Select(e => Convert.ToDouble(e.totalemployee)).Cast<double?>().ToList();
+            List<double?> countValue = transactionsCountTodayByFI.Select(e => Convert.ToDouble(e.totalemployee)).Cast<double?>().ToList();
             List<ChartColor> backgroundColorList = new List<ChartColor>();
 
             foreach (var item in colorList.Take(countValue.Count()))
@@ -93,7 +93,7 @@ namespace IDTPDashboard.Web.Controllers
                 backgroundColorList.Add(ChartColor.FromHexString(item));
             }
 
-            List<string> Lables = totalEmployeeUtilityWise.Select(e => e.Organization).ToList();
+            List<string> Lables = transactionsCountTodayByFI.Select(e => e.Organization).ToList();
             PieDataset dataset = new PieDataset()
             {
                 Label = "Number of Employees",
@@ -166,10 +166,10 @@ namespace IDTPDashboard.Web.Controllers
             };
             return ChartHelper.GeneratePieChart(Lables, dataset);
         }
-        private Chart TotalEmployeeByStatusBarChart(List<TotalEmployeeByStatus> totalEmployeeByStatus)
+        private Chart TotalNumberOfUsersByStatusBarChart(List<TotalNumberOfUsersByStatus> totalNumberOfUsersByStatus)
         {
-            List<double?> EmployeeCount = totalEmployeeByStatus.Select(e => Convert.ToDouble(e.EmployeeCount).ConvertThousand()).Cast<double?>().ToList();
-            List<string> Lables = totalEmployeeByStatus.Select(e => e.Type).ToList();
+            List<double?> EmployeeCount = totalNumberOfUsersByStatus.Select(e => Convert.ToDouble(e.EmployeeCount).ConvertThousand()).Cast<double?>().ToList();
+            List<string> Lables = totalNumberOfUsersByStatus.Select(e => e.Type).ToList();
             BarDataset dataset1 = new BarDataset()
             {
                 Label = "Number of Posts",
@@ -320,7 +320,7 @@ namespace IDTPDashboard.Web.Controllers
         {
             var companyName = HttpContext.User.FindFirstValue("Organization");
             //HRManagement_Entity hRManagement_Entity = await _repositoryHRManagement.GetAllReports(companyName);
-            //Chart totalEmployeeUtilityWise = TotalEmployeeUtilityWisePieChart(hRManagement_Entity.TotalEmployeeUtilityWiseList);
+            //Chart transactionsCountTodayByFI = TransactionsCountTodayByFIPieChart(hRManagement_Entity.TransactionsCountTodayByFIList);
             //Finance_Entity finance_Entity = await _repositoryFinance.GetAllReports(companyName);
             //Chart UtilityWiseTurnover = UtilityWiseTurnoverPieChart(finance_Entity.UtilityWiseTurnoverList.ToList());
             ////Chart ExpensevsRevenue = ExpensevsRevenuePieChart(finance_Entity.ExpensevsRevenueList.ToList());
@@ -333,7 +333,7 @@ namespace IDTPDashboard.Web.Controllers
             //Landing_Entity landing_Entity = await _repositoryLanding.GetAllReports();
             //Chart TotalPowerPlants = TotalPowerPlantsPieChart(landing_Entity.TotalPowerPlantList.ToList());
             //Chart TotalInstalledCapacityMW = TotalInstalledCapacityMWPieChart(landing_Entity.TotalInstalledCapacityMWList.ToList());
-            //Chart TotalEmployeeByStatus = TotalEmployeeByStatusBarChart(landing_Entity.TotalEmployeeByStatusesList.ToList());
+            //Chart TotalNumberOfUsersByStatus = TotalNumberOfUsersByStatusBarChart(landing_Entity.TotalNumberOfUsersByStatusesList.ToList());
             //Chart TotalExpenceRevenues = TotalExpenceRevenuesPieChart(landing_Entity.TotalExpenceRevenuesList.ToList());
             //Chart APPUtilizedUnutilized = APPUtilizedUnutilizedPieChart(landing_Entity.appUtilizedUnutilizedList.ToList());
             //Chart AccReceivableAndPayable = AccReceivableAndPayableBarChart(landing_Entity.AccReceivableAndPayableList.ToList());
@@ -342,14 +342,14 @@ namespace IDTPDashboard.Web.Controllers
             //List<Particular> particulars = await _particularsRepository.GetParticulars(companyName);
 
             ViewData["OrgName"] = companyName;
-            //ViewData["totalEmployeeUtilityWise"] = totalEmployeeUtilityWise;
+            //ViewData["transactionsCountTodayByFI"] = transactionsCountTodayByFI;
             //ViewData["UtilityWiseTurnover"] = UtilityWiseTurnover;
             //ViewData["procurementValuebyOffice"] = procurementValuebyOffice;
             //ViewData["TotalPowerPlants"] = TotalPowerPlants;
             //ViewData["TotalInstalledCapacityMW"] = TotalInstalledCapacityMW;
-            //ViewData["TotalEmployeeByStatus"] = TotalEmployeeByStatus;
+            //ViewData["TotalNumberOfUsersByStatus"] = TotalNumberOfUsersByStatus;
             //ViewData["particulars"] = particulars;
-            //ViewData["TotalEmployeeByStatus"] = TotalEmployeeByStatus;
+            //ViewData["TotalNumberOfUsersByStatus"] = TotalNumberOfUsersByStatus;
             //ViewData["TotalExpenceRevenues"] = TotalExpenceRevenues;
             //ViewData["APPUtilizedUnutilized"] = APPUtilizedUnutilized;
             //ViewData["fuelWisePowerPlant"] = fuelWisePowerPlant;

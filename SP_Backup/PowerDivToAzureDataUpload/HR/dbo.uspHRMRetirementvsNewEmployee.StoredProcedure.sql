@@ -1,16 +1,16 @@
-DROP PROCEDURE IF EXISTS [dbo].[uspHRMRetirementvsNewEmployee]
+DROP PROCEDURE IF EXISTS [dbo].[uspHRMNetDebitCapPositionByFI]
 GO
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE [dbo].[uspHRMRetirementvsNewEmployee]
+CREATE PROCEDURE [dbo].[uspHRMNetDebitCapPositionByFI]
 @Organization varchar(20)
 AS
 /*Testing
-exec uspHRMRetirementvsNewEmployee 'APSCL'
-exec uspHRMRetirementvsNewEmployee 'BREB'
-exec uspHRMRetirementvsNewEmployee 'PBS'
+exec uspHRMNetDebitCapPositionByFI 'APSCL'
+exec uspHRMNetDebitCapPositionByFI 'BREB'
+exec uspHRMNetDebitCapPositionByFI 'PBS'
 
 */
 BEGIN

@@ -11,7 +11,7 @@ namespace IDTPDashboard.DomainModel.Entity
         }
         public List<TotalPowerPlant> TotalPowerPlantList { get; set; }
         public List<TotalInstalledCapacityMW> TotalInstalledCapacityMWList { get; set; }
-        public List<TotalEmployeeByStatus> TotalEmployeeByStatusesList { get; set; }
+        public List<TotalNumberOfUsersByStatus> TotalNumberOfUsersByStatusesList { get; set; }
         public List<TotalExpenceRevenue> TotalExpenceRevenuesList { get; set; }       
         public List<APPUtilizedUnutilized> appUtilizedUnutilizedList { get; set; }
         public List<AccReceivableAndPayable> AccReceivableAndPayableList { get; set; }
@@ -28,7 +28,7 @@ namespace IDTPDashboard.DomainModel.Entity
         public string Type { get; set; }
         public long InstalledCapacityMW { get; set; }        
     }
-    public class TotalEmployeeByStatus
+    public class TotalNumberOfUsersByStatus
     {
         public string Type { get; set; }
         public long EmployeeCount { get; set; }

@@ -30,15 +30,15 @@ namespace IDTPDashboard.DataAccess.Repositoty
                     cmd.Parameters.Add(new SqlParameter("@Organization", Organization));
 
                     var response = new HRManagement_Entity();
-                    var filledPostVacantPostData = new List<FilledPostVacantPost>();
-                    var employeeJobStatusData = new List<EmployeeJobStatus>();
-                    var employeeQualifcationData = new List<EmployeeQualifcation>();
-                    var retirementvsNewEmployeeData = new List<RetirementvsNewEmployee>();
-                    var upcommingRetirementCompanyWiseData = new List<UpcommingRetirementCompanyWise>();
-                    var foreignTourOrganizationWiseData = new List<ForeignTourOrganizationWise>();
-                    var totalEmployeeData = new List<TotalEmployee>();
-                    var totalEmployeeUtilityWiseData = new List<TotalEmployeeUtilityWise>();
-                    var netSalaryByMonthData = new List<NetSalaryByMonth>();                    
+                    var rtpStatusByFIData = new List<RTPStatusByFI>();
+                    var transactionsSettledUnsettledData = new List<TransactionsSettledUnsettled>();
+                    var transactionCountByTypeData = new List<TransactionCountByType>();
+                    var netDebitCapPositionByFIData = new List<NetDebitCapPositionByFI>();
+                    var registeredUsersByFIData = new List<RegisteredUsersByFI>();
+                    var transactionsAmountTodayByFIData = new List<TransactionsAmountTodayByFI>();
+                    var totalNumberOfUsersData = new List<TotalNumberOfUsers>();
+                    var transactionsCountTodayByFIData = new List<TransactionsCountTodayByFI>();
+                    var transactionAmountBySettlementCycleIdData = new List<TransactionAmountBySettlementCycleId>();                    
 
                     await sql.OpenAsync();
 
@@ -48,66 +48,66 @@ namespace IDTPDashboard.DataAccess.Repositoty
                         {
                             while (await reader.ReadAsync())
                             {
-                                filledPostVacantPostData.Add(RTPStatusByFIDataPurser(reader));
+                                rtpStatusByFIData.Add(RTPStatusByFIDataPurser(reader));
                             }                          
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                employeeJobStatusData.Add(TransactionsSettledUnsettledDataPurser(reader));
+                                transactionsSettledUnsettledData.Add(TransactionsSettledUnsettledDataPurser(reader));
                             }
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                employeeQualifcationData.Add(TransactionCountByTypeDataPurser(reader));
+                                transactionCountByTypeData.Add(TransactionCountByTypeDataPurser(reader));
                             }
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                retirementvsNewEmployeeData.Add(NetDebitCapPositionByFIDataPurser(reader));
+                                netDebitCapPositionByFIData.Add(NetDebitCapPositionByFIDataPurser(reader));
                             }
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                upcommingRetirementCompanyWiseData.Add(RegisteredUsersByFIDataPurser(reader));
+                                registeredUsersByFIData.Add(RegisteredUsersByFIDataPurser(reader));
                             }
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                foreignTourOrganizationWiseData.Add(TransactionsAmountTodayByFIDataPurser(reader));
+                                transactionsAmountTodayByFIData.Add(TransactionsAmountTodayByFIDataPurser(reader));
                             }
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                totalEmployeeData.Add(TotalNumberOfUsersDataPurser(reader));
+                                totalNumberOfUsersData.Add(TotalNumberOfUsersDataPurser(reader));
                             }          
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                totalEmployeeUtilityWiseData.Add(TransactionsCountTodayByFIDataPurser(reader));
+                                transactionsCountTodayByFIData.Add(TransactionsCountTodayByFIDataPurser(reader));
                             }
 
                             await reader.NextResultAsync();
                             while (await reader.ReadAsync())
                             {
-                                netSalaryByMonthData.Add(TransactionAmountBySettlementCycleIdDataPurser(reader));
+                                transactionAmountBySettlementCycleIdData.Add(TransactionAmountBySettlementCycleIdDataPurser(reader));
                             }
 
-                            response.FilledPostVacantPostList = filledPostVacantPostData;
-                            response.EmployeeJobStatusList = employeeJobStatusData;
-                            response.EmployeeQualifcationList = employeeQualifcationData;
-                            response.RetirementvsNewEmployeeList = retirementvsNewEmployeeData;
-                            response.UpcommingRetirementCompanyWiseList = upcommingRetirementCompanyWiseData;
-                            response.ForeignTourOrganizationWiseList = foreignTourOrganizationWiseData;
-                            response.TotalEmployeeList = totalEmployeeData;
-                            response.TotalEmployeeUtilityWiseList = totalEmployeeUtilityWiseData;
-                            response.NetSalaryByMonthList = netSalaryByMonthData;
+                            response.RTPStatusByFIList = rtpStatusByFIData;
+                            response.TransactionsSettledUnsettledList = transactionsSettledUnsettledData;
+                            response.TransactionCountByTypeList = transactionCountByTypeData;
+                            response.NetDebitCapPositionByFIList = netDebitCapPositionByFIData;
+                            response.RegisteredUsersByFIList = registeredUsersByFIData;
+                            response.TransactionsAmountTodayByFIList = transactionsAmountTodayByFIData;
+                            response.TotalNumberOfUsersList = totalNumberOfUsersData;
+                            response.TransactionsCountTodayByFIList = transactionsCountTodayByFIData;
+                            response.TransactionAmountBySettlementCycleIdList = transactionAmountBySettlementCycleIdData;
                         }
 
                     }
@@ -122,9 +122,9 @@ namespace IDTPDashboard.DataAccess.Repositoty
             }
         }
 
-        private NetSalaryByMonth TransactionAmountBySettlementCycleIdDataPurser(SqlDataReader reader)
+        private TransactionAmountBySettlementCycleId TransactionAmountBySettlementCycleIdDataPurser(SqlDataReader reader)
         {
-            return new NetSalaryByMonth()
+            return new TransactionAmountBySettlementCycleId()
             {
                 SalaryDate = reader["SettleCycleId"].ToString(),
                 TotalSalary = Convert.ToDouble(reader["TotalTransactionAmount"].ToString()),
@@ -133,9 +133,9 @@ namespace IDTPDashboard.DataAccess.Repositoty
             };
         }       
 
-        private FilledPostVacantPost RTPStatusByFIDataPurser(SqlDataReader reader)
+        private RTPStatusByFI RTPStatusByFIDataPurser(SqlDataReader reader)
         {
-            return new FilledPostVacantPost()
+            return new RTPStatusByFI()
             {
                 PostType = reader["FIVID"].ToString(),
                 SanctionPosts = Convert.ToInt32(reader["Accepted"].ToString()),
@@ -144,27 +144,27 @@ namespace IDTPDashboard.DataAccess.Repositoty
             };
         }
 
-        private EmployeeJobStatus TransactionsSettledUnsettledDataPurser(SqlDataReader reader)
+        private TransactionsSettledUnsettled TransactionsSettledUnsettledDataPurser(SqlDataReader reader)
         {
-            return new EmployeeJobStatus()
+            return new TransactionsSettledUnsettled()
             {
                 JobStatus    = reader["Transaction_Status_Code"].ToString(),
-                TotalEmployee = Convert.ToInt32(reader["Total_Count"].ToString())
+                TotalNumberOfUsers = Convert.ToInt32(reader["Total_Count"].ToString())
             };
         }
 
-        private EmployeeQualifcation TransactionCountByTypeDataPurser(SqlDataReader reader)
+        private TransactionCountByType TransactionCountByTypeDataPurser(SqlDataReader reader)
         {
-            return new EmployeeQualifcation()
+            return new TransactionCountByType()
             {
                 Qualification = reader["TransactionType"].ToString(),
                 Total = Convert.ToInt32(reader["Total_Count"].ToString())
             };
         }
 
-        private RetirementvsNewEmployee NetDebitCapPositionByFIDataPurser(SqlDataReader reader)
+        private NetDebitCapPositionByFI NetDebitCapPositionByFIDataPurser(SqlDataReader reader)
         {
-            return new RetirementvsNewEmployee()
+            return new NetDebitCapPositionByFI()
             {
                 Organization = reader["FIVID"].ToString(),
                 Retirement = Convert.ToInt64(reader["NetDebitPosition"].ToString()),
@@ -172,18 +172,18 @@ namespace IDTPDashboard.DataAccess.Repositoty
             };
         }
 
-        private UpcommingRetirementCompanyWise RegisteredUsersByFIDataPurser(SqlDataReader reader)
+        private RegisteredUsersByFI RegisteredUsersByFIDataPurser(SqlDataReader reader)
         {
-            return new UpcommingRetirementCompanyWise()
+            return new RegisteredUsersByFI()
             {
                 Organization = reader["FIVID"].ToString(),
                 Employee = Convert.ToInt64(reader["User_Count"].ToString())
             };
         }
 
-        private ForeignTourOrganizationWise TransactionsAmountTodayByFIDataPurser(SqlDataReader reader)
+        private TransactionsAmountTodayByFI TransactionsAmountTodayByFIDataPurser(SqlDataReader reader)
         {
-            return new ForeignTourOrganizationWise()
+            return new TransactionsAmountTodayByFI()
             {
                 Organization = reader["FIVID"].ToString(),
                 TourCount = Convert.ToInt64(reader["TotalAmount"].ToString())
@@ -191,18 +191,18 @@ namespace IDTPDashboard.DataAccess.Repositoty
         }
 
 
-        private TotalEmployee TotalNumberOfUsersDataPurser(SqlDataReader reader)
+        private TotalNumberOfUsers TotalNumberOfUsersDataPurser(SqlDataReader reader)
         {
-            return new TotalEmployee()
+            return new TotalNumberOfUsers()
             {
                 totalemployee = Convert.ToInt64(reader["totaluser"].ToString())
             };
         }
 
 
-        private TotalEmployeeUtilityWise TransactionsCountTodayByFIDataPurser(SqlDataReader reader)
+        private TransactionsCountTodayByFI TransactionsCountTodayByFIDataPurser(SqlDataReader reader)
         {
-            return new TotalEmployeeUtilityWise()
+            return new TransactionsCountTodayByFI()
             {
                 Organization = reader["FIVID"].ToString(),
                 totalemployee = Convert.ToInt64(reader["TransactionCount"].ToString())
