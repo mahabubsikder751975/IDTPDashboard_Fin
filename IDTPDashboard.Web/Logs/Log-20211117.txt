@@ -301,3 +301,4 @@ System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-s
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 ClientConnectionId:00000000-0000-0000-0000-000000000000
 Error Number:10060,State:0,Class:20
+2021-11-17T15:46:44.3442154+06:00  [INF] Application is shutting down... (90f52c38)

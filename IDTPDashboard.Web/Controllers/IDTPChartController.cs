@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IDTPDashboard.Web.Controllers
 {
-    [Authorize()]
+    //[Authorize()]
     public class IDTPChartController : Controller
     {
         private readonly IIDTPDashboard_Repository _repositoryHRManagement;
@@ -30,7 +30,7 @@ namespace IDTPDashboard.Web.Controllers
         #region  IDTPDashboard1
         public async Task<IActionResult> IDTPDashboard1()
         {
-            var Organization = HttpContext.User.FindFirstValue("Organization");
+            var Organization = "IDTP";//HttpContext.User.FindFirstValue("Organization");
 
             HRManagement_Entity hRManagement_Entity = await _repositoryHRManagement.GetAllReports(Organization);            
 

@@ -33,43 +33,43 @@ namespace IDTPDashboard.Web.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Login(LoginModel model)
+        public  async  Task<IActionResult> Login(LoginModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var user = await _userRepository.GetByUsernameAndPassword(model.Username, model.Password);
-                if (user == null)
-                {
-                    Unauthorized();
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View();
-                }
+            // if (ModelState.IsValid)
+            // {
+            //     var user = await _userRepository.GetByUsernameAndPassword(model.Username, model.Password);
+            //     if (user == null)
+            //     {
+            //         Unauthorized();
+            //         ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            //         return View();
+            //     }
 
-                var claims = new List<Claim>() {
-                new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
-                new Claim(ClaimTypes.Name,user.Name),
-                new Claim("Organization",user.Organization),
-                new Claim(ClaimTypes.Role,user.Role),
-                new Claim("PBSName", user.PbsName)
-            };
+            //     var claims = new List<Claim>() {
+            //     new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
+            //     new Claim(ClaimTypes.Name,user.Name),
+            //     new Claim("Organization",user.Organization),
+            //     new Claim(ClaimTypes.Role,user.Role),
+            //     new Claim("PBSName", user.PbsName)
+            // };
 
-                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var principal = new ClaimsPrincipal(new[] { identity });
+            //     var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            //     var principal = new ClaimsPrincipal(new[] { identity });
 
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties { IsPersistent = model.RememberLogin });
+            //     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties { IsPersistent = model.RememberLogin });
 
-                if(user.Organization== "IDTP")
-                {
-                    return RedirectToAction("IDTPDashboard1", "IDTPChart");
-                }
-                //else
-                //{
-                //    return LocalRedirect(model.ReturnUrl);
-                //}
-            }
+            //     if(user.Organization== "IDTP")
+            //     {
+            //         return RedirectToAction("IDTPDashboard1", "IDTPChart");
+            //     }
+            //     //else
+            //     //{
+            //     //    return LocalRedirect(model.ReturnUrl);
+            //     //}
+            // }
             
-
-            return LocalRedirect(model.ReturnUrl);
+            return RedirectToAction("IDTPDashboard1", "IDTPChart");
+            //return LocalRedirect(model.ReturnUrl);
 
         }
         public async Task<IActionResult> LogOut()

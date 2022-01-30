@@ -114,7 +114,7 @@ namespace IDTPDashboard.DataAccess.Repositoty
                     catch (Exception ex)
                     {
 
-                        throw;
+                        throw ex;
                     }
 
                     return response;
