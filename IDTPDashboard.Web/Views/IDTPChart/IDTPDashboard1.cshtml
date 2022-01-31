@@ -21,172 +21,114 @@
 <h6 style="color: #00008B; text-align: center">Total Number of Users: @ViewBag.totalemployee</h6>
 <div class="row p-4">
     @*totalEmpUtilityWise*@
-    <div class="col-md-6 p-1">
+    <div class="col-md-12 p-1">
         <div class="card h-100">
             <div class="card-body">                
                 <div class="row">
                     <div class="col-md-8">
                         <h5 id="G1ChartTitle" class="card-title">Transactions Count (Today) by FI</h5>
-                    </div>
-                    <div class="col-md-4">                        
-                        <button id="btnBack" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="graphOneNavigation()">
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                    </div>
+                    </div>                   
                 </div>
                 <canvas id="totalEmpUtilityWise"></canvas>               
             </div>
         </div>
     </div>
     @*transactionsAmountTodayByFI*@
-    <div class="col-md-6 p-1">
+    <div class="col-md-12 p-1">
         <div class="card h-100" >
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-10">
                         <h5 id="G2ChartTitle" class="card-title">Transactions Amount (Today) by FI</h5>
-                    </div>
-                    <div class="col-md-2">
-                        <!-- Button to Open the Modal -->
-                        <button id="btnBack2" type="button" style="display:none;" class="btn btn-primary float-right btn-sm" onclick="graphTwoNavigation()">
-                            <i class="fas fa-arrow-left"></i>
-                        </button>
-                    </div>
+                    </div>                   
                 </div>
-
-                <canvas id="transactionsAmountTodayByFI"></canvas>
-                
+                <canvas id="transactionsAmountTodayByFI"></canvas>                
             </div>
         </div>
     </div> 
-    @*upcommingRetirement*@
-    <div class="col-md-6 p-1">
+    @*Total Registered Users by FI*@
+    <div class="col-md-12 p-1">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
                         <h5 id="G3ChartTitle" class="card-title">Total Registered Users by FI</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <button id="btnBack3" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain3()">
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                    </div>
+                    </div>                   
                 </div>
-                <canvas id="upcommingRetirement"></canvas>
+                <canvas id="totalRegisteredUserbyFI"></canvas>
                 
             </div>
         </div>
     </div>
     @* netDebitCapPositionByFI *@
-    <div class="col-md-6 p-1">
+    <div class="col-md-12 p-1">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
                         <h5 id="G4ChartTitle" class="card-title">Current Net Debit Cap/Position by FI</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Button to Open the Modal -->
-                        <button id="btnBack4" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain4()">
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                    </div>
+                    </div>                    
                 </div>
-                <canvas id="netDebitCapPositionByFI"></canvas>
-                <div id="G4L3DesigWiseEmployeeCountForRetirementVsNew" style="display:none;">
-                    <table id="tblG4L3DesigWiseEmployeeCountForRetirementVsNew" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
-                        <thead>
-                            <tr class="table-active">
-                                <th scope="col">Designation</th>
-                                <th scope="col">Number of Employee</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="G4L4EmployeeList" style="display:none;">
-                    <table id="tblG4L4EmployeeList" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
-                        <thead>
-                            <tr class="table-active">
-                                <th scope="col">Name</th>
-                                <th scope="col">Office</th>
-                                <th scope="col">First Joining Date</th>                                
-                            </tr>
-                        </thead>
-                    </table>
-
-                </div>
+                <canvas id="netDebitCapPositionByFI"></canvas>                
             </div>
         </div>
     </div>
     @* rtpStatusByFIs *@
-    <div class="col-md-6 p-1">
+    <div class="col-md-12 p-1">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
                         <h5 id="G5ChartTitle" class="card-title">RTP Status by FI</h5>
-                    </div>
-                    <div class="col-md-4">                        
-                        <button id="btnBack5" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain5()">
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                    </div>
+                    </div>                    
                 </div>
                 <canvas id="rtpStatusByFIs"></canvas>
-                <div id="G5L3EmployeeListByForeignTourPurpose" style="display:none;">
-                    <table id="tblG5L3EmployeeListByForeignTourPurpose" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
-                        <thead>
-                            <tr class="table-active">
-                                <th scope="col">Employee Name</th>
-                                <th scope="col">From Date</th>
-                                <th scope="col">To Date</th>
-                                <th scope="col">Country Visited</th>
-                                <th scope="col">GO</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
     </div>
-    @* transactionAmountBySettlementCycleId *@
-    <div class="col-md-6 p-1">
+
+    @* FailedTransactionByFI & Types *@
+    <div class="col-md-12 p-1">
         <div class="card h-100">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
-                        <h5 id="G6ChartTitle" class="card-title">Transaction Amount by Settlement Cycle</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Button to Open the Modal -->
-                        <button id="btnBack6" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain6()">
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                    </div>
+                        <h5 id="G55ChartTitle" class="card-title">Failed Transactions by FI</h5>
+                    </div>                    
                 </div>
-                <canvas id="transactionAmountBySettlementCycleId"></canvas>
-                <div id="G6L3MonthlySalarySummary" style="display:none;">
-                    <canvas id="monthlySalarySummary"></canvas>
-                </div>
-                <div id="G6L4GradeWiseMonthlySalarySummary" style="display:none;">
-                    <table id="tblG6L4GradeWiseMonthlySalarySummary" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
-                        <thead>
-                            <tr class="table-active">
-                                <th scope="col">Grade</th>
-                                <th scope="col">Amount</th>                                
-                            </tr>
-                        </thead>
-                    </table>
-
-                </div>
+                <canvas id="failedTransactionByFI"></canvas>                
             </div>
         </div>
     </div>
+
+    @* transactionAmountBySettlementCycleId *@
+    <div class="col-md-12 p-1">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 id="G6ChartTitle" class="card-title">Transaction Amount by Settlement Time</h5>
+                    </div>                    
+                </div>
+                <canvas id="transactionAmountBySettlementCycleId"></canvas>                
+            </div>
+        </div>
+    </div>
+
+    @* transactionCountBySettlementTime *@
+    <div class="col-md-12 p-1">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 id="G111ChartTitle" class="card-title">Transaction Count by Settlement Time</h5>
+                    </div>                   
+                </div>
+                <canvas id="transactionCountBySettlementTime"></canvas>                
+            </div>
+        </div>
+    </div>
+
     @*PIE CHART*@
     <div class="col-md-6 p-1">
         <div class="card h-100">
@@ -194,40 +136,9 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h5 id="G7ChartTitle" class="card-title">Current Transactions Settled vs Unsettled</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Button to Open the Modal -->
-                        <button id="btnBack7" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain7()">
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                    </div>
+                    </div>                    
                 </div>
-                <canvas id="transactionsSettledUnsettledPieChart"></canvas>
-                <div id="G7L3DesignationWiseEmployeeCount" style="display:none;">
-                    <table id="tblG7L3DesignationWiseEmployeeCount" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
-                        <thead>
-                            <tr class="table-active">
-                                <th scope="col">Designation</th>
-                                <th scope="col">Number of Employee</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="G7L4EmployeeList" style="display:none;">
-                    <table id="tblG7L4EmployeeList" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
-                        <thead>
-                            <tr class="table-active">
-                                <th scope="col">Name</th>
-                                <th scope="col">Office</th>
-                                <th scope="col">First Joining Date</th>
-                                <th scope="col">Service Length</th>
-                            </tr>
-                        </thead>
-                    </table>
-
-                </div>
+                <canvas id="transactionsSettledUnsettledPieChart"></canvas>                
             </div>
         </div>
     </div>
@@ -237,88 +148,12 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h5 id="G8ChartTitle" class="card-title">Transaction Count by Type</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Button to Open the Modal -->
-                        <button id="btnBack8" type="button" style="display: none;" class="btn btn-primary float-right btn-sm" onclick="loadMain8()">
-                            <i class="fa fa-arrow-left"></i>
-                        </button>
-                    </div>
+                    </div>                    
                 </div>
-                <canvas id="transactionCountByTypePieChart"></canvas>
-                <div id="G8L3DesignationWiseEmployeeCount" style="display:none;">
-                    <table id="tblG8L3DesignationWiseEmployeeCount" class="table table-condensed table-striped table-bordered table-hover table-sm dt-nowrap">
-                        <thead>
-                            <tr class="table-active">
-                                <th scope="col">Designation</th>
-                                <th scope="col">Number of Employee</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+                <canvas id="transactionCountByTypePieChart"></canvas>                
             </div>
         </div>
     </div>
-
- 
-    @*<div class="col-md-4 p-1">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Employee by Cadre</h5>
-                <canvas id="EmployeebyCategory"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-1">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Employee Foreign Tour</h5>
-                <canvas id="foreignTourCategoryWisePieChart"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-1">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Foreign Tour Personal Purpose wise</h5>
-                <canvas id="foreignTourPurposeWisePersonalPieChart"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-1">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Foreign Tour Official Purpose wise</h5>
-                <canvas id="foreignTourPurposeWiseOfficialPieChart"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-1">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Male-Female Ratio</h5>
-                <canvas id="MaleFemaleRatioBoth"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-1">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Male-Female Ratio (Officer)</h5>
-                <canvas id="MaleFemaleRatioOfficer"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 p-1">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Male-Female Ratio (Staff)</h5>
-                <canvas id="MaleFemaleRatioStaff"></canvas>
-            </div>
-        </div>
-    </div>*@
 </div>
 
 @section Scripts {
@@ -373,15 +208,44 @@
             var ctx = canvas.getContext("2d");
             var xValues = totalEmpUtilityWise.map(o => o.organization);
             var yValues = totalEmpUtilityWise.map(v => v.totalemployee);
+            var y2Values = totalEmpUtilityWise.map(a => a.rtpTransactionCount);
             //var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
-                label: 'Transaction Count',
+                label: 'Direct Pay',
                 backgroundColor: '#01B8AA',
-                data: yValues
+                data: yValues,
+                stack: 'Stack 0'
             };
 
-            var chartData = chartHelper.data(xValues, dataSet);
-            chart1 = new Chart(ctx, chartHelper.config('bar',chartData));
+            var dataSet2 = {
+                label: 'Request to Pay',
+                backgroundColor: '#DD780A',
+                data: y2Values,
+                stack: 'Stack 0'
+            };
+            
+            var chartData = chartHelper.data(xValues, dataSet, dataSet2);
+
+            const config = {
+                type: 'bar',
+                data: chartData,
+                options: {
+                    plugins: {
+                        tooltip:true,
+                        labels: false,                        
+                    },
+                    responsive: true,                      
+                    interaction: {
+                    intersect: false,
+                    },
+                    scales: {
+                        xAxes: [{ stacked: true }],
+                        yAxes: [{ stacked: true }]
+                    }
+                }         
+            };         
+
+            chart1 = new Chart(ctx, config);
             @* canvas.onclick = function (evt) {
                 var activePoints1 = chart1.getElementsAtEvent(evt);
                 if (activePoints1[0]) {
@@ -759,11 +623,11 @@
             chartHelper.setChartTitle('G3L1ChartTitle','Total Registered Users by FI');
             $('#G3ChartTitle').text(chartHelper.getChartTitle('G3L1ChartTitle'));
 
-            var upcommingRetirement =@Html.Raw(Json.Serialize(@ViewBag.upcommingRetirement));
-            var canvas = document.getElementById("upcommingRetirement");
+            var totalRegisteredUserbyFI =@Html.Raw(Json.Serialize(@ViewBag.totalRegisteredUserbyFI));
+            var canvas = document.getElementById("totalRegisteredUserbyFI");
             var ctx = canvas.getContext("2d");
-            var xValues = upcommingRetirement.map(o => o.organization);
-            var yValues = upcommingRetirement.map(v => v.employee);
+            var xValues = totalRegisteredUserbyFI.map(o => o.organization);
+            var yValues = totalRegisteredUserbyFI.map(v => v.employee);
 
             var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
@@ -1159,7 +1023,7 @@
 
         }
         function loadforeignTourOrgWiseChart() {
-            chartHelper.setChartTitle('G5L1ChartTitle', 'RTP Status by FI');
+            chartHelper.setChartTitle('G5L1ChartTitle', 'RTP Status (Today) by FI');
             $('#G5ChartTitle').text(chartHelper.getChartTitle('G5L1ChartTitle'));
 
             var transactionsAmountTodayByFI =@Html.Raw(Json.Serialize(@ViewBag.transactionsAmountTodayByFI));
@@ -1167,16 +1031,43 @@
             var ctx = canvas.getContext("2d");
             var xValues = transactionsAmountTodayByFI.map(o => o.organization);
             var yValues = transactionsAmountTodayByFI.map(v => v.tourCount);
+            var y2Values = transactionsAmountTodayByFI.map(v => v.rtpTotalAmount);
 
             var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
             var dataSet = {
-                label: 'Transactions Amount',
+                label: 'Direct Pay',
                 backgroundColor: '#01B8AA',
-                data: yValues
+                data: yValues,
+                stack: 'Stack 0'
             };
 
-            var chartData5 = chartHelper.data(xValues, dataSet);
-            chart5 = new Chart(ctx, chartHelper.config('bar',chartData5));
+            var dataSet2 = {
+                label: 'Request to Pay',
+                backgroundColor: '#DD780A',
+                data: y2Values,
+                stack: 'Stack 0'
+            };
+
+            var chartData5 = chartHelper.data(xValues, dataSet, dataSet2);
+            const config = {
+                type: 'bar',
+                data: chartData5,
+                options: {
+                    plugins: {
+                        tooltip:true,
+                        labels: false,                        
+                    },
+                    responsive: true,                      
+                    interaction: {
+                    intersect: false,
+                    },
+                    scales: {
+                        xAxes: [{ stacked: true }],
+                        yAxes: [{ stacked: true }]
+                    }
+                }         
+            };
+            chart5 = new Chart(ctx,config);
             //canvas.onclick = function (evt) {
             //    var activePoints5 = chart5.getElementsAtEvent(evt);
             //    console.log(canvas.onclick);
@@ -1323,7 +1214,7 @@
 
         }
         function loadtransactionAmountBySettlementCycleIdChart() {
-            chartHelper.setChartTitle('G6L1ChartTitle', 'Transaction Amount by Settlement Cycle');
+            chartHelper.setChartTitle('G6L1ChartTitle', 'Transaction Amount (Today) by Settlement Time');
             $('#G6ChartTitle').text(chartHelper.getChartTitle('G6L1ChartTitle'));
 
             var transactionAmountBySettlementCycleId =@Html.Raw(Json.Serialize(@ViewBag.transactionAmountBySettlementCycleId));
@@ -1340,23 +1231,10 @@
             };
 
             var chartData6 = chartHelper.data(xValues, dataSet);
-            chart6 = new Chart(ctx, chartHelper.config('bar',chartData6));
-            
-            //canvas.onclick = function (evt) {
-            //    var activePoints6 = chart6.getElementsAtEvent(evt);
-            //    console.log(canvas.onclick);
-            //    if (activePoints6[0]) {
-            //        var chartData6 = activePoints6[0]['_chart'].config.data;
-            //        var idx = activePoints6[0]['_index'];
-
-            //        var label = chartData6.labels[idx];
-            //        var value = chartData6.datasets[0].label[idx];
-            //        chart6.destroy();                    
-            //       TransactionAmountBySettlementCycleIdChart(label);
-            //    }
-
-           // };
+            chart6 = new Chart(ctx, chartHelper.config('bar',chartData6));                        
         }
+
+        
           //Graph 06 level 02 data pulling
         function TransactionAmountBySettlementCycleIdChart(salaryDate) {            
             //$('#chartTitle6').text(salaryDate + ' - Salary');
@@ -1489,6 +1367,100 @@
         }
 
     </script>
+
+    <script type="text/javascript">
+        var chart6;
+        var chart61;
+        //Load Document
+        $(document).ready(function () {
+            //transactionAmountBySettlementCycleId
+           //Graph 06 level 01 data loading
+            loadtransactionCountBySettlementTimeChart();
+
+        });
+
+        function loadtransactionCountBySettlementTimeChart() {
+            chartHelper.setChartTitle('G6L1ChartTitle', 'Transaction Count (Today) by Settlement Time');
+            $('#G111ChartTitle').text(chartHelper.getChartTitle('G6L1ChartTitle'));
+
+            var transactionCountBySettlementTime =@Html.Raw(Json.Serialize(@ViewBag.transactionCountBySettlementTime));
+            var canvas = document.getElementById("transactionCountBySettlementTime");
+            var ctx = canvas.getContext("2d");
+            var xValues = transactionCountBySettlementTime.map(o => o.salaryDate);
+            var yValues = transactionCountBySettlementTime.map(v => v.totalTransactionCount);
+
+            var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Transaction Count',
+                backgroundColor: '#01B8AA',
+                data: yValues
+            };
+
+            var chartData6 = chartHelper.data(xValues, dataSet);
+            chart6 = new Chart(ctx, chartHelper.config('bar',chartData6));                        
+        }
+        
+    </script>    
+
+<script type="text/javascript">
+        var chart6;
+        var chart61;
+        //Load Document
+        $(document).ready(function () {
+            //transactionAmountBySettlementCycleId
+           //Graph 06 level 01 data loading
+            loadFailedTransactionCountByFIChart();
+
+        });
+
+        function loadFailedTransactionCountByFIChart() {
+            chartHelper.setChartTitle('G6L1ChartTitle', 'Failed Transaction Count (Today) by FI');
+            $('#G55ChartTitle').text(chartHelper.getChartTitle('G6L1ChartTitle'));
+
+            var failedTransactionCountByFI =@Html.Raw(Json.Serialize(@ViewBag.failedTransactionCountByFI));
+            var canvas = document.getElementById("failedTransactionByFI");
+            var ctx = canvas.getContext("2d");
+            var xValues = failedTransactionCountByFI.map(o => o.fivid);
+            var yValues = failedTransactionCountByFI.map(v => v.dpTransactionCount);
+            var y2Values = failedTransactionCountByFI.map(v => v.rtpTransactionCount);
+
+            var barColors = ["#FE9666", "#01B8AA", "#698B69", "#008080", "#007EB9", "#5F6B6D", "#DFBFBF", "#660000", "#FFDEAD", "#9AFF9A", "#4F8E83", "#62B1F6", "#990099", "#9D6B84", "#551011"];
+            var dataSet = {
+                label: 'Direct Pay',
+                backgroundColor: '#01B8AA',
+                data: yValues,
+                stack: 'Stack 0'
+            };
+             var dataSet2 = {
+                label: 'Request to Pay',
+                backgroundColor: '#DD780A',
+                data: y2Values,
+                stack: 'Stack 0'
+            };
+
+            var chartData55 = chartHelper.data(xValues, dataSet, dataSet2);
+            const config = {
+                type: 'bar',
+                data: chartData55,
+                options: {
+                    plugins: {
+                        tooltip:true,
+                        labels: false,                        
+                    },
+                    responsive: true,                      
+                    interaction: {
+                    intersect: false,
+                    },
+                    scales: {
+                        xAxes: [{ stacked: true }],
+                        yAxes: [{ stacked: true }]
+                    }
+                }         
+            };
+            chart55 = new Chart(ctx,config);                   
+        }
+        
+    </script>  
 
     <script type="text/javascript">
         var chart7;
@@ -1729,7 +1701,7 @@
             
         }
         function loademployeeQualificationPieChart() {
-            chartHelper.setChartTitle('G8L1ChartTitle', 'Transaction Count by Type');
+            chartHelper.setChartTitle('G8L1ChartTitle', 'Transaction Count (Today) by Type');
             $('#G8ChartTitle').text(chartHelper.getChartTitle('G8L1ChartTitle'));
 
             var transactionCountByTypePieChart =@Html.Raw(Json.Serialize(@ViewBag.transactionCountByTypePieChart));

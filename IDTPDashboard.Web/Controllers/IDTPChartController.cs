@@ -39,12 +39,15 @@ namespace IDTPDashboard.Web.Controllers
             // //JS Chartjs
             ViewData["totalEmpUtilityWise"] = hRManagement_Entity.TransactionsCountTodayByFIList;
             ViewData["rtpStatusByFIs"] = hRManagement_Entity.RTPStatusByFIList;
-            ViewData["upcommingRetirement"] = hRManagement_Entity.RegisteredUsersByFIList;
+            ViewData["totalRegisteredUserbyFI"] = hRManagement_Entity.RegisteredUsersByFIList;
             ViewData["netDebitCapPositionByFI"] = hRManagement_Entity.NetDebitCapPositionByFIList;
             ViewData["transactionsAmountTodayByFI"] = hRManagement_Entity.TransactionsAmountTodayByFIList;
             ViewData["transactionAmountBySettlementCycleId"] = hRManagement_Entity.TransactionAmountBySettlementCycleIdList;
             ViewData["transactionsSettledUnsettledPieChart"] = hRManagement_Entity.TransactionsSettledUnsettledList;
             ViewData["transactionCountByTypePieChart"] = hRManagement_Entity.TransactionCountByTypeList;
+            ViewData["transactionCountBySettlementTime"] = hRManagement_Entity.TransactionCountBySettlementTimeList;
+            ViewData["failedTransactionCountByFI"] = hRManagement_Entity.FailedTransactionCountByFIList;
+            
             return View();
         }
         #endregion

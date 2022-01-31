@@ -33,8 +33,14 @@ namespace IDTPDashboard.DomainModel.Entity
             DesignationWiseEmpByJobTypeAndOrgList = new List<DesignationWiseEmpByJobTypeAndOrg>();
             DesignationWiseEmpByQualificationAndOrgList = new List<DesignationWiseEmpByQualificationAndOrg>();
             TransactionAmountBySettlementCycleIdList = new List<TransactionAmountBySettlementCycleId>();
+            TransactionCountBySettlementTimeList = new List<TransactionCountBySettlementTime>();
+            FailedTransactionCountByFIList = new List<FailedTransactionCountByFI>();
         }
         public List<TransactionAmountBySettlementCycleId> TransactionAmountBySettlementCycleIdList { get; set; }
+
+        public List<TransactionCountBySettlementTime> TransactionCountBySettlementTimeList { get; set; }
+
+        public List<FailedTransactionCountByFI> FailedTransactionCountByFIList { get; set; }
         public List<EmployeeAttendance> EmployeeAttendanceList { get; set; }
         public List<EmployeeOnLeave> EmployeeOnLeaveList { get; set; }
         public List<RTPStatusByFI> RTPStatusByFIList { get; set; }
@@ -121,6 +127,7 @@ namespace IDTPDashboard.DomainModel.Entity
     {
         public string Organization { get; set; }
         public long TourCount { get; set; }
+        public long RTPTotalAmount { get; set; }
     }
     public class RTPStatusByFIUtilityWise
     {
@@ -152,6 +159,7 @@ namespace IDTPDashboard.DomainModel.Entity
     {
         public string Organization { get; set; }
         public long totalemployee { get; set; }
+        public long RTPTransactionCount { get; set; }
     }
     public class UtilitywiseLastFiscalYearSalary
     {

@@ -1,0 +1,104 @@
+﻿.left_align_text {
+    text-align: left
+}
+
+.userInfo {
+    margin-top: 25px;
+}
+
+    .userInfo label {
+        font-weight: bold;
+    }
+
+.control-label {
+    font-weight: bold !important;
+}
+
+.pt-3-half {
+    padding-top: 1.4rem;
+}
+
+.page-section {
+    padding-bottom: 1px !important;
+}
+
+
+.approvalProcessImg .row {
+    margin: 0 !important;
+}
+
+.approvalProcessImg {
+    margin-right: -100px !important;
+}
+
+.linkStyle {
+    color: #1abc9c !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
+
+    .linkStyle:hover {
+        text-decoration: underline !important;
+    }
+
+.form-group.required .control-label:after {
+    content: "*";
+    color: red;
+}
+
+.borderedTable td {
+    border: 1px solid
+}
+.borderedTable tr {
+    line-height: 0.05;
+    border: 1px solid
+}
+
+.boldLabel label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    border-color: #2B547E !important;
+    background-color: #2B547E !important;
+}
+
+.btn-primary:hover {
+    border-color: #1A6BA0 !important;
+    background-color: #1A6BA0 !important;
+}
+.modal-body {
+    padding: 1rem 1rem !important;
+}
+.modal-footer {
+    padding: 1rem 1rem !important;
+}
+.modal-content {
+height:60% !important;
+}
+
+
+.i-circle {
+    background: #00008B;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 50%;
+    font-size: 35px;
+}
+[data-letters]:before {
+    content: attr(data-letters);
+    display: inline-block;
+    font-size: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    border-radius: 50%;
+    background: plum;
+    vertical-align: middle;
+    margin-right: 1em;
+    color: white;
+}
+.table-condensed {
+    font-size: 14px;
+}

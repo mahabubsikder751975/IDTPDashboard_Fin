@@ -42,8 +42,23 @@ namespace IDTPDashboard.DomainModel.Entity
     {
         public string SalaryDate { get; set; }
         public double TotalSalary { get; set; }
-        public int SequenceNo { get; set; }
+        public string SequenceNo { get; set; }
     }
+
+    public class TransactionCountBySettlementTime
+    {
+        public string SalaryDate { get; set; }
+        public double TotalTransactionCount { get; set; }
+        public string SequenceNo { get; set; }
+    }
+
+    public class FailedTransactionCountByFI
+    {
+        public string FIVID { get; set; }
+        public double DPTransactionCount { get; set; }
+        public string RTPTransactionCount { get; set; }
+    }
+
     public class AllowanceDeductionByMonth
     {
         public int HouseRentAllowance { get; set; }

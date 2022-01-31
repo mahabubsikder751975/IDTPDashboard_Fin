@@ -39,6 +39,8 @@ namespace IDTPDashboard.DataAccess.Repositoty
                     var totalNumberOfUsersData = new List<TotalNumberOfUsers>();
                     var transactionsCountTodayByFIData = new List<TransactionsCountTodayByFI>();
                     var transactionAmountBySettlementCycleIdData = new List<TransactionAmountBySettlementCycleId>();                    
+                    var transactionCountBySettlementTimeData = new List<TransactionCountBySettlementTime>();  
+                    var failedTransactionCountByFIData = new List<FailedTransactionCountByFI>();  
 
                     await sql.OpenAsync();
 
@@ -99,6 +101,19 @@ namespace IDTPDashboard.DataAccess.Repositoty
                                 transactionAmountBySettlementCycleIdData.Add(TransactionAmountBySettlementCycleIdDataPurser(reader));
                             }
 
+                            await reader.NextResultAsync();
+                            while (await reader.ReadAsync())
+                            {
+                                transactionCountBySettlementTimeData.Add(TransactionCountBySettlementTimeDataPurser(reader));
+                            }
+
+                            await reader.NextResultAsync();
+                            while (await reader.ReadAsync())
+                            {
+                                failedTransactionCountByFIData.Add(FailedTransactionCountByFIDataPurser(reader));
+                            }
+
+
                             response.RTPStatusByFIList = rtpStatusByFIData;
                             response.TransactionsSettledUnsettledList = transactionsSettledUnsettledData;
                             response.TransactionCountByTypeList = transactionCountByTypeData;
@@ -108,6 +123,8 @@ namespace IDTPDashboard.DataAccess.Repositoty
                             response.TotalNumberOfUsersList = totalNumberOfUsersData;
                             response.TransactionsCountTodayByFIList = transactionsCountTodayByFIData;
                             response.TransactionAmountBySettlementCycleIdList = transactionAmountBySettlementCycleIdData;
+                            response.TransactionCountBySettlementTimeList = transactionCountBySettlementTimeData;
+                            response.FailedTransactionCountByFIList = failedTransactionCountByFIData;
                         }
 
                     }
@@ -122,16 +139,38 @@ namespace IDTPDashboard.DataAccess.Repositoty
             }
         }
 
+        private FailedTransactionCountByFI FailedTransactionCountByFIDataPurser(SqlDataReader reader)
+        {
+            return new FailedTransactionCountByFI()
+            {
+                FIVID = reader["FIVID"].ToString(),
+                DPTransactionCount = Convert.ToDouble(reader["DPTransactionCount"].ToString()),
+                RTPTransactionCount = reader["RTPTransactionCount"].ToString(),
+
+            };
+        }     
+
         private TransactionAmountBySettlementCycleId TransactionAmountBySettlementCycleIdDataPurser(SqlDataReader reader)
         {
             return new TransactionAmountBySettlementCycleId()
             {
                 SalaryDate = reader["SettleCycleId"].ToString(),
                 TotalSalary = Convert.ToDouble(reader["TotalTransactionAmount"].ToString()),
-                SequenceNo = Convert.ToInt32(reader["SequenceNo"].ToString()),
+                SequenceNo = reader["SequenceNo"].ToString(),
 
             };
         }       
+
+        private TransactionCountBySettlementTime TransactionCountBySettlementTimeDataPurser(SqlDataReader reader)
+        {
+            return new TransactionCountBySettlementTime()
+            {
+                SalaryDate = reader["SettleCycleId"].ToString(),
+                TotalTransactionCount = Convert.ToDouble(reader["TotalTransactionCount"].ToString()),
+                SequenceNo = reader["SequenceNo"].ToString(),
+
+            };
+        }     
 
         private RTPStatusByFI RTPStatusByFIDataPurser(SqlDataReader reader)
         {
@@ -186,7 +225,8 @@ namespace IDTPDashboard.DataAccess.Repositoty
             return new TransactionsAmountTodayByFI()
             {
                 Organization = reader["FIVID"].ToString(),
-                TourCount = Convert.ToInt64(reader["TotalAmount"].ToString())
+                TourCount = Convert.ToInt64(reader["DPTotalAmount"].ToString()),
+                RTPTotalAmount = Convert.ToInt64(reader["RTPTotalAmount"].ToString())
             };
         }
 
@@ -205,7 +245,8 @@ namespace IDTPDashboard.DataAccess.Repositoty
             return new TransactionsCountTodayByFI()
             {
                 Organization = reader["FIVID"].ToString(),
-                totalemployee = Convert.ToInt64(reader["TransactionCount"].ToString())
+                totalemployee = Convert.ToInt64(reader["DPTransactionCount"].ToString()),
+                RTPTransactionCount = Convert.ToInt64(reader["RTPTransactionCount"].ToString())
             };
         }
 
